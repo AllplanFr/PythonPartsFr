@@ -1,0 +1,9 @@
+# PythonParts scripts (backend)
+__BuildingElementStubFiles/
+__pycache__/
+
+# PYP-related temporary file
+___pyp__
+
+# Editor configuration
+.vscode/
