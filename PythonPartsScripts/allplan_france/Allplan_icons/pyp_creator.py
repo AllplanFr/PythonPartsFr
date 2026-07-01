@@ -355,51 +355,100 @@ class PypCreator:
 
         icon_list_index = 0
 
-        for page_name, codes in ICON_CODES.items():
+        # ----
+        #  Page
+        # ----
 
-            # ----
-            #  Page
-            # ----
+        page = etree.SubElement(self.root, "Page")
 
-            page = etree.SubElement(self.root, "Page")
+        parameters_page = etree.SubElement(page, "Parameters"
+                                           )
+        # ----
 
-            # ----
+        self.add_text_element(page, "Name", "Icon")
+        self.add_text_element(page, "Text", "Icônes")
 
-            self.add_text_element(page, "Name", page_name)
-            self.add_text_element(page, "Text", page_name)
+        # ----
+        #  Categories
+        # ----
 
-            # ----
-            #  Parameters
-            # ----
+        categories_list = list(ICON_CODES)
 
-            parameters = etree.SubElement(page, "Parameters")
+        categorie_default = categories_list[0]
 
-            # ----
+        categories_text = "|".join(categories_list)
 
-            for index, group in enumerate(self.chunked(codes, 8), start=1):
+        # ----
+
+        parameter_categories = etree.SubElement(parameters_page, "Parameter")
+
+        self.add_text_element(parameter_categories, "Name", "Categories")
+        self.add_text_element(parameter_categories, "TextId", 1001)
+        self.add_text_element(parameter_categories, "Value", categorie_default)
+        self.add_text_element(parameter_categories, "ValueList", categories_text)
+        self.add_text_element(parameter_categories, "ValueType", "StringComboBox")
+
+        # ----
+        #  Code selected
+        # ----
+
+        parameter_code = etree.SubElement(parameters_page, "Parameter")
+
+        self.add_text_element(parameter_code, "Name", "Code")
+        self.add_text_element(parameter_code, "TextId", 1002)
+        self.add_text_element(parameter_code, "Value", "")
+        self.add_text_element(parameter_code, "ValueType", "Integer")
+
+        # ----
+
+        for categorie_name, codes in ICON_CODES.items():
+
+            for group in self.chunked(codes, 8):
+
+                if len(group) < DEFAULT_CHUNK_SIZE:
+                    group += [0] * (DEFAULT_CHUNK_SIZE - len(group))
+
+                # ----
+
                 joined = "|".join(map(str, group))
 
                 # ----
                 #  Parameter
                 # ----
 
-                parameter = etree.SubElement(parameters, "Parameter")
+                parameter_row = etree.SubElement(parameters_page, "Parameter")
+
+                # ----
+                #  Row
+                # ----
+
+                self.add_text_element(parameter_row, "Name", f"Row_{icon_list_index}")
+                self.add_text_element(parameter_row, "Text", " "*icon_list_index)
+                self.add_text_element(parameter_row, "ValueType", "Row")
+                self.add_text_element(parameter_row, "Value", "OVERALL")
+                self.add_text_element(parameter_row, "Visible", f'Categories == "{categorie_name}"')
+
+                # ----
+
+                parameters_row = etree.SubElement(parameter_row, "Parameters")
 
                 # ----
                 #  PictureResourceButtonList
                 # ----
 
-                self.add_text_element(parameter, "Name", f"IconList_{icon_list_index}")
+                parameter_icon_list = etree.SubElement(parameters_row, "Parameter")
 
-                self.add_text_element(parameter, "Value", group[0])
+                self.add_text_element(parameter_icon_list, "Name", f"IconList_{icon_list_index}")
 
-                self.add_text_element(parameter, "ValueList", joined)
+                self.add_text_element(parameter_icon_list, "Value", group[0])
 
-                self.add_text_element(parameter, "ValueTextList", joined)
+                self.add_text_element(parameter_icon_list, "ValueList", joined)
 
-                self.add_text_element(parameter, "ValueList2", joined)
+                self.add_text_element(parameter_icon_list, "ValueTextList", joined)
 
-                self.add_text_element(parameter, "ValueType", "PictureResourceButtonList")
+                self.add_text_element(parameter_icon_list, "ValueList2", joined)
+
+                self.add_text_element(parameter_icon_list, "ValueType", "PictureResourceButtonList")
 
                 icon_list_index += 1
 

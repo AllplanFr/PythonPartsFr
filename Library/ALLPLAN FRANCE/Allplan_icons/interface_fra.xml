@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Element>
+    <StringTable>Allplan PythonParts stringtable</StringTable>
+    <IncludeLanguageFile>GeneralLanguageFile</IncludeLanguageFile>
+    <Item>
+        <TextId>1001</TextId>
+        <Text>Catégories</Text>
+    </Item>
+    <Item>
+        <TextId>1002</TextId>
+        <Text>Code sélectionné</Text>
+    </Item>
+</Element>

@@ -33,4 +33,3 @@ def create_script_object(build_ele: BuildingElement, script_object_data: BaseScr
         created script object
     """
     return MyScriptObject(build_ele=build_ele, script_object_data=script_object_data)
-

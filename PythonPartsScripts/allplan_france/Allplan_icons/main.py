@@ -1,7 +1,5 @@
 """Script"""
 
-from __future__ import annotations
-
 from CreateElementResult import CreateElementResult
 
 from BuildingElement import BuildingElement
@@ -12,9 +10,7 @@ from BaseScriptObject import BaseScriptObject, BaseScriptObjectData
 class MyScriptObject(BaseScriptObject):
     """ Implementation of the script object class"""
 
-    def __init__(self,
-                 build_ele: BuildingElement,
-                 script_object_data: BaseScriptObjectData) -> None:
+    def __init__(self, build_ele: BuildingElement, script_object_data: BaseScriptObjectData) -> None:
         """ Initialization Aim Element
 
         Args:
@@ -39,6 +35,8 @@ class MyScriptObject(BaseScriptObject):
         """
         self.script_object_interactor = None
 
+        return None
+
     def execute(self) -> CreateElementResult:
         """ Execute the script
 
@@ -58,5 +56,24 @@ class MyScriptObject(BaseScriptObject):
             event was processed state
         """
 
+        print(event_id)
+
         return True
-    
+
+    def modify_element_property(self,
+                                name: str,
+                                value: int) -> bool:
+        """ Modify the element property
+
+        Args:
+            name:   name
+            value: value
+
+        Returns:
+            update palette state
+        """
+
+        if isinstance(value, int):
+            self.build_ele.Code.value = value
+
+        return True
