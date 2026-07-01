@@ -4,7 +4,7 @@ Welcome to this GitHub project — a collection of **PythonParts** developed by 
 
 ## About the Project
 
-This repository contains PythonParts utilities for ALLPLAN.  
+This repository contains PythonParts utilities for ALLPLAN.
 These tools help automate repetitive tasks, streamline workflows, and deliver practical functionality for teams using ALLPLAN in their daily projects.
 
 ## Features
@@ -14,8 +14,8 @@ These tools help automate repetitive tasks, streamline workflows, and deliver pr
 
 ## Installation
 
-**ALLPLAN FRANCE PythonParts Collection** can be installed directly from the Plugin Manager in ALLPLAN.  
-Alternatively, the corresponding `.allep` package can be downloaded from the [release page](https://github.com/AllplanFr/PythonPartsFr/releases).  
+**ALLPLAN FRANCE PythonParts Collection** can be installed directly from the Plugin Manager in ALLPLAN.
+Alternatively, the corresponding `.allep` package can be downloaded from the [release page](https://github.com/AllplanFr/PythonPartsFr/releases).
 `.allep` files are ALLPLAN extension packages that can be installed via drag and drop into the program window.
 
 ## Requirements
@@ -41,16 +41,16 @@ In other words:
 The plugin installs the following assets into ALLPLAN:
 
 - PythonParts utilities:
-  - ...
+  - CircularReinforcement
 
-They can be found in the Library under `Office` → `PythonParts` → `ALLPLAN FRANCE`.
+They can be found in the Library under `Office` → `ALLPLAN FRANCE`.
 
 ## Repository Structure
 
 A PythonPart in this repository is typically split into two parts:
 
-- **front-end**: the `.pyp` file exposed in the ALLPLAN Library `PythonParts`
-- **back-end**: the Python package located in `PythonPartsScripts`
+- **front-end**: the `.pyp` file exposed in the ALLPLAN Library `ALLPLAN FRANCE`
+- **back-end**: the Python package located in `allplan_france`
 
 The `.pyp` file is the entry point used by ALLPLAN to expose the tool in the Library, while the Python package contains the implementation logic and event handling. The official PythonParts documentation states that `.pyp` files are used to start a PythonPart from the ALLPLAN UI and must be placed in specific library directories.
 The Python script side must be located in a `PythonPartsScripts` folder for execution.
@@ -78,9 +78,12 @@ Example:
 <Element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd">
 
+    <LanguageFile><AssetName></LanguageFile>
+
     <Script>
         <Name>allplan_france\<AssetName>\__init__.py</Name>
         <Title><AssetTitle></Title>
+        <TextId>1001</TextId>
         <Version>1.0</Version>
     </Script>
 
@@ -101,7 +104,7 @@ Typical files:
 
 ```text
 __init__.py
-scriptobject.py
+main.py
 ```
 
 `__init__.py` defines the PythonPart entry points, especially:
@@ -109,7 +112,7 @@ scriptobject.py
 - `check_allplan_version`
 - `create_script_object`
 
-`scriptobject.py` contains the ScriptObject implementation and ALLPLAN event handling.
+`main.py` contains the ScriptObject implementation and ALLPLAN event handling.
 
 ### Interactor
 
@@ -127,9 +130,12 @@ Example:
 <Element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd">
 
+    <LanguageFile><AssetName></LanguageFile>
+
     <Script>
         <Name>allplan_france\<AssetName>\__init__.py</Name>
         <Title><AssetTitle></Title>
+        <TextId>1001</TextId>
         <Version>1.0</Version>
         <Interactor>True</Interactor>
     </Script>
@@ -151,7 +157,7 @@ Typical files:
 
 ```text
 __init__.py
-interactor.py
+main.py
 ```
 
 `__init__.py` defines the PythonPart entry points, especially:
@@ -160,7 +166,7 @@ interactor.py
 - `create_preview`
 - `create_interactor`
 
-`interactor.py` contains the interactive behavior and event-driven logic.
+`main.py` contains the interactive behavior and event-driven logic.
 
 ## Contributing
 
