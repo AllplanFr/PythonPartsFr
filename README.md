@@ -43,14 +43,14 @@ The plugin installs the following assets into ALLPLAN:
 - PythonParts utilities:
   - CircularReinforcement
 
-They can be found in the Library under `Office` → `PythonParts` → `ALLPLAN FRANCE`.
+They can be found in the Library under `Office` → `ALLPLAN FRANCE`.
 
 ## Repository Structure
 
 A PythonPart in this repository is typically split into two parts:
 
-- **front-end**: the `.pyp` file exposed in the ALLPLAN Library `PythonParts`
-- **back-end**: the Python package located in `PythonPartsScripts`
+- **front-end**: the `.pyp` file exposed in the ALLPLAN Library `ALLPLAN FRANCE`
+- **back-end**: the Python package located in `allplan_france`
 
 The `.pyp` file is the entry point used by ALLPLAN to expose the tool in the Library, while the Python package contains the implementation logic and event handling. The official PythonParts documentation states that `.pyp` files are used to start a PythonPart from the ALLPLAN UI and must be placed in specific library directories.
 The Python script side must be located in a `PythonPartsScripts` folder for execution.
