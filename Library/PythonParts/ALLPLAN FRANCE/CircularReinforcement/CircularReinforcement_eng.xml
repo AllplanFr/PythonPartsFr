@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Element>
+    <StringTable>Allplan PythonParts string table</StringTable>
+
+    <!-- Script Title -->
+    <Item>
+        <TextId>1001</TextId>
+        <Text>Circular Reinforcement Helper</Text>
+    </Item>
+
+    <!-- Global Page -->
+    <Item>
+        <TextId>2001</TextId>
+        <Text>Global</Text>
+    </Item>
+
+    <Item>
+        <TextId>2002</TextId>
+        <Text>Create as pythonpart?</Text>
+    </Item>
+
+    <Item>
+        <TextId>2003</TextId>
+        <Text>Name</Text>
+    </Item>
+
+    <Item>
+        <TextId>2004</TextId>
+        <Text>Name</Text>
+    </Item>
+
+    <Item>
+        <TextId>2005</TextId>
+        <Text>Geometry</Text>
+    </Item>
+
+    <Item>
+        <TextId>2006</TextId>
+        <Text>Inner radius</Text>
+    </Item>
+
+    <Item>
+        <TextId>2007</TextId>
+        <Text>Outer radius</Text>
+    </Item>
+
+    <Item>
+        <TextId>2008</TextId>
+        <Text>Global rotation</Text>
+    </Item>
+
+    <Item>
+        <TextId>2009</TextId>
+        <Text>Reinforcement</Text>
+    </Item>
+
+    <Item>
+        <TextId>2010</TextId>
+        <Text>Concrete cover</Text>
+    </Item>
+
+    <Item>
+        <TextId>2011</TextId>
+        <Text>Form</Text>
+    </Item>
+
+    <Item>
+        <TextId>2012</TextId>
+        <Text>Bar length</Text>
+    </Item>
+
+    <Item>
+        <TextId>2013</TextId>
+        <Text>Direction</Text>
+    </Item>
+
+    <Item>
+        <TextId>2014</TextId>
+        <Text>from inside to outside</Text>
+    </Item>
+
+    <Item>
+        <TextId>2015</TextId>
+        <Text>from outside to inside</Text>
+    </Item>
+
+    <Item>
+        <TextId>2016</TextId>
+        <Text>Bar spacing</Text>
+    </Item>
+
+    <!-- Options Page -->
+    <Item>
+        <TextId>3001</TextId>
+        <Text>Options</Text>
+    </Item>
+
+    <Item>
+        <TextId>3002</TextId>
+        <Text>Convert</Text>
+    </Item>
+
+    <Item>
+        <TextId>3003</TextId>
+        <Text>Convert as:</Text>
+    </Item>
+
+    <Item>
+        <TextId>3004</TextId>
+        <Text>Bottom plane</Text>
+    </Item>
+
+    <Item>
+        <TextId>3005</TextId>
+        <Text>Format</Text>
+    </Item>
+
+</Element>
