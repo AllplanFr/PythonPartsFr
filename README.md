@@ -4,7 +4,7 @@ Welcome to this GitHub project — a collection of **PythonParts** developed by 
 
 ## About the Project
 
-This repository contains PythonParts utilities for ALLPLAN.  
+This repository contains PythonParts utilities for ALLPLAN.
 These tools help automate repetitive tasks, streamline workflows, and deliver practical functionality for teams using ALLPLAN in their daily projects.
 
 ## Features
@@ -14,8 +14,8 @@ These tools help automate repetitive tasks, streamline workflows, and deliver pr
 
 ## Installation
 
-**ALLPLAN FRANCE PythonParts Collection** can be installed directly from the Plugin Manager in ALLPLAN.  
-Alternatively, the corresponding `.allep` package can be downloaded from the [release page](https://github.com/AllplanFr/PythonPartsFr/releases).  
+**ALLPLAN FRANCE PythonParts Collection** can be installed directly from the Plugin Manager in ALLPLAN.
+Alternatively, the corresponding `.allep` package can be downloaded from the [release page](https://github.com/AllplanFr/PythonPartsFr/releases).
 `.allep` files are ALLPLAN extension packages that can be installed via drag and drop into the program window.
 
 ## Requirements
@@ -41,7 +41,7 @@ In other words:
 The plugin installs the following assets into ALLPLAN:
 
 - PythonParts utilities:
-  - ...
+  - CircularReinforcement
 
 They can be found in the Library under `Office` → `PythonParts` → `ALLPLAN FRANCE`.
 
