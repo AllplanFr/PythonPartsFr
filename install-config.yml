@@ -1,7 +1,7 @@
 plugin:
   name: ALLPLAN FRANCE PythonParts Collection
   UUID: c8f3d9a2-4b7e-4c13-9f21-7e6b2d40a581
-  version: 1.0.2
+  version: 1.0.3
   developer: allplan-france
   default-language: en
   min-allplan-version: 2026
