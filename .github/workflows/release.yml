@@ -27,10 +27,8 @@ jobs:
         shell: pwsh
         run: |
           $tag = "${{ github.ref_name }}"
-          $notes = "### Release notes $tag`n"
           
           gh release create "$tag" `
             --title "ALLPLAN FRANCE PythonParts Collection v$tag" `            
             --draft `
-            --notes "$notes" `
             PythonPartsFr.allep
