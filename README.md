@@ -43,7 +43,7 @@ The plugin installs the following assets into ALLPLAN:
 - PythonParts utilities:
   - CircularReinforcement
 
-They can be found in the Library under `Office` → `ALLPLAN FRANCE`.
+They can be found in the Library under `Office` → `PythonParts` → `ALLPLAN FRANCE`.
 
 ## Repository Structure
 
