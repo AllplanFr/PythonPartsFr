@@ -2,15 +2,18 @@
 
 Welcome to this GitHub project — a collection of **PythonParts** developed by **ALLPLAN FRANCE**.
 
-## About the Project
+## What you get
 
-This repository contains PythonParts utilities for ALLPLAN.
-These tools help automate repetitive tasks, streamline workflows, and deliver practical functionality for teams using ALLPLAN in their daily projects.
+The plugin installs PythonParts in the ALLPLAN Library under:
 
-## Features
+`Office` → `ALLPLAN FRANCE`
 
-- Ready-to-use PythonParts utilities
-- Based on the [ALLPLAN PythonParts API](https://pythonparts.allplan.com/)
+Each asset is designed to solve a specific task inside ALLPLAN.
+Asset-specific instructions are documented in dedicated READMEs so users can quickly understand what result to expect.
+
+## Available assets
+
+- [CircularReinforcement](./PythonPartsScripts/allplan_france/CircularReinforcement/README.md) — helper to create circular reinforcement.
 
 ## Installation
 
@@ -20,164 +23,20 @@ Alternatively, the corresponding `.allep` package can be downloaded from the [re
 
 ## Requirements
 
-- ALLPLAN >= 2026
+- ALLPLAN 2026 or newer
 
-## Branch Strategy
+## Documentation
 
-This repository is managed by **ALLPLAN version**.
+This repository uses separate documentation levels so each audience can find the right information quickly.
 
-- `main` contains the **current stable version** of the collection.
-- stable versions published through the **Plugin Manager** are also distributed through GitHub **releases**
-- version branches such as `2026` contain the codebase for a specific ALLPLAN version
-- development for a given ALLPLAN release is done in its dedicated branch before being merged into `main`
-
-In other words:
-
-- `main` = current production-ready version
-- `2026`, `2027`, ... = version-specific development and maintenance branches
-
-## Installed Assets
-
-The plugin installs the following assets into ALLPLAN:
-
-- PythonParts utilities:
-  - CircularReinforcement
-
-They can be found in the Library under `Office` → `PythonParts` → `ALLPLAN FRANCE`.
-
-## Repository Structure
-
-A PythonPart in this repository is typically split into two parts:
-
-- **front-end**: the `.pyp` file exposed in the ALLPLAN Library `ALLPLAN FRANCE`
-- **back-end**: the Python package located in `allplan_france`
-
-The `.pyp` file is the entry point used by ALLPLAN to expose the tool in the Library, while the Python package contains the implementation logic and event handling. The official PythonParts documentation states that `.pyp` files are used to start a PythonPart from the ALLPLAN UI and must be placed in specific library directories.
-The Python script side must be located in a `PythonPartsScripts` folder for execution.
-
-## PythonPart Templates
-
-Two main implementation patterns are used in this repository:
-
-- **ScriptObject**
-- **Interactor**
-
-### ScriptObject
-
-#### Front-end
-
-```text
-Library\PythonParts\ALLPLAN FRANCE\<AssetName>\<AssetName>.pyp
-```
-
-Example:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-
-<Element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd">
-
-    <LanguageFile><AssetName></LanguageFile>
-
-    <Script>
-        <Name>allplan_france\<AssetName>\__init__.py</Name>
-        <Title><AssetTitle></Title>
-        <TextId>1001</TextId>
-        <Version>1.0</Version>
-    </Script>
-
-    <Page>
-        ...
-    </Page>
-
-</Element>
-```
-
-### Back-end
-
-```text
-PythonPartsScripts\allplan_france\<AssetName>\
-```
-
-Typical files:
-
-```text
-__init__.py
-main.py
-```
-
-`__init__.py` defines the PythonPart entry points, especially:
-
-- `check_allplan_version`
-- `create_script_object`
-
-`main.py` contains the ScriptObject implementation and ALLPLAN event handling.
-
-### Interactor
-
-#### Front-end
-
-```text
-Library\PythonParts\ALLPLAN FRANCE\<AssetName>\<AssetName>.pyp
-```
-
-Example:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-
-<Element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd">
-
-    <LanguageFile><AssetName></LanguageFile>
-
-    <Script>
-        <Name>allplan_france\<AssetName>\__init__.py</Name>
-        <Title><AssetTitle></Title>
-        <TextId>1001</TextId>
-        <Version>1.0</Version>
-        <Interactor>True</Interactor>
-    </Script>
-
-    <Page>
-        ...
-    </Page>
-
-</Element>
-```
-
-#### Back-end
-
-```text
-PythonPartsScripts\allplan_france\<AssetName>\
-```
-
-Typical files:
-
-```text
-__init__.py
-main.py
-```
-
-`__init__.py` defines the PythonPart entry points, especially:
-
-- `check_allplan_version`
-- `create_preview`
-- `create_interactor`
-
-`main.py` contains the interactive behavior and event-driven logic.
+- `README.md` — overview for ALLPLAN users.
+- asset `README` files — what each tool does and how to use it.
+- `CONTRIBUTING.md` — repository structure, templates, and contribution workflow.
+- `CODE_OF_CONDUCT.md` — expected behavior for contributors and maintainers.
 
 ## Contributing
 
-Contributions are welcome. You can:
-
-- propose new PythonParts utilities
-- report bugs
-- suggest improvements
-- open issues or pull requests
-
-Please follow the repository structure and naming conventions when adding a new asset.
+Bug reports, feature suggestions, and contributions are welcome.
 
 ## License
 
