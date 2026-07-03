@@ -31,17 +31,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository tools
         uses: actions/checkout@v4
         with:
+          ref: main
+          path: repo-tools
+          fetch-depth: 0
+
+      - name: Checkout repository workspace
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repo-work
           fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Configure git
+        working-directory: repo-work
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,30 +65,37 @@ jobs:
             exit 1
           fi
 
-      - name: Create target branch
+      - name: Create empty target branch
+        working-directory: repo-work
         run: |
-          git checkout -b "dev/${{ github.event.inputs.asset_name }}"
+          git checkout --orphan "dev/${{ github.event.inputs.asset_name }}"
+          git rm -rf . || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
 
       - name: Export template branch
+        working-directory: repo-work
         run: |
+          rm -rf /tmp/template-src
           mkdir -p /tmp/template-src
           git fetch origin "template/${{ github.event.inputs.template_type }}":"refs/remotes/origin/template/${{ github.event.inputs.template_type }}"
           git archive "origin/template/${{ github.event.inputs.template_type }}" Library PythonPartsScripts | tar -x -C /tmp/template-src
 
       - name: Generate asset files
         run: |
-          python .github/scripts/create_asset.py \
+          python repo-tools/.github/scripts/create_asset.py \
             --source /tmp/template-src \
-            --destination . \
+            --destination repo-work \
             --asset-name "${{ github.event.inputs.asset_name }}" \
             --asset-title-en "${{ github.event.inputs.asset_title_en }}" \
             --asset-title-fr "${{ github.event.inputs.asset_title_fr }}"
 
       - name: Commit generated asset
+        working-directory: repo-work
         run: |
-          git add Library PythonPartsScripts
+          git add .
           git commit -m "Create asset ${{ github.event.inputs.asset_name }} from ${{ github.event.inputs.template_type }} template"
 
       - name: Push branch
+        working-directory: repo-work
         run: |
           git push origin "dev/${{ github.event.inputs.asset_name }}"
