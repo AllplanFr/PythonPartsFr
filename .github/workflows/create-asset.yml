@@ -1,0 +1,84 @@
+name: Create asset from template
+
+on:
+  workflow_dispatch:
+    inputs:
+      template_type:
+        description: Template type
+        required: true
+        type: choice
+        options:
+          - scriptobject
+          - interactor
+      asset_name:
+        description: Asset technical name (used in branch, folders, and files)
+        required: true
+        type: string
+      asset_title_en:
+        description: Asset title in English
+        required: true
+        type: string
+      asset_title_fr:
+        description: Asset title in French
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-asset:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Validate asset name
+        shell: bash
+        run: |
+          ASSET_NAME="${{ github.event.inputs.asset_name }}"
+          if [[ ! "$ASSET_NAME" =~ ^[A-Za-z0-9_-]+$ ]]; then
+            echo "Invalid asset_name: only letters, digits, underscore, and hyphen are allowed."
+            exit 1
+          fi
+
+      - name: Create target branch
+        run: |
+          git checkout -b "dev/${{ github.event.inputs.asset_name }}"
+
+      - name: Export template branch
+        run: |
+          mkdir -p /tmp/template-src
+          git fetch origin "template/${{ github.event.inputs.template_type }}":"refs/remotes/origin/template/${{ github.event.inputs.template_type }}"
+          git archive "origin/template/${{ github.event.inputs.template_type }}" Library PythonPartsScripts | tar -x -C /tmp/template-src
+
+      - name: Generate asset files
+        run: |
+          python .github/scripts/create_asset.py \
+            --source /tmp/template-src \
+            --destination . \
+            --asset-name "${{ github.event.inputs.asset_name }}" \
+            --asset-title-en "${{ github.event.inputs.asset_title_en }}" \
+            --asset-title-fr "${{ github.event.inputs.asset_title_fr }}"
+
+      - name: Commit generated asset
+        run: |
+          git add Library PythonPartsScripts
+          git commit -m "Create asset ${{ github.event.inputs.asset_name }} from ${{ github.event.inputs.template_type }} template"
+
+      - name: Push branch
+        run: |
+          git push origin "dev/${{ github.event.inputs.asset_name }}"
