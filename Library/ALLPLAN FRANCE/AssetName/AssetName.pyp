@@ -10,7 +10,6 @@
         <Title>Asset title</Title>
         <TextId>1001</TextId>
         <Version>1.0</Version>
-        <Interactor>True</Interactor>
     </Script>
 
     <Page>
