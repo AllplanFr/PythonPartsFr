@@ -334,7 +334,6 @@ class MyInteractor(BaseInteractor):
             True when the PythonPart framework should terminate the PythonPart, False otherwise
         """
         self.palette_service.close_palette()
-        Input.InputFunctionStarter.RemoveFunction()
 
         return True
 
@@ -543,50 +542,14 @@ class MyInteractor(BaseInteractor):
     def execute_pp(self) -> None:
         """ Execute the script
         """
-        # Get parameters
+
+        # ----
+        # Get parameters from the palette
+        # ----
+
+        # Get name
         self.pp_name = self.build_ele.PPNameString.value
-        self.attr_list = BuildingElementAttributeList()
-        self.attr_list.add_attributes_from_parameters(self.build_ele)
-
-        # Variants
         pp_name = "".join(self.pp_name.split())
-        self.var_attr_name = f"{pp_name}_variant"
-        self.var_attr_values = Utility.VecStringList()
-        for i in range(1, self.var_qtt + 1):
-            self.var_attr_values.append(f"variant {i}")
-
-        if self.var_qtt > 1:
-            var_attr_has_id = BaseElements.AttributeService.GetAttributeID(self.document, self.var_attr_name)
-
-            if var_attr_has_id == -1:
-                self.var_attr_id = BaseElements.AttributeService.AddUserAttribute(
-                    doc= self.document,
-                    attributeType= BaseElements.AttributeService.AttributeType.Enum,
-                    attributeName= self.var_attr_name,
-                    attributeDefaultValue= "",
-                    attributeMinValue= 0,
-                    attributeMaxValue= 60,
-                    attributeDimension= "",
-                    attributeCtrlType= BaseElements.AttributeService.AttributeControlType.ComboBoxFixed,
-                    attributeListValues= self.var_attr_values
-                    )
-
-                if self.var_attr_id == -1:
-                    string_from_table = self.local_str_table.get_string("9005", "Unable to create attribute:")
-                    Utility.ShowMessageBox(
-                        text= f"{string_from_table} {self.var_attr_name}",
-                        flags= Utility.MB_OK
-                        )
-
-            else:
-                string_from_table = self.local_str_table.get_string(
-                    "9006",
-                    "already exists.\nPlease delete it or choose another name for your object"
-                    )
-                Utility.ShowMessageBox(
-                    text= f"{self.var_attr_name} {string_from_table}",
-                    flags= Utility.MB_OK
-                    )
 
         if self.pp_name == "":
             string_from_table = self.local_str_table.get_string("9007", "Please enter a name for your PythonPart")
@@ -594,71 +557,131 @@ class MyInteractor(BaseInteractor):
                 text= string_from_table,
                 flags= Utility.MB_OK
                 )
+            self.end_of_processing()
+            return
+
+        # Get attributes
+        self.attr_list = BuildingElementAttributeList()
+        self.attr_list.add_attributes_from_parameters(self.build_ele)
+
+        # ----
+        # Create variants attribute
+        # ----
+
+        # Create the variant list
+        self.var_attr_name = f"{pp_name}_variant"
+        self.var_attr_values = Utility.VecStringList()
+        for i in range(1, self.var_qtt + 1):
+            self.var_attr_values.append(f"variant {i}")
+
+        # Get variant attribute id
+        var_attr_has_id = BaseElements.AttributeService.GetAttributeID(self.document, self.var_attr_name)
+
+        # Check if the attribute already exists
+        if var_attr_has_id == -1:
+            self.var_attr_id = BaseElements.AttributeService.AddUserAttribute(
+                doc= self.document,
+                attributeType= BaseElements.AttributeService.AttributeType.Enum,
+                attributeName= self.var_attr_name,
+                attributeDefaultValue= "",
+                attributeMinValue= 0,
+                attributeMaxValue= 60,
+                attributeDimension= "",
+                attributeCtrlType= BaseElements.AttributeService.AttributeControlType.ComboBoxFixed,
+                attributeListValues= self.var_attr_values
+                )
+
+            if self.var_attr_id == -1:
+                string_from_table = self.local_str_table.get_string("9005", "Unable to create attribute:")
+                Utility.ShowMessageBox(
+                    text= f"{string_from_table} {self.var_attr_name}",
+                    flags= Utility.MB_OK
+                    )
+                self.end_of_processing()
+                return
 
         else:
+            string_from_table = self.local_str_table.get_string(
+                "9006",
+                "already exists.\nPlease delete it or choose another name for your object"
+                )
+            Utility.ShowMessageBox(
+                text= f"{self.var_attr_name} {string_from_table}",
+                flags= Utility.MB_OK
+                )
+            self.end_of_processing()
+            return
 
-            self.variants = {}
+        # ----
+        # Create group per variant
+        # ----
 
-            for variant_idx, (ref_pnt, adap_list) in enumerate(self.foils.items()):
-                variant_data = VariantData(ref_pnt= ref_pnt)
+        self.variants = {}
 
-                for adap in adap_list:
-                    ele = BaseElements.GetElement(adap)
-                    geo = adap.GetModelGeometry()
+        for variant_idx, (ref_pnt, adap_list) in enumerate(self.foils.items()):
+            variant_data = VariantData(ref_pnt= ref_pnt)
 
-                    if isinstance(ele, BasisElements.ModelElement2D):
-                        moved_geo = Geometry.Move(
-                            geo,
-                            Geometry.Vector2D(Geometry.Point2D(ref_pnt), Geometry.Point2D())
-                            )
-                        render_key = self.get_render_key(ele)
+            for adap in adap_list:
+                ele = BaseElements.GetElement(adap)
+                geo = adap.GetModelGeometry()
 
-                        if render_key is None:
-                            continue
+                if isinstance(ele, BasisElements.ModelElement2D):
+                    moved_geo = Geometry.Move(
+                        geo,
+                        Geometry.Vector2D(Geometry.Point2D(ref_pnt), Geometry.Point2D())
+                        )
+                    render_key = self.get_render_key(ele)
 
-                        if render_key not in variant_data.grouped_obj.groups_2d:
-                            variant_data.grouped_obj.groups_2d[render_key] = RenderGroup(
-                                key= render_key,
-                                common_properties= ele.GetCommonProperties()
-                                )
-                        variant_data.grouped_obj.groups_2d[render_key].geometries.append(moved_geo)
-
-                    elif isinstance(ele, BasisElements.ModelElement3D):
-                        moved_geo = Geometry.Move(
-                            geo,
-                            Geometry.Vector3D(Geometry.Point3D(ref_pnt), Geometry.Point3D())
-                            )
-                        render_key = self.get_render_key(ele)
-
-                        if render_key is None:
-                            continue
-
-                        if render_key not in variant_data.grouped_obj.groups_3d:
-                            variant_data.grouped_obj.groups_3d[render_key] = RenderGroup(
-                                key= render_key,
-                                common_properties= ele.GetCommonProperties()
-                                )
-                        variant_data.grouped_obj.groups_3d[render_key].geometries.append(moved_geo)
-
-                    else:
+                    if render_key is None:
                         continue
 
-                self.variants[variant_idx] = variant_data
+                    if render_key not in variant_data.grouped_obj.groups_2d:
+                        variant_data.grouped_obj.groups_2d[render_key] = RenderGroup(
+                            key= render_key,
+                            common_properties= ele.GetCommonProperties()
+                            )
+                    variant_data.grouped_obj.groups_2d[render_key].geometries.append(moved_geo)
 
-            script_name = self.build_ele.PPNameString.value
-            script_name_without_spaces = "".join(script_name.split())
-            self.pyp_path, self.py_path = self.get_pythonpart_location_paths(script_name_without_spaces)
+                elif isinstance(ele, BasisElements.ModelElement3D):
+                    moved_geo = Geometry.Move(
+                        geo,
+                        Geometry.Vector3D(Geometry.Point3D(ref_pnt), Geometry.Point3D())
+                        )
+                    render_key = self.get_render_key(ele)
 
-            self.all_render_groups_by_variant = {
-                variant_idx: (
-                    [(rk, rg, False) for rk, rg in variant_data.grouped_obj.groups_2d.items()] +
-                    [(rk, rg, True) for rk, rg in variant_data.grouped_obj.groups_3d.items()]
-                    )
-                for variant_idx, variant_data in self.variants.items()
-                }
+                    if render_key is None:
+                        continue
 
-            self.create_pyp_file()
-            self.create_py_file()
+                    if render_key not in variant_data.grouped_obj.groups_3d:
+                        variant_data.grouped_obj.groups_3d[render_key] = RenderGroup(
+                            key= render_key,
+                            common_properties= ele.GetCommonProperties()
+                            )
+                    variant_data.grouped_obj.groups_3d[render_key].geometries.append(moved_geo)
+
+                else:
+                    continue
+
+            self.variants[variant_idx] = variant_data
+
+        script_name = self.build_ele.PPNameString.value
+        script_name_without_spaces = "".join(script_name.split())
+        self.pyp_path, self.py_path = self.get_pythonpart_location_paths(script_name_without_spaces)
+
+        self.all_render_groups_by_variant = {
+            variant_idx: (
+                [(rk, rg, False) for rk, rg in variant_data.grouped_obj.groups_2d.items()] +
+                [(rk, rg, True) for rk, rg in variant_data.grouped_obj.groups_3d.items()]
+                )
+            for variant_idx, variant_data in self.variants.items()
+            }
+
+        # ----
+        # Create files for the new PythonPart
+        # ----
+
+        self.create_pyp_file()
+        self.create_py_file()
 
 
     def create_pyp_file(self) -> None:
@@ -742,19 +765,18 @@ class MyInteractor(BaseInteractor):
             attr_expand_param = ET.SubElement(attr_expand, "Parameters")
 
             # <Variant Attribute>
-            if self.var_qtt > 1:
-                var_param = ET.SubElement(attr_expand_param, "Parameter")
-                ET.SubElement(var_param, "Name").text = "VariantAttribute"
-                ET.SubElement(var_param, "Text").text = "Aspect"
-                ET.SubElement(var_param, "TextId").text = "e_ASPECT"
-                ET.SubElement(var_param, "Value").text = "0"
-                ET.SubElement(var_param, "ValueType").text = "Attribute"
-                ET.SubElement(var_param, "AttributeId").text = str(self.var_attr_id)
+            var_param = ET.SubElement(attr_expand_param, "Parameter")
+            ET.SubElement(var_param, "Name").text = "VariantAttribute"
+            ET.SubElement(var_param, "Text").text = "Aspect"
+            ET.SubElement(var_param, "TextId").text = "e_ASPECT"
+            ET.SubElement(var_param, "Value").text = "0"
+            ET.SubElement(var_param, "ValueType").text = "Attribute"
+            ET.SubElement(var_param, "AttributeId").text = str(self.var_attr_id)
 
-                # <Separator>
-                sep_param = ET.SubElement(attr_expand_param, "Parameter")
-                ET.SubElement(sep_param, "Name").text = "Separator"
-                ET.SubElement(sep_param, "ValueType").text = "Separator"
+            # <Separator>
+            sep_param = ET.SubElement(attr_expand_param, "Parameter")
+            ET.SubElement(sep_param, "Name").text = "Separator"
+            ET.SubElement(sep_param, "ValueType").text = "Separator"
 
             # <Dynamic Attributes>
             dyn_attr_param = ET.SubElement(attr_expand_param, "Parameter")
@@ -1052,4 +1074,10 @@ class MyScriptObject(BaseScriptObject):
                 text= f"{self.pp_name} {string_from_table}",
                 flags= Utility.MB_OK
                 )
-            keyboard.press_and_release('esc')
+            self.end_of_processing()
+
+
+    def end_of_processing(self) -> None:
+        """ Close the PythonPart
+        """
+        keyboard.press_and_release('esc')
