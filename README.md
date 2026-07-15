@@ -14,6 +14,7 @@ Asset-specific instructions are documented in dedicated READMEs so users can qui
 ## Available assets
 
 - [CircularReinforcement](./PythonPartsScripts/allplan_france/CircularReinforcement/README.md) — helper to create circular reinforcement.
+- [PythonPartBuilder](./PythonPartsScripts/allplan_france/PythonPartBuilder/README.md) — use to generate parametric elements.
 
 ## Installation
 

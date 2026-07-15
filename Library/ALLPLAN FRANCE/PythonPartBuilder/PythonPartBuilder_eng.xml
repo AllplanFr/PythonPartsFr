@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Element>
+    <StringTable>Allplan PythonParts string table</StringTable>
+
+    <!-- Script Title -->
+    <Item>
+        <TextId>1001</TextId>
+        <Text>PythonPart Builder</Text>
+    </Item>
+
+    <!-- Global Page -->
+    <Item>
+        <TextId>2001</TextId>
+        <Text>Global</Text>
+    </Item>
+
+    <Item>
+        <TextId>2002</TextId>
+        <Text>PythonPart name</Text>
+    </Item>
+
+    <Item>
+        <TextId>2003</TextId>
+        <Text>Geometry</Text>
+    </Item>
+
+    <Item>
+        <TextId>2004</TextId>
+        <Text>Attributes</Text>
+    </Item>
+
+    <!-- Options Page -->
+    <Item>
+        <TextId>3001</TextId>
+        <Text>Options</Text>
+    </Item>
+
+    <Item>
+        <TextId>3002</TextId>
+        <Text>Location</Text>
+    </Item>
+
+    <Item>
+        <TextId>3003</TextId>
+        <Text>File location</Text>
+    </Item>
+
+    <Item>
+        <TextId>3004</TextId>
+        <Text>Office</Text>
+    </Item>
+
+    <Item>
+        <TextId>3005</TextId>
+        <Text>Project</Text>
+    </Item>
+
+    <Item>
+        <TextId>3006</TextId>
+        <Text>User</Text>
+    </Item>
+
+    <!-- Script -->
+    <Item>
+        <TextId>9001</TextId>
+        <Text>No elements selected</Text>
+    </Item>
+
+    <Item>
+        <TextId>9002</TextId>
+        <Text>Select elements</Text>
+    </Item>
+
+    <Item>
+        <TextId>9003</TextId>
+        <Text>Reference point</Text>
+    </Item>
+
+    <Item>
+        <TextId>9004</TextId>
+        <Text>Project name not found:</Text>
+    </Item>
+
+    <Item>
+        <TextId>9005</TextId>
+        <Text>Unable to create attribute:</Text>
+    </Item>
+
+    <Item>
+        <TextId>9006</TextId>
+        <Text>already exists.
+Please delete it or choose another name for your object</Text>
+    </Item>
+
+    <Item>
+        <TextId>9007</TextId>
+        <Text>Please enter a name for your PythonPart</Text>
+    </Item>
+
+    <Item>
+        <TextId>9008</TextId>
+        <Text>Do you want to overwrite the existing</Text>
+    </Item>
+
+    <Item>
+        <TextId>9009</TextId>
+        <Text>Press OK or add a new variant</Text>
+    </Item>
+
+    <Item>
+        <TextId>9010</TextId>
+        <Text>successfully created!</Text>
+    </Item>
+
+ </Element>
