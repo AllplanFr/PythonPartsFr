@@ -48,6 +48,14 @@
                         <Enable>False</Enable>
                     </Parameter>
 
+                    <Parameter>
+                        <Name>ReadMeButton</Name>
+                        <Text>?</Text>
+                        <EventId>9999</EventId>
+                        <ValueType>Button</ValueType>
+                        <Value>https://github.com/AllplanFr/PythonPartsFr/blob/main/PythonPartBuilder/PythonPartsScripts/allplan_france/PythonPartBuilder/README.md</Value>
+                    </Parameter>
+
                 </Parameters>
             </Parameter>
 
