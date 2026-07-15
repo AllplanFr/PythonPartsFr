@@ -24,6 +24,11 @@
             <Value>1001</Value>
             <ValueType>Integer</ValueType>
         </Constant>
+        <Constant>
+            <Name>README</Name>
+            <Value>9999</Value>
+            <ValueType>Integer</ValueType>
+        </Constant>
     </Constants>
 
     <Page>
@@ -33,6 +38,28 @@
         <TextId>2001</TextId>
 
         <Parameters>
+
+            <Parameter>
+                <Name>ReadMeButtonRow</Name>
+                <Text>🌐</Text>
+                <ValueType>Row</ValueType>
+                <Parameters>
+
+                    <Parameter>
+                        <Name>Button</Name>
+                        <Text>?</Text>
+                        <EventId>README</EventId>
+                        <ValueType>Button</ValueType>
+                        <Value>https://github.com/AllplanFr/PythonPartsFr/blob/main/PythonPartsScripts/allplan_france/PythonPartBuilder/README.md</Value>
+                    </Parameter>
+
+                </Parameters>
+            </Parameter>
+
+            <Parameter>
+                <Name>Separator</Name>
+                <ValueType>Separator</ValueType>
+            </Parameter>
 
             <Parameter>
                 <Name>OKButtonRow</Name>
@@ -46,14 +73,6 @@
                         <Value>15213</Value>
                         <ValueType>PictureResourceButton</ValueType>
                         <Enable>False</Enable>
-                    </Parameter>
-
-                    <Parameter>
-                        <Name>ReadMeButton</Name>
-                        <Text>?</Text>
-                        <EventId>9999</EventId>
-                        <ValueType>Button</ValueType>
-                        <Value>https://github.com/AllplanFr/PythonPartsFr/blob/main/PythonPartBuilder/PythonPartsScripts/allplan_france/PythonPartBuilder/README.md</Value>
                     </Parameter>
 
                 </Parameters>
