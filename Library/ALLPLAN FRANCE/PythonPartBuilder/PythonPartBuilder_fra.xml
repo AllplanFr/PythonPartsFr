@@ -6,13 +6,111 @@
     <!-- Script Title -->
     <Item>
         <TextId>1001</TextId>
-        <Text>PythonPart Builder</Text>
+        <Text>Générateur de PythonPart</Text>
     </Item>
 
     <!-- Global Page -->
     <Item>
         <TextId>2001</TextId>
         <Text>Global</Text>
+    </Item>
+
+    <Item>
+        <TextId>2002</TextId>
+        <Text>Désignation du PythonPart</Text>
+    </Item>
+
+    <Item>
+        <TextId>2003</TextId>
+        <Text>Géométrie</Text>
+    </Item>
+
+    <Item>
+        <TextId>2004</TextId>
+        <Text>Attributs</Text>
+    </Item>
+
+    <!-- Options Page -->
+    <Item>
+        <TextId>3001</TextId>
+        <Text>Options</Text>
+    </Item>
+
+    <Item>
+        <TextId>3002</TextId>
+        <Text>Emplacement</Text>
+    </Item>
+
+    <Item>
+        <TextId>3003</TextId>
+        <Text>Emplacement du fichier</Text>
+    </Item>
+
+    <Item>
+        <TextId>3004</TextId>
+        <Text>Bureau</Text>
+    </Item>
+
+    <Item>
+        <TextId>3005</TextId>
+        <Text>Projet</Text>
+    </Item>
+
+    <Item>
+        <TextId>3006</TextId>
+        <Text>Utilisateur</Text>
+    </Item>
+
+    <!-- Script -->
+    <Item>
+        <TextId>9001</TextId>
+        <Text>Aucun élément sélectionné</Text>
+    </Item>
+
+    <Item>
+        <TextId>9002</TextId>
+        <Text>Sélectionner les éléments</Text>
+    </Item>
+
+    <Item>
+        <TextId>9003</TextId>
+        <Text>Point de référence</Text>
+    </Item>
+
+    <Item>
+        <TextId>9004</TextId>
+        <Text>Nom du projet inconnu :</Text>
+    </Item>
+
+    <Item>
+        <TextId>9005</TextId>
+        <Text>Impossible de créer l'attribut :</Text>
+    </Item>
+
+    <Item>
+        <TextId>9006</TextId>
+        <Text>existe déjà.
+Merci de le supprimer ou de choisir un autre nom pour votre objet</Text>
+    </Item>
+
+    <Item>
+        <TextId>9007</TextId>
+        <Text>Veuillez saisir un nom pour votre PythonPart</Text>
+    </Item>
+
+    <Item>
+        <TextId>9008</TextId>
+        <Text>Voulez-vous écraser</Text>
+    </Item>
+
+    <Item>
+        <TextId>9009</TextId>
+        <Text>Cliquez sur OK ou ajouter une variante</Text>
+    </Item>
+
+    <Item>
+        <TextId>9010</TextId>
+        <Text>créé avec succès !</Text>
     </Item>
 
  </Element>
