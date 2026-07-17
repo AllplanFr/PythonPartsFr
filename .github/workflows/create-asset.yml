@@ -87,7 +87,19 @@ jobs:
             --destination repo-work \
             --asset-name "${{ github.event.inputs.asset_name }}" \
             --asset-title-en "${{ github.event.inputs.asset_title_en }}" \
-            --asset-title-fr "${{ github.event.inputs.asset_title_fr }}"
+            --asset-title-fr "${{ github.event.inputs.asset_title_fr }}" \
+            --run-id "${{ github.run_id }}"
+
+      - name: Verify no placeholder remains
+        working-directory: repo-work
+        run: |
+          if grep -R --include="*.py" --include="*.pyp" --include="*.xml" --include="*.md" \
+             --include="*.eng" --include="*.fra" \
+             -l "__ASSET_NAME__\|__ASSET_TITLE_EN__\|__ASSET_TITLE_FR__\|__ASSET_UUID__\|__CURRENT_YEAR__" .; then
+            echo "Error: unresolved placeholders remain in generated files."
+            exit 1
+          fi
+          echo "No placeholder remaining. OK."
 
       - name: Commit generated asset
         working-directory: repo-work
