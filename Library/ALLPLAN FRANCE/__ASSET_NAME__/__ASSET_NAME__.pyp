@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Element xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd'>
+<Element
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='https://pythonparts.allplan.com/__ALLPLAN_SCHEMA_VERSION__/schemas/PythonPart.xsd'>
 
     <LanguageFile>__ASSET_NAME__</LanguageFile>
 
