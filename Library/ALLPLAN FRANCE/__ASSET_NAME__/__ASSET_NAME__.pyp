@@ -7,7 +7,7 @@
 
     <Script>
         <Name>allplan_france\__ASSET_NAME__\__init__.py</Name>
-        <Title>	__ASSET_TITLE_EN__</Title>
+        <Title>__ASSET_TITLE_EN__</Title>
         <TextId>1001</TextId>
         <Version>1.0</Version>
         <Uuid>__ASSET_UUID__</Uuid>
