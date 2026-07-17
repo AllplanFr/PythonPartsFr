@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ Interactor PythonPart
 
-Copyright © 2026 ALLPLAN FRANCE
+Copyright © __CURRENT_YEAR__ ALLPLAN FRANCE
 """
 from __future__ import annotations
 
@@ -17,18 +17,19 @@ import NemAll_Python_Utility            as Utility
 from BaseInteractor                   import BaseInteractor
 from BaseInteractor                   import BaseInteractorData
 
+from CreateElementResult              import CreateElementResult
 from BuildingElement                  import BuildingElement
 from BuildingElementListService       import BuildingElementListService
 from BuildingElementPaletteService    import BuildingElementPaletteService
 from BuildingElementComposite         import BuildingElementComposite
 from BuildingElementControlProperties import BuildingElementControlProperties
-from CreateElementResult              import CreateElementResult
+from BuildingElementAttributeList     import BuildingElementAttributeList
+from TypeCollections.ModelEleList     import ModelEleList
 from StringTableService               import StringTableService
 from ControlPropertiesUtil            import ControlPropertiesUtil
 from PythonPartUtil                   import PythonPartUtil
 from PythonPartTransaction            import PythonPartTransaction
 
-from TypeCollections.ModelEleList            import ModelEleList
 from TypeCollections.ModificationElementList import ModificationElementList
 
 
@@ -51,11 +52,11 @@ class MyInteractor(BaseInteractor):
         self.palette_service: BuildingElementPaletteService = None
 
         self.palette_service = BuildingElementPaletteService(
-            build_ele_list= self.build_ele_list,
-            build_ele_composite= interactor_data.build_ele_composite,
-            build_ele_script= self.build_ele.script_name,
-            build_ele_ctrl_props_list= self.control_props_list,
-            picture_path= f"{self.build_ele.pyp_file_path}\\"
+            build_ele_list=self.build_ele_list,
+            build_ele_composite=interactor_data.build_ele_composite,
+            build_ele_script=self.build_ele.script_name,
+            build_ele_ctrl_props_list=self.control_props_list,
+            picture_path=f"{self.build_ele.pyp_file_path}\\"
             )
         self.palette_service.show_palette(self.build_ele.pyp_file_name)
 

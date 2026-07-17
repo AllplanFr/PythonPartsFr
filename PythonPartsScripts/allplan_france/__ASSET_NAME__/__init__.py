@@ -1,4 +1,4 @@
-""" Entry point for AssetName using Interactor PythonPart
+""" Entry point for __ASSET_NAME__ using Interactor PythonPart
 
 Allplan discovers a PythonPart package through two mandatory module-level
 functions defined here:
@@ -10,7 +10,7 @@ functions defined here:
 Everything else lives in the sub-modules:
 - ``main.py`` — Allplan event handling
 
-Copyright © 2026 ALLPLAN FRANCE
+Copyright © __CURRENT_YEAR__ ALLPLAN FRANCE
 """
 import NemAll_Python_IFW_ElementAdapter as ElementAdapter
 
