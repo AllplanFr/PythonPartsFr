@@ -1,4 +1,4 @@
-""" Entry point for AssetName using ScriptObject PythonPart
+""" Entry point for __ASSET_NAME__ using ScriptObject PythonPart
 
 Allplan discovers a PythonPart package through two mandatory module-level
 functions defined here:
@@ -9,7 +9,7 @@ functions defined here:
 Everything else lives in the sub-modules:
 - ``main.py`` — Allplan event handling
 
-Copyright © 2026 ALLPLAN FRANCE
+Copyright © __CURRENT_YEAR__ ALLPLAN FRANCE
 """
 from BaseScriptObject import BaseScriptObject
 from BaseScriptObject import BaseScriptObjectData

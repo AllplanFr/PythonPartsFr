@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ ScriptObject PythonPart
 
-Copyright © 2026 ALLPLAN FRANCE
+Copyright © __CURRENT_YEAR__ ALLPLAN FRANCE
 """
 from __future__ import annotations
 

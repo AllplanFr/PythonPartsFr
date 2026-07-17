@@ -6,7 +6,7 @@
     <!-- Script Title -->
     <Item>
         <TextId>1001</TextId>
-        <Text>Asset title</Text>
+        <Text>__ASSET_TITLE_FR__</Text>
     </Item>
 
     <!-- Global Page -->
