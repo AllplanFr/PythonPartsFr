@@ -5,10 +5,11 @@ import argparse
 import datetime
 import shutil
 import uuid
+
 from pathlib import Path
 
 # Text files remaining in UTF-8 (including all .xml files, regardless of suffix)
-TEXT_EXTENSIONS_UTF8 = {
+UTF8_EXTENSIONS = {
     ".py",
     ".pyp",
     ".xml",
@@ -17,7 +18,7 @@ TEXT_EXTENSIONS_UTF8 = {
     }
 
 # Only direct .eng / .fra extensions are expected to be ANSI (Windows-1252 / cp1252)
-ANSI_EXTENSIONS = {
+CP1252_EXTENSIONS = {
     ".eng",
     ".fra"
     }
@@ -65,6 +66,31 @@ def generate_unique_uuid_v5(asset_name: str,
     return str(uuid.uuid5(ASSET_UUID_NAMESPACE, unique_seed))
 
 
+def compute_allplan_schema_version(now: datetime.datetime | None = None) -> str:
+    """ Compute the current Allplan version year for the PYP schema URL.
+
+    Allplan releases a new version every year, generally in October,
+    named after the following year. Before October, the current Allplan
+    version matches the calendar year. From October onward, it matches
+    the calendar year plus one.
+
+    Uses the GitHub Actions runner's UTC time by default; exact timezone
+    precision is not significant given the yearly granularity of this value.
+
+    Args:
+        now: reference datetime, defaults to the current UTC time.
+
+    Returns:
+        String representation of the Allplan schema version year.
+    """
+    now = now or datetime.datetime.now()
+    year = now.year
+    if now.month >= 10:
+        year += 1
+
+    return str(year)
+
+
 def replace_in_path(path_str:   str,
                     asset_name: str) -> str:
     """ Replace the asset name placeholder in a file or directory path.
@@ -79,21 +105,23 @@ def replace_in_path(path_str:   str,
     return path_str.replace(PATH_PLACEHOLDER_ASSET_NAME, asset_name)
 
 
-def replace_in_content(content:        str,
-                       asset_name:     str,
-                       asset_title_en: str,
-                       asset_title_fr: str,
-                       asset_uuid:     str,
-                       current_year:   str) -> str:
+def replace_in_content(content:                str,
+                       asset_name:             str,
+                       asset_title_en:         str,
+                       asset_title_fr:         str,
+                       asset_uuid:             str,
+                       current_year:           str,
+                       allplan_schema_version: str) -> str:
     """ Replace all known placeholders inside a file's text content.
 
     Args:
-        content:        original file content read from the template.
-        asset_name:     real technical asset name.
-        asset_title_en: asset title in English.
-        asset_title_fr: asset title in French.
-        asset_uuid:     generated UUID v5 for this asset.
-        current_year:   current year as a string, used for the copyright notice.
+        content:                original file content read from the template.
+        asset_name:             real technical asset name.
+        asset_title_en:         asset title in English.
+        asset_title_fr:         asset title in French.
+        asset_uuid:             generated UUID v5 for this asset.
+        current_year:           current year as a string, used for the copyright notice.
+        allplan_schema_version: computed Allplan schema version year.
 
     Returns:
         Content with all placeholders substituted.
@@ -103,6 +131,7 @@ def replace_in_content(content:        str,
     content = content.replace("__ASSET_TITLE_FR__", asset_title_fr)
     content = content.replace("__ASSET_UUID__", asset_uuid)
     content = content.replace("__CURRENT_YEAR__", current_year)
+    content = content.replace("__ALLPLAN_SCHEMA_VERSION__", allplan_schema_version)
     return content
 
 
@@ -118,33 +147,35 @@ def get_encoding(path: Path) -> str | None:
     """
     suffix = path.suffix.lower()
 
-    if suffix in ANSI_EXTENSIONS:
+    if suffix in CP1252_EXTENSIONS:
         return "cp1252"
 
-    if suffix in TEXT_EXTENSIONS_UTF8:
+    if suffix in UTF8_EXTENSIONS:
         return "utf-8"
 
     return None  # binary file (e.g. .jpg) -> raw copy
 
 
-def copy_template(source:         Path,
-                  destination:    Path,
-                  asset_name:     str,
-                  asset_title_en: str,
-                  asset_title_fr: str,
-                  asset_uuid:     str,
-                  current_year:   str) -> None:
+def copy_template(source:                 Path,
+                  destination:            Path,
+                  asset_name:             str,
+                  asset_title_en:         str,
+                  asset_title_fr:         str,
+                  asset_uuid:             str,
+                  current_year:           str,
+                  allplan_schema_version: str) -> None:
     """ Copy the template tree to the destination, renaming paths and
     substituting placeholders in text files.
 
     Args:
-        source:         root directory of the exported template.
-        destination:    root directory of the target repository workspace.
-        asset_name:     real technical asset name.
-        asset_title_en: asset title in English.
-        asset_title_fr: asset title in French.
-        asset_uuid:     generated UUID v5 for this asset.
-        current_year:   current year as a string.
+        source:                 root directory of the exported template.
+        destination:            root directory of the target repository workspace.
+        asset_name:             real technical asset name.
+        asset_title_en:         asset title in English.
+        asset_title_fr:         asset title in French.
+        asset_uuid:             generated UUID v5 for this asset.
+        current_year:           current year as a string.
+        allplan_schema_version: computed Allplan schema version year.
     """
     for src in sorted(source.rglob("*"), key=lambda p: (len(p.parts), str(p))):
         rel = src.relative_to(source)
@@ -165,7 +196,13 @@ def copy_template(source:         Path,
         # The source template in the GitHub repository is always UTF-8
         content = src.read_text(encoding="utf-8")
         content = replace_in_content(
-            content, asset_name, asset_title_en, asset_title_fr, asset_uuid, current_year
+            content=content,
+            asset_name=asset_name,
+            asset_title_en=asset_title_en,
+            asset_title_fr=asset_title_fr,
+            asset_uuid=asset_uuid,
+            current_year=current_year,
+            allplan_schema_version=allplan_schema_version
             )
 
         if encoding == "cp1252":
@@ -177,6 +214,9 @@ def copy_template(source:         Path,
 def main() -> None:
     """ Entry point: parse arguments, generate asset metadata, and copy the
     template into the destination workspace with all placeholders resolved.
+
+    Raises:
+        FileNotFoundError: if the source template directory does not exist.
     """
     args = parse_args()
     source = Path(args.source).resolve()
@@ -187,6 +227,7 @@ def main() -> None:
 
     asset_uuid = generate_unique_uuid_v5(args.asset_name, args.run_id)
     current_year = str(datetime.datetime.now().year)
+    allplan_schema_version = compute_allplan_schema_version()
 
     copy_template(
         source=source,
@@ -195,9 +236,9 @@ def main() -> None:
         asset_title_en=args.asset_title_en,
         asset_title_fr=args.asset_title_fr,
         asset_uuid=asset_uuid,
-        current_year=current_year
+        current_year=current_year,
+        allplan_schema_version=allplan_schema_version
         )
-
 
 if __name__ == "__main__":
     main()

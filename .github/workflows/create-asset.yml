@@ -95,7 +95,7 @@ jobs:
         run: |
           if grep -R --include="*.py" --include="*.pyp" --include="*.xml" --include="*.md" \
              --include="*.eng" --include="*.fra" \
-             -l "__ASSET_NAME__\|__ASSET_TITLE_EN__\|__ASSET_TITLE_FR__\|__ASSET_UUID__\|__CURRENT_YEAR__" .; then
+             -l "__ASSET_NAME__\|__ASSET_TITLE_EN__\|__ASSET_TITLE_FR__\|__ASSET_UUID__\|__CURRENT_YEAR__\|__ALLPLAN_SCHEMA_VERSION__" .; then
             echo "Error: unresolved placeholders remain in generated files."
             exit 1
           fi
