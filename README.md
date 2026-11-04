@@ -13,6 +13,7 @@ Asset-specific instructions are documented in dedicated READMEs so users can qui
 
 ## Available assets
 
+- [ArmaturiaSlabLabel](./PythonPartsScripts/allplan_france/ArmaturiaSlabLabel/README.md) — use to annotate slabs.
 - [CircularReinforcement](./PythonPartsScripts/allplan_france/CircularReinforcement/README.md) — helper to create circular reinforcement.
 - [PythonPartBuilder](./PythonPartsScripts/allplan_france/PythonPartBuilder/README.md) — use to generate parametric elements.
 
