@@ -4,11 +4,11 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd'>
 
-    <LanguageFile>ArmaturiaSlabLabel</LanguageFile>
+    <LanguageFile>SlabLabel</LanguageFile>
 
     <Script>
-        <Name>allplan_france\ArmaturiaSlabLabel\__init__.py</Name>
-        <Title>Armaturia - slab label</Title>
+        <Name>allplan_france\Engineering\SlabLabel\__init__.py</Name>
+        <Title>Slab label</Title>
         <TextId>1001</TextId>
         <AttributeEvent>True</AttributeEvent>
         <MoveEvent>True</MoveEvent>
@@ -54,7 +54,7 @@
                         <EventId>README</EventId>
                         <ValueType>Button</ValueType>
                         <Value>
-                            https://github.com/AllplanFr/PythonPartsFr/blob/main/PythonPartsScripts/allplan_france/ArmaturiaSlabLabel/README.md</Value>
+                            https://github.com/AllplanFr/PythonPartsFr/blob/main/PythonPartsScripts/allplan_france/Engineering/SlabLabel/README.md</Value>
                     </Parameter>
 
                 </Parameters>

@@ -1,6 +1,6 @@
-# ArmaturiaSlabLabel | ALLPLAN FRANCE PythonParts Collection
+# SlabLabel | ALLPLAN FRANCE PythonParts Collection
 
-`ArmaturiaSlabLabel` is a PythonPart for ALLPLAN that creates associative slab labels showing elevations, thickness, spanning directions and an optional load attribute.
+`SlabLabel` is a PythonPart for ALLPLAN that creates associative slab labels showing elevations, thickness, spanning directions and an optional load attribute.
 
 ## What this asset does
 
@@ -20,15 +20,15 @@ Spanning arrows are annotation graphics, not the result of a structural analysis
 
 After installation, the asset is available in the ALLPLAN Library under:
 
-`Office` → `ALLPLAN FRANCE` → `Armaturia - slab label`
+`Office` → `ALLPLAN FRANCE` → `Engineering` → `Slab label`
 
-In the French interface, the asset is named `Armaturia - annotation de dalle`.
+In the French interface, the `Engineering` folder is displayed as `Ingénierie`, and the asset is named `Annotation de dalle`.
 
 ## How to use it
 
 1. Open the ALLPLAN Library.
-2. Navigate to `Office` → `ALLPLAN FRANCE`.
-3. Start `Armaturia - slab label`.
+2. Navigate to `Office` → `ALLPLAN FRANCE` → `Engineering`.
+3. Start `Slab label`.
 4. Set the display and format options in the PythonPart property palette.
 5. Select the slabs to annotate in the active drawing file and complete the selection.
 6. The tool creates one associated label per selected slab.

@@ -10,6 +10,7 @@ from typing import cast
 import NemAll_Python_BaseElements    as BaseElements
 import NemAll_Python_Geometry        as Geometry
 import NemAll_Python_AllplanSettings as Settings
+import NemAll_Python_Reinforcement   as Reinforcement
 
 from BuildingElement              import BuildingElement
 from CreateElementResult          import CreateElementResult
@@ -25,6 +26,10 @@ from TypeCollections.ModelEleList import ModelEleList
 
 from Utils.HandleCreator                import HandleCreator
 from Utils.Geometry.TransformationStack import TransformationStack
+
+from StdReinfShapeBuilder                              import LinearBarPlacementBuilder
+from StdReinfShapeBuilder.ReinforcementShapeProperties import ReinforcementShapeProperties
+from StdReinfShapeBuilder.BarShapeSideDataList         import BarShapeSideDataList
 
 
 class MyScriptObject(BaseScriptObject):
@@ -47,9 +52,7 @@ class MyScriptObject(BaseScriptObject):
         self.trans_stack = TransformationStack()
 
         self.com_prop = BaseElements.CommonProperties()
-
-        self.help_prop = BaseElements.CommonProperties()
-        self.help_prop.HelpConstruction = True
+        self.reinf_prop = BaseElements.CommonProperties()
 
 
     def start_input(self) -> None:
@@ -68,38 +71,44 @@ class MyScriptObject(BaseScriptObject):
         # Get parameters from the palette
         # ----
 
-        create_as_pp = self.build_ele.CreateAsPythonPart.value
         zone_name = self.build_ele.ZoneName.value
 
         center_point = Geometry.Point2D()
         inner_radius = self.build_ele.InnerRadius.value
         outer_radius = self.build_ele.OuterRadius.value
         rotation = self.build_ele.Rotation.value
+        bottom_plane = self.build_ele.BottomPlane.value
+        z_offset = bottom_plane.GetAbsBottomElevation()
+
         concrete_cover = self.build_ele.ReinfConcreteCover.value
+        circ_rebar_diam = self.build_ele.CircularBarDiameter.value
         circ_rebar_length = self.build_ele.CircularBarLength.value
         circ_rebar_spacing = self.build_ele.CircularBarSpacing.value
 
         form_choice = self.build_ele.FormRadioGroup.value
         distribution_direction = self.build_ele.DistributionDirection.value
 
-        convert_type = self.build_ele.ConvertRadioGroup.value
-        bottom_plane = self.build_ele.BottomPlane.value
+        has_distribution = self.build_ele.DistributionCheckBox.value
+        distrib_type = self.build_ele.DistribTypeRadioGroup.value
+        distrib_count = self.build_ele.DistribCount.value
+        distrib_spacing = self.build_ele.DistribSpacing.value
+        distrib_height = self.build_ele.DistribHeight.value
+
         self.com_prop = self.build_ele.CommonProp.value
+        self.reinf_prop = self.build_ele.ReinfProp.value
 
         # ----
-        # Init objects
+        # Transformation stack
         # ----
 
         self.trans_stack = TransformationStack()
         self.trans_stack.rotate_z(rotation)
-        model_ele_list = ModelEleList(trans_stack= self.trans_stack)
-        pyp_util = PythonPartUtil()
-        attr_list = BuildingElementAttributeList()
-        attr_list.add_attribute(507, zone_name)
 
         # ----
         # Geometry
         # ----
+
+        model_ele_list = ModelEleList(com_prop= self.com_prop, trans_stack= self.trans_stack)
 
         outer_circle = Geometry.Arc2D(center_point, outer_radius)
         inner_circle = Geometry.Arc2D(center_point, inner_radius)
@@ -110,7 +119,7 @@ class MyScriptObject(BaseScriptObject):
             inner_circle,
             ref_line,
             ):
-            model_ele_list.append_geometry_2d(geo, self.help_prop)
+            model_ele_list.append_geometry_2d(geo)
 
         # ----
         # Reinforcement helpers
@@ -162,41 +171,89 @@ class MyScriptObject(BaseScriptObject):
                 arc_list.append(arc)
 
         # ----
+        # Reinforcement
+        # ----
+
+        reinforcement = []
+
+        shape_properties = ReinforcementShapeProperties.rebar(
+            diameter= circ_rebar_diam,
+            bending_roller= 4,
+            steel_grade= -1,
+            concrete_grade= -1,
+            bending_shape_type= Reinforcement.BendingShapeType.BarWithArc
+            )
+
+        for idx, arc in enumerate(arc_list):
+
+            arc = Geometry.Rotate(arc, Geometry.Point2D(), Geometry.Angle.FromDeg(rotation))
+
+            shape_data = BarShapeSideDataList([0, (arc, 0), 0])
+
+            shape_builder = Reinforcement.ReinforcementShapeBuilder()
+            shape_builder.AddSides(shape_data)
+
+            shape = shape_builder.CreateShape(shape_properties)
+            shape.Move(Geometry.Vector3D(0, 0, z_offset))
+
+            if has_distribution:
+                if distrib_type == 0:
+                    placement = LinearBarPlacementBuilder.create_linear_bar_placement_from_to_by_count(
+                        position= idx + 1,
+                        shape= shape,
+                        from_point= Geometry.Point3D(),
+                        to_point= Geometry.Point3D(0, 0, distrib_height),
+                        concrete_cover_left= concrete_cover,
+                        concrete_cover_right= concrete_cover,
+                        bar_count= distrib_count
+                        )
+                else:
+                    placement = LinearBarPlacementBuilder.create_linear_bar_placement_from_to_by_dist(
+                        position= idx + 1,
+                        shape= shape,
+                        from_point= Geometry.Point3D(),
+                        to_point= Geometry.Point3D(0, 0, distrib_height),
+                        concrete_cover_left= concrete_cover,
+                        concrete_cover_right= concrete_cover,
+                        bar_distance= distrib_spacing
+                        )
+
+            else:
+                placement = Reinforcement.BarPlacement(
+                    positionNumber= idx + 1,
+                    barCount= 1,
+                    distVec= Geometry.Vector3D(),
+                    startPnt= Geometry.Point3D(),
+                    endPnt= Geometry.Point3D(),
+                    bendingShape= shape
+                    )
+
+            placement.SetCommonProperties(self.reinf_prop)
+            reinforcement.append(placement)
+
+        # ----
+        # Attributes
+        # ----
+
+        attr_list = BuildingElementAttributeList()
+        attr_list.add_attribute(507, zone_name)
+
+        # ----
         # Create PythonPart
         # ----
 
-        if create_as_pp:
-
-            for arc in arc_list:
-                model_ele_list.append_geometry_2d(arc, self.help_prop)
-
-            pyp_util.add_pythonpart_view_2d(model_ele_list)
-            pyp_util.add_attribute_list(attr_list)
-            pythonpart = pyp_util.create_pythonpart(
-                    build_ele= self.build_ele,
-                    type_display_name= "CircularRebarHelper"
-                    )
-            return CreateElementResult(
-                elements= pythonpart,
-                handles= self.create_handles())
-
-        # ----
-        # Convert into ALLPLAN objects
-        # ----
-
-        model_ele_list = ModelEleList(trans_stack= self.trans_stack)
-
-        for arc in arc_list:
-            if convert_type == '2D':
-                model_ele_list.append_geometry_2d(arc, self.com_prop)
-            else:
-                abs_bottom_elevation = bottom_plane.AbsBottomElevation
-                arc=Geometry.Arc3D(arc)
-                arc = Geometry.Move(arc, Geometry.Vector3D(0, 0, abs_bottom_elevation))
-                model_ele_list.append_geometry_3d(arc, self.com_prop)
-            model_ele_list.set_element_attributes(-1, attr_list.get_attribute_list())
-
-        return CreateElementResult(model_ele_list)
+        pyp_util = PythonPartUtil(common_props= self.com_prop)
+        pyp_util.add_pythonpart_view_2d(model_ele_list)
+        pyp_util.add_reinforcement_elements(reinforcement)
+        pyp_util.add_attribute_list(attr_list)
+        pythonpart = pyp_util.create_pythonpart(
+                build_ele= self.build_ele,
+                type_display_name= "PyCircularRebar"
+                )
+        return CreateElementResult(
+            elements= pythonpart,
+            handles= self.create_handles()
+            )
 
 
     def create_handles(self) -> list[HandleProperties]:
@@ -353,7 +410,7 @@ class MyScriptObject(BaseScriptObject):
                         raise ValueError("Each spacing value must be greater than zero.")
 
                     next_radius = current_radius - spacing
-                    if next_radius <= radius_min:
+                    if next_radius < radius_min:
                         break
 
                     radii.append(next_radius)

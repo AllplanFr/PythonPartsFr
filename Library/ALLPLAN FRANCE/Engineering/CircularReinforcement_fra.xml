@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Element>
+    <StringTable>Allplan PythonParts string table</StringTable>
+
+    <!-- Script Title -->
+    <Item>
+        <TextId>1001</TextId>
+        <Text>Armatures circulaires</Text>
+    </Item>
+
+    <!-- Global Page -->
+    <Item>
+        <TextId>2001</TextId>
+        <Text>Global</Text>
+    </Item>
+
+    <Item>
+        <TextId>2002</TextId>
+        <Text>Désignation</Text>
+    </Item>
+
+    <Item>
+        <TextId>2003</TextId>
+        <Text>Désignation</Text>
+    </Item>
+
+    <Item>
+        <TextId>2004</TextId>
+        <Text>Géométrie</Text>
+    </Item>
+
+    <Item>
+        <TextId>2005</TextId>
+        <Text>Rayon intérieur</Text>
+    </Item>
+
+    <Item>
+        <TextId>2006</TextId>
+        <Text>Rayon extérieur</Text>
+    </Item>
+
+    <Item>
+        <TextId>2007</TextId>
+        <Text>Rotation globale</Text>
+    </Item>
+
+    <Item>
+        <TextId>2008</TextId>
+        <Text>Bord inférieur</Text>
+    </Item>
+
+    <Item>
+        <TextId>2009</TextId>
+        <Text>Armatures</Text>
+    </Item>
+
+    <Item>
+        <TextId>2010</TextId>
+        <Text>Enrobage</Text>
+    </Item>
+
+    <Item>
+        <TextId>2011</TextId>
+        <Text>Diamètre de barre</Text>
+    </Item>
+
+    <Item>
+        <TextId>2012</TextId>
+        <Text>Forme</Text>
+    </Item>
+
+    <Item>
+        <TextId>2013</TextId>
+        <Text>A</Text>
+    </Item>
+
+    <Item>
+        <TextId>2014</TextId>
+        <Text>B</Text>
+    </Item>
+
+    <Item>
+        <TextId>2015</TextId>
+        <Text>Longueur de barre</Text>
+    </Item>
+
+    <Item>
+        <TextId>2016</TextId>
+        <Text>Direction</Text>
+    </Item>
+
+    <Item>
+        <TextId>2017</TextId>
+        <Text>de l'intérieur vers l'extérieur</Text>
+    </Item>
+
+    <Item>
+        <TextId>2018</TextId>
+        <Text>de l'extérieur vers l'intérieur</Text>
+    </Item>
+
+    <Item>
+        <TextId>2019</TextId>
+        <Text>Espacement des barres</Text>
+    </Item>
+
+    <Item>
+        <TextId>2020</TextId>
+        <Text>Définissez les espacements entre les barres, en millimètres.
+
+• Espacement constant : 250
+  Répète un espacement de 250 mm jusqu’à la limite de la zone.
+
+• Répétitions : 150 ; 3*250 ; 500
+  Applique un espacement de 150 mm, puis trois de 250 mm, puis un de 500 mm (dans la limite de la zone).
+
+Les espacements suivent le sens de distribution choisi et doivent être strictement positifs.</Text>
+    </Item>
+
+    <Item>
+        <TextId>2021</TextId>
+        <Text>Activer la répartition</Text>
+    </Item>
+
+    <Item>
+        <TextId>2022</TextId>
+        <Text>Par</Text>
+    </Item>
+
+    <Item>
+        <TextId>2023</TextId>
+        <Text>Quantité</Text>
+    </Item>
+
+    <Item>
+        <TextId>2024</TextId>
+        <Text>Espacement</Text>
+    </Item>
+
+    <Item>
+        <TextId>2025</TextId>
+        <Text>Quantité</Text>
+    </Item>
+
+    <Item>
+        <TextId>2026</TextId>
+        <Text>Espacement</Text>
+    </Item>
+
+    <Item>
+        <TextId>2027</TextId>
+        <Text>Hauteur de répartition</Text>
+    </Item>
+
+    <!-- Options Page -->
+    <Item>
+        <TextId>3001</TextId>
+        <Text>Options</Text>
+    </Item>
+
+    <Item>
+        <TextId>3002</TextId>
+        <Text>Format</Text>
+    </Item>
+
+    <Item>
+        <TextId>3003</TextId>
+        <Text>PythonPart</Text>
+    </Item>
+
+    <Item>
+        <TextId>3004</TextId>
+        <Text>Armatures</Text>
+    </Item>
+
+</Element>
