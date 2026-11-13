@@ -30,6 +30,24 @@ been fabricated, and no home-manifest /2 or worktree snapshot contract was added
 The frontend close_home source connection has been added locally after import;
 the original frontend inventory below remains the unmodified export baseline.
 
+## Manual home closure recipe - 2026-11-13
+
+Candidate: `home-close-5dd43513-candidate`.
+Frontend bundle source commit: `5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee`.
+Assembly used two subsequent local Python adaptations in
+allplan_tools/assemble_package.py and allplan_tools/runtime/home_host.py to align
+the bundle source and HOME_REVISION; the entire candidate is not a clean Git
+state at that commit.
+The user confirmed that Quit -> Cancel kept the home open and usable, and
+Quit -> Confirm effectively closed the window.
+The PID 28916 session log contained no errors, but no explicit close_home call
+trace. The runner exited with code 0.
+PIDs 28916 and 8180 were absent at collection; no residual process was found
+through current parent chains or candidate/profile command-line matching.
+The absence of every detached descendant cannot be certified because no initial
+process tree was retained.
+Launching from the existing Allplan entry was not tested.
+
 ## Working-tree files
 
 The staged diff check with

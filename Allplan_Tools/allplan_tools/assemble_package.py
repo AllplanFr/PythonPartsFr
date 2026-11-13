@@ -12,7 +12,7 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-HOME_REVISION = "980fff2f09a9e8c819b24287d53561992baddb99"
+HOME_REVISION = "5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee"
 AIM_REVISION = "0b05206ba6c1ce6d7ef9fcc9e6df7879601bfc65"
 PYTHON_ITEMS = ("application", "inspect_allplan.py", "launcher.py", "requirements.txt",
                 "pyproject.toml", "setup.py", "MANIFEST.in")
@@ -57,7 +57,8 @@ def assemble(out, python_exe, profile, candidate):
         shutil.copytree(HERE / name, out / name, ignore=IGNORED)
     for name in ("palette-normalization.json", "validated-icons-reference.json"):
         shutil.copy2(HERE / name, out / name)
-    shutil.copytree(HERE / "home", out / ("home-" + HOME_REVISION[:7]))
+    shutil.copytree(REPO / "artifacts" / "home-5dd43513",
+                    out / ("home-" + HOME_REVISION[:7]))
     wrappers = out / "pythonparts" / "AllplanToolsTest"
     (wrappers / "entry-config.example.json").unlink()
     write_json(wrappers / "entry-config.json", {"testRoot": str(out)})
