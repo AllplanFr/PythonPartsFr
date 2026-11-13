@@ -1,0 +1,26 @@
+{
+  "externalWithDefinitions": {
+    "projectInstallation": {"status": "unassociated"},
+    "prjtoolsAvailable": false,
+    "fileSaveAvailable": true,
+    "toolRequired": false
+  },
+  "associatedWithTool": {
+    "projectInstallation": {"status": "associated"},
+    "prjtoolsAvailable": true,
+    "fileSaveAvailable": true,
+    "toolRequired": true
+  },
+  "associatedWithoutTool": {
+    "projectInstallation": {"status": "associated"},
+    "prjtoolsAvailable": false,
+    "fileSaveAvailable": true,
+    "toolRequired": true
+  },
+  "unknown": {
+    "projectInstallation": {"status": "unknown"},
+    "prjtoolsAvailable": false,
+    "fileSaveAvailable": false,
+    "toolRequired": null
+  }
+}

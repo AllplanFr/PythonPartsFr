@@ -1,0 +1,6 @@
+# Repertoires dont les fichiers sont verifies par empreinte SHA-256 (work-manifest, home-manifest, validated-icons-reference) : octets identiques exiges.
+overlay/** -text
+home/** -text
+library/** -text
+template/** -text
+pythonparts/** -text

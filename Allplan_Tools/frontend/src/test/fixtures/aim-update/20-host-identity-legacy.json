@@ -1,0 +1,18 @@
+{
+  "id": "information_manager",
+  "title": "Allplan Information Manager — Gestion des informations",
+  "protocol_version": 1,
+  "capabilities": [
+    "project.select"
+  ],
+  "read_only": true,
+  "project_contract": 2,
+  "presentation_contract": 1,
+  "presentation_capabilities": [
+    "presentation.import.prepare",
+    "presentation.import.apply",
+    "presentation.import.cancel",
+    "presentation.get",
+    "presentation.export"
+  ]
+}

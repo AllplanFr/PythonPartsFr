@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "status": "preview",
+  "preview": {
+    "project": {
+      "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+      "name": "Synthetic.prj"
+    },
+    "source": {
+      "status": "resolved",
+      "version": "2026",
+      "verificationVersion": false,
+      "reason": null
+    },
+    "readOnly": true,
+    "valuesStatus": "read",
+    "mode": "current_presentation",
+    "items": [
+      {
+        "kind": "group",
+        "id": "group-a",
+        "title": "Synthetic group",
+        "rows": [
+          {"kind": "row", "id": "row-a", "number": "7", "title": "First occurrence", "value": "0"},
+          {"kind": "row", "id": "row-b", "number": "7", "title": "Second occurrence", "value": "0"}
+        ],
+        "backgroundColor": "#a0C0e0"
+      }
+    ]
+  }
+}

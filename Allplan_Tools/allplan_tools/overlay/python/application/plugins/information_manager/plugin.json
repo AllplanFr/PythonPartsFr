@@ -1,0 +1,10 @@
+{
+  "id": "information_manager",
+  "name": "Allplan Information Manager — Gestion des informations",
+  "description": "Ouvrir la version locale en lecture seule. Livraison locale protegee requise.",
+  "entrypoint": "plugin:create_app",
+  "url": "https://allplan-tools.lovable.app/information-manager",
+  "script": "resources\\bridge.js",
+  "icon": "resources\\identity.png",
+  "required_resources": ["application.py", "project.py"]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "Provisional surface style names and IDs transcribed from the supplied Allplan screenshot; replace with PythonPart references.",
+  "styles": [
+    { "id": 0, "name": "None", "folder": "" },
+    { "id": 486, "name": "Windows", "folder": "" },
+    { "id": 485, "name": "Doors", "folder": "" },
+    { "id": 484, "name": "Sanitary facilities", "folder": "" },
+    { "id": 483, "name": "Furniture", "folder": "" },
+    { "id": 482, "name": "Persons", "folder": "" },
+    { "id": 481, "name": "Trees", "folder": "" },
+    { "id": 480, "name": "Cars", "folder": "" },
+    { "id": 316, "name": "Demolition, general", "folder": "" },
+    { "id": 315, "name": "Paving assembly", "folder": "" },
+    { "id": 314, "name": "Paving arc segments", "folder": "" },
+    { "id": 313, "name": "Planks horizontal", "folder": "" },
+    { "id": 312, "name": "Planks vertical", "folder": "" },
+    { "id": 311, "name": "Tiling straight", "folder": "" },
+    { "id": 310, "name": "Tiling diagonal", "folder": "" },
+    { "id": 309, "name": "Precast elements", "folder": "" },
+    { "id": 308, "name": "Light partition", "folder": "" },
+    { "id": 307, "name": "As-built", "folder": "" },
+    { "id": 306, "name": "Insulation material", "folder": "" },
+    { "id": 305, "name": "Metal", "folder": "" },
+    { "id": 304, "name": "Timber", "folder": "" },
+    { "id": 303, "name": "Masonry", "folder": "" },
+    { "id": 302, "name": "Unreinforced concrete", "folder": "" },
+    { "id": 301, "name": "Reinforced concrete", "folder": "" },
+    { "id": 20433, "name": "GO - Mur ext.", "folder": "204 - MURS" },
+    { "id": 14044, "name": "PLA - Cloison de redressement", "folder": "14 - PLÂTRERIE / PLACO" },
+    { "id": 13003, "name": "ISO - Mur", "folder": "13 - ISOLATION" },
+    { "id": 1105, "name": "END - Enduit extérieur", "folder": "11 - ENDUIT EXTÉRIEUR" }
+  ]
+}

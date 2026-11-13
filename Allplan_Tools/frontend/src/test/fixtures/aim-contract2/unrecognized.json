@@ -1,0 +1,38 @@
+{
+ "app": "information_manager",
+ "project_contract": 2,
+ "capabilities": [
+  "project.select"
+ ],
+ "read_only": true,
+ "selection": "installation_required",
+ "project": {
+  "path": "C:\\AIM-Fixture\\Prj\\Test.prj",
+  "name": "Test.prj"
+ },
+ "installation": null,
+ "installationCandidates": [],
+ "prjatt": {
+  "status": "not_loaded",
+  "path": null,
+  "encodingHint": null,
+  "header": null
+ },
+ "definitions": {
+  "status": "not_loaded"
+ },
+ "data": {
+  "attributes": []
+ },
+ "diagnostics": [
+  {
+   "code": "project_outside_installation",
+   "severity": "error",
+   "message": "Projet hors du PRJ d'une installation Allplan reconnue.",
+   "path": null,
+   "line": null,
+   "attributeNumber": null,
+   "relatedPath": null
+  }
+ ]
+}

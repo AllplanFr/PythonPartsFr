@@ -1,0 +1,96 @@
+{
+  "configuration": {
+    "schema": "aim-presentation-configuration",
+    "version": 1,
+    "configurationId": "synthetic-configuration",
+    "resetPolicy": {
+      "applyOn": "explicit_reset_only",
+      "checkboxWithoutDefault": "unchecked"
+    },
+    "categories": [
+      {
+        "id": "category-a",
+        "position": 1,
+        "name": "Synthetic category",
+        "icon": "",
+        "groups": [
+          {
+            "id": "group-a",
+            "position": 1,
+            "title": "Synthetic group",
+            "backgroundColor": "#FFFFFF",
+            "expanded": true,
+            "rows": []
+          }
+        ]
+      }
+    ]
+  },
+  "report": null,
+  "model": {
+    "schema": "aim-organized-presentation",
+    "version": 1,
+    "configurationId": "synthetic-configuration",
+    "readOnly": true,
+    "project": {
+      "name": "Synthetic.prj",
+      "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+    },
+    "installation": {
+      "version": "2026",
+      "verificationVersion": false,
+      "allplanLanguage": "eng",
+      "paths": {
+        "PRJ": "C:\\AIM-Synthetic\\Prj",
+        "STD": "C:\\AIM-Synthetic\\Std",
+        "ETC": "C:\\AIM-Synthetic\\Etc"
+      }
+    },
+    "prjatt": {
+      "status": "read",
+      "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+      "encodingHint": "cp1252",
+      "header": "Version 3"
+    },
+    "definitions": {
+      "status": "available",
+      "attr": "PRJ",
+      "language": "en",
+      "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+      "systemFiles": [
+        "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+      ],
+      "customFiles": [],
+      "priority": "first_valid_etc_then_custom_plain_preferred",
+      "groupMask": 65536
+    },
+    "categories": [
+      {
+        "id": "category-a",
+        "position": 1,
+        "name": "Synthetic category",
+        "icon": "",
+        "groups": [
+          {
+            "id": "group-a",
+            "position": 1,
+            "title": "Synthetic group",
+            "backgroundColor": "#FFFFFF",
+            "expanded": true,
+            "rows": []
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "configurationLines": 0,
+      "matchedDefinitions": 0,
+      "missingDefinitions": 0,
+      "set": 0,
+      "unset": 0,
+      "unavailable": 0
+    },
+    "diagnostics": [],
+    "conversionDiagnostics": []
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "vob_editor",
+  "name": "VOB Editor",
+  "description": "Ouvrir et modifier les regles VOB. Sans installation selectionnee, ajouter les fichiers manuellement.",
+  "entrypoint": "plugin:create_app",
+  "validator": "plugin:validate_context",
+  "url": "https://allplan-tools.lovable.app/vob-editor",
+  "script": "resources\\bridge.js",
+  "path_options": {
+    "initial_path": "Fichier VOB a ouvrir au demarrage"
+  },
+  "settings_rules": {
+    "vobEditor.headerHeight": {"min": 64, "max": 2000}
+  },
+  "language_paths": ["vobEditor.lang", "vobEditor.app.lang"],
+  "required_resources": [
+    "application.py", "allplan.py", "discovery.py", "format.py",
+    "messages.py", "resources\\messages.json"
+  ]
+}

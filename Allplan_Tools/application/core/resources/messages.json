@@ -1,0 +1,149 @@
+{
+  "invalid": {
+    "fr": "La demande est invalide.",
+    "en": "The request is invalid.",
+    "de": "Die Anfrage ist ungültig.",
+    "it": "La richiesta non è valida.",
+    "es": "La solicitud no es válida."
+  },
+  "unknown_command": {
+    "fr": "Cette commande n'est pas reconnue : {command}.",
+    "en": "This command is not recognized: {command}.",
+    "de": "Dieser Befehl ist unbekannt: {command}.",
+    "it": "Comando non riconosciuto: {command}.",
+    "es": "Comando no reconocido: {command}."
+  },
+  "unsupported-version": {
+    "fr": "Allplan 2022 ou une version plus récente est requis (exception : 99).",
+    "en": "Allplan 2022 or later is required (exception: 99).",
+    "de": "Allplan 2022 oder neuer ist erforderlich (Ausnahme: 99).",
+    "it": "È richiesto Allplan 2022 o successivo (eccezione: 99).",
+    "es": "Se requiere Allplan 2022 o posterior (excepción: 99)."
+  },
+  "not_found": {
+    "fr": "Le fichier demandé est introuvable.",
+    "en": "The requested file could not be found.",
+    "de": "Die angeforderte Datei wurde nicht gefunden.",
+    "it": "Il file richiesto non è stato trovato.",
+    "es": "No se encontró el archivo solicitado."
+  },
+  "not-implemented": {
+    "fr": "La commande {command} n'est pas encore implémentée dans cette intégration.",
+    "en": "Command {command} is not yet implemented in this integration.",
+    "de": "Befehl {command} ist in dieser Integration noch nicht implementiert.",
+    "it": "Il comando {command} non è ancora implementato in questa integrazione.",
+    "es": "El comando {command} aún no está implementado en esta integración."
+  },
+  "references-not-implemented": {
+    "fr": "Le chargement des référentiels ({command}) n'est pas encore implémenté. Ce n'est pas une erreur de configuration Allplan. Les identifiants bruts restent utilisables.",
+    "en": "Reference loading ({command}) is not yet implemented. This is not an Allplan configuration error. Raw identifiers remain usable.",
+    "de": "Das Laden der Referenzdaten ({command}) ist noch nicht implementiert. Dies ist kein Allplan-Konfigurationsfehler. Rohkennungen bleiben nutzbar.",
+    "it": "Il caricamento dei riferimenti ({command}) non è ancora implementato. Non è un errore di configurazione Allplan. Gli identificatori originali restano utilizzabili.",
+    "es": "La carga de referencias ({command}) aún no está implementada. No es un error de configuración de Allplan. Los identificadores originales siguen siendo utilizables."
+  },
+  "write_error": {
+    "fr": "Impossible d'enregistrer le fichier. Vérifiez les droits d'écriture et le dossier de destination.",
+    "en": "Unable to save the file. Check write permissions and the destination folder.",
+    "de": "Die Datei kann nicht gespeichert werden. Prüfen Sie Schreibrechte und Zielordner.",
+    "it": "Impossibile salvare il file. Verificare i permessi di scrittura e la cartella di destinazione.",
+    "es": "No se puede guardar el archivo. Compruebe los permisos de escritura y la carpeta de destino."
+  },
+  "io": {
+    "fr": "Impossible d'accéder aux données. Vérifiez les chemins et les droits d'accès.",
+    "en": "Unable to access the data. Check paths and access permissions.",
+    "de": "Datenzugriff nicht möglich. Prüfen Sie Pfade und Zugriffsrechte.",
+    "it": "Impossibile accedere ai dati. Verificare percorsi e permessi di accesso.",
+    "es": "No se puede acceder a los datos. Compruebe las rutas y los permisos de acceso."
+  },
+  "timeout": {
+    "fr": "Le délai est dépassé. Vérifiez la disponibilité du disque ou du réseau.",
+    "en": "The operation timed out. Check disk or network availability.",
+    "de": "Zeitüberschreitung. Prüfen Sie die Verfügbarkeit von Laufwerk oder Netzwerk.",
+    "it": "Tempo scaduto. Verificare la disponibilità del disco o della rete.",
+    "es": "Tiempo de espera agotado. Compruebe la disponibilidad del disco o de la red."
+  },
+  "internal-error": {
+    "fr": "Une erreur interne est survenue pendant l'opération ({detail}).",
+    "en": "An internal error occurred during the operation ({detail}).",
+    "de": "Während des Vorgangs ist ein interner Fehler aufgetreten ({detail}).",
+    "it": "Si è verificato un errore interno durante l'operazione ({detail}).",
+    "es": "Se produjo un error interno durante la operación ({detail})."
+  },
+  "absolute-path": {
+    "fr": "Le chemin du fichier doit être absolu.",
+    "en": "The file path must be absolute.",
+    "de": "Der Dateipfad muss absolut sein.",
+    "it": "Il percorso del file deve essere assoluto.",
+    "es": "La ruta del archivo debe ser absoluta."
+  },
+  "expected-fields": {
+    "fr": "Champs attendus : {fields}.",
+    "en": "Expected fields: {fields}.",
+    "de": "Erwartete Felder: {fields}.",
+    "it": "Campi previsti: {fields}.",
+    "es": "Campos esperados: {fields}."
+  },
+  "text-required": {
+    "fr": "Le champ {field} doit être une chaîne non vide.",
+    "en": "Field {field} must be a non-empty string.",
+    "de": "Feld {field} muss eine nicht leere Zeichenfolge sein.",
+    "it": "Il campo {field} deve essere una stringa non vuota.",
+    "es": "El campo {field} debe ser una cadena no vacía."
+  },
+  "open-file": {
+    "fr": "Ouvrir un fichier",
+    "en": "Open file",
+    "de": "Datei öffnen",
+    "it": "Apri file",
+    "es": "Abrir archivo"
+  },
+  "save-file": {
+    "fr": "Enregistrer le fichier",
+    "en": "Save file",
+    "de": "Datei speichern",
+    "it": "Salva file",
+    "es": "Guardar archivo"
+  },
+  "open-folder": {
+    "fr": "Choisir un dossier",
+    "en": "Choose folder",
+    "de": "Ordner auswählen",
+    "it": "Scegli cartella",
+    "es": "Seleccionar carpeta"
+  },
+  "cancel": {
+    "fr": "Annuler",
+    "en": "Cancel",
+    "de": "Abbrechen",
+    "it": "Annulla",
+    "es": "Cancelar"
+  },
+  "quit": {
+    "fr": "Quitter",
+    "en": "Quit",
+    "de": "Beenden",
+    "it": "Esci",
+    "es": "Salir"
+  },
+  "quit-confirmation": {
+    "fr": "Voulez-vous vraiment quitter ?",
+    "en": "Do you really want to quit?",
+    "de": "Möchten Sie wirklich beenden?",
+    "it": "Vuoi davvero uscire?",
+    "es": "¿Seguro que desea salir?"
+  },
+  "all-files": {
+    "fr": "Tous les fichiers",
+    "en": "All files",
+    "de": "Alle Dateien",
+    "it": "Tutti i file",
+    "es": "Todos los archivos"
+  },
+  "menu-files": {
+    "fr": "Fichiers de menu",
+    "en": "Menu files",
+    "de": "Menüdateien",
+    "it": "File di menu",
+    "es": "Archivos de menú"
+  }
+}

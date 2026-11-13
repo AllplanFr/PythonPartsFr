@@ -1,0 +1,22 @@
+{
+  "identity": {
+    "app": "information_manager",
+    "organized_presentation_contract": 1,
+    "read_only": true,
+    "capabilities": [],
+    "validationOnly": true
+  },
+  "counts": {
+    "configurationLines": 3,
+    "matchedDefinitions": 2,
+    "missingDefinitions": 1,
+    "set": 0,
+    "unset": 3,
+    "unavailable": 0
+  },
+  "rows": [
+    {"id": "group-1-line-1", "number": "7", "widget": "entry", "valueState": "unset", "value": null},
+    {"id": "group-1-line-2", "number": "7", "widget": "entry", "valueState": "unset", "value": null},
+    {"id": "group-1-line-3", "number": "8", "widget": "checkbox", "valueState": "unset", "value": null}
+  ]
+}

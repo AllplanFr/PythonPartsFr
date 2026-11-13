@@ -1,0 +1,37 @@
+{
+  "invalid_payload": {
+    "ok": false,
+    "error": {
+      "code": "invalid_payload",
+      "message": "presentation.update attend {configuration}."
+    }
+  },
+  "invalid_presentation": {
+    "ok": false,
+    "error": {
+      "code": "invalid_presentation",
+      "message": "Structure de presentation invalide."
+    }
+  },
+  "model_unavailable": {
+    "ok": false,
+    "error": {
+      "code": "model_unavailable",
+      "message": "Modele indisponible ; presentation precedente conservee."
+    }
+  },
+  "legacy_update_refusal": {
+    "ok": false,
+    "error": {
+      "code": "unknown_command",
+      "message": "Commande AIM non exposee."
+    }
+  },
+  "stale_import_after_successful_update": {
+    "ok": false,
+    "error": {
+      "code": "stale_candidate",
+      "message": "Import absent, expire ou deja consomme."
+    }
+  }
+}

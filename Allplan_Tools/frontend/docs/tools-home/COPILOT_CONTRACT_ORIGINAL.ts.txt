@@ -1,0 +1,81 @@
+/** Test adapter contract. This is not a plugin identity or an AIM capability. */
+export type PluginId = "smartcatalog" | "vob_editor" | "information_manager";
+
+export interface HomeContext {
+  /** Forward unchanged, including the empty string for standalone mode. */
+  year: string;
+  verification: boolean;
+  country: string;
+}
+
+export interface HomePlugin {
+  id: PluginId;
+  /** Shipped resources available; does not promise successful initialization. */
+  available: boolean;
+  reason: string | null;
+}
+
+export interface HomeInfo {
+  home_launch_contract: 1;
+  context: HomeContext;
+  plugins: HomePlugin[];
+}
+
+/** ok means the existing host launch service returned after process creation. */
+export type LaunchReply = { ok: true } | { ok: false; error: string };
+
+export interface AllplanToolsHomeApi {
+  get_home_info(): Promise<HomeInfo>;
+  launch(
+    plugin_id: PluginId,
+    year: string,
+    verification: boolean,
+    country: string,
+  ): Promise<LaunchReply>;
+}
+
+export interface HomeWindow {
+  pywebview?: {
+    api?: Partial<AllplanToolsHomeApi>;
+  };
+}
+
+/** First structural detection; then await get_home_info and validate its reply. */
+export function detectHomeService(win: HomeWindow): boolean {
+  const api = win.pywebview?.api;
+  return typeof api?.get_home_info === "function" && typeof api.launch === "function";
+}
+
+/**
+ * Validate untrusted bridge data without coercion.
+ * The UI must not enable launch until both detection and validation succeed.
+ */
+export function isHomeInfo(value: unknown): value is HomeInfo {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const obj = value as Record<string, unknown>;
+  if (obj.home_launch_contract !== 1 || !obj.context ||
+      typeof obj.context !== "object" || Array.isArray(obj.context) ||
+      !Array.isArray(obj.plugins)) return false;
+  const ctx = obj.context as Record<string, unknown>;
+  if (typeof ctx.year !== "string" || typeof ctx.verification !== "boolean" ||
+      typeof ctx.country !== "string") return false;
+  const ids = new Set<string>();
+  for (const item of obj.plugins) {
+    if (!item || typeof item !== "object" || Array.isArray(item)) return false;
+    const plugin = item as Record<string, unknown>;
+    if (typeof plugin.id !== "string" ||
+        !["smartcatalog", "vob_editor", "information_manager"].includes(plugin.id) ||
+        ids.has(plugin.id) || typeof plugin.available !== "boolean" ||
+        (plugin.reason !== null && typeof plugin.reason !== "string") ||
+        (plugin.available ? plugin.reason !== null : !plugin.reason)) return false;
+    ids.add(plugin.id);
+  }
+  return ids.size === 3;
+}
+
+export function isLaunchReply(value: unknown): value is LaunchReply {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const obj = value as Record<string, unknown>;
+  return obj.ok === true ||
+    (obj.ok === false && typeof obj.error === "string" && obj.error.length > 0);
+}

@@ -1,0 +1,9 @@
+{
+  "id": "smartcatalog",
+  "name": "SmartCatalog",
+  "description": "Gerer les catalogues et leurs preferences. Les services metier non implementes restent indisponibles.",
+  "entrypoint": "plugin:create_app",
+  "url": "https://allplan-tools.lovable.app/smartcatalog",
+  "script": "resources\\bridge.js",
+  "required_resources": ["application.py"]
+}

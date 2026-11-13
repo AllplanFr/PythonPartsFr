@@ -1,0 +1,74 @@
+{
+ "app": "information_manager",
+ "project_contract": 2,
+ "capabilities": [
+  "project.select"
+ ],
+ "read_only": true,
+ "selection": "accepted",
+ "project": {
+  "path": "C:\\AIM-Fixture\\Prj\\Test.prj",
+  "name": "Test.prj"
+ },
+ "installation": {
+  "version": "2024",
+  "verificationVersion": false,
+  "allplanLanguage": null,
+  "paths": {
+   "PRJ": "C:\\AIM-Fixture\\Prj",
+   "STD": "C:\\AIM-Fixture\\Std",
+   "ETC": "C:\\AIM-Fixture\\Etc"
+  }
+ },
+ "installationCandidates": [
+  {
+   "version": "2024",
+   "verificationVersion": false,
+   "allplanLanguage": null,
+   "paths": {
+    "PRJ": "C:\\AIM-Fixture\\Prj",
+    "STD": "C:\\AIM-Fixture\\Std",
+    "ETC": "C:\\AIM-Fixture\\Etc"
+   }
+  }
+ ],
+ "prjatt": {
+  "status": "read",
+  "path": "C:\\AIM-Fixture\\Prj\\Test.prj\\prjatt.dat",
+  "encodingHint": "cp1252",
+  "header": "Version 3"
+ },
+ "definitions": {
+  "status": "unavailable",
+  "attr": "PRJ",
+  "language": null,
+  "source": "C:\\AIM-Fixture\\Prj\\Test.prj",
+  "systemFiles": [],
+  "customFiles": [],
+  "priority": "first_valid_etc_then_custom_plain_preferred",
+  "groupMask": 65536
+ },
+ "data": {
+  "attributes": []
+ },
+ "diagnostics": [
+  {
+   "code": "system_definition_missing",
+   "severity": "error",
+   "message": "Aucun fichier systeme obligatoire dans les langues admissibles.",
+   "path": "C:\\AIM-Fixture\\Etc\\Xml",
+   "line": null,
+   "attributeNumber": null,
+   "relatedPath": null
+  },
+  {
+   "code": "definitions_unavailable",
+   "severity": "error",
+   "message": "Definitions projet absentes ou invalides ; aucun catalogue invente.",
+   "path": null,
+   "line": null,
+   "attributeNumber": null,
+   "relatedPath": null
+  }
+ ]
+}

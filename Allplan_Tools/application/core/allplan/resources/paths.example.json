@@ -1,0 +1,13 @@
+{
+  "version": "2026",
+  "verification_version": false,
+  "country": "FRA",
+  "paths": {
+    "ETC": "C:\\A_ADAPTER\\2026\\ETC",
+    "PRG": "C:\\A_ADAPTER\\2026\\PRG",
+    "STD": "C:\\A_ADAPTER\\2026\\STD",
+    "PRJ": "C:\\A_ADAPTER\\2026\\PRJ",
+    "USR": "C:\\A_ADAPTER\\2026\\USR",
+    "TMP": "C:\\A_ADAPTER\\2026\\TMP"
+  }
+}

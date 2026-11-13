@@ -1,0 +1,5040 @@
+{
+  "layers": [
+    {
+      "id": 0,
+      "name": "DEFAULT",
+      "code": "DEFAULT",
+      "family": "",
+      "group": "",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3700,
+      "name": "Général01",
+      "code": "DE_GEN01",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 7,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3701,
+      "name": "Général02",
+      "code": "DE_GEN02",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 8,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3702,
+      "name": "Général03",
+      "code": "DE_GEN03",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3703,
+      "name": "Général04",
+      "code": "DE_GEN04",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3704,
+      "name": "Général05",
+      "code": "DE_GEN05",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 4,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3856,
+      "name": "Général06",
+      "code": "DE_GEN06",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3857,
+      "name": "Général07",
+      "code": "DE_GEN07",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3705,
+      "name": "Axes",
+      "code": "DE_AXES",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 12,
+      "line": 5,
+      "color": 8
+    },
+    {
+      "id": 3706,
+      "name": "Trame",
+      "code": "DE_TRAM",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 12,
+      "line": 5,
+      "color": 8
+    },
+    {
+      "id": 3707,
+      "name": "Construction d'aide",
+      "code": "DE_CA",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 11,
+      "line": 9,
+      "color": 11
+    },
+    {
+      "id": 3708,
+      "name": "Ameublement",
+      "code": "DE_AMEU",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4109,
+      "name": "Cuisine",
+      "code": "DE_CUIS",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3709,
+      "name": "Sanitaire",
+      "code": "DE_SANI",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 7
+    },
+    {
+      "id": 3710,
+      "name": "Electro",
+      "code": "DE_ELEC",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 3711,
+      "name": "Chauffage",
+      "code": "DE_CHAU",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 3712,
+      "name": "Conditionnement d'air",
+      "code": "DE_CONDI",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 3713,
+      "name": "Design",
+      "code": "DE_DES",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3760,
+      "name": "Incendie",
+      "code": "DE_INCEN",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 6
+    },
+    {
+      "id": 3875,
+      "name": "Drainage",
+      "code": "DE_DRAIN",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3876,
+      "name": "Limites parcelle",
+      "code": "DE_PARCE",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3877,
+      "name": "Limites de construction",
+      "code": "DE_CONST",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3878,
+      "name": "Aménag. ext., végétation",
+      "code": "DE_A_VEG",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3879,
+      "name": "Aménag. ext., véhicules",
+      "code": "DE_A_VEH",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3880,
+      "name": "Aménag. ext., personnes",
+      "code": "DE_A_PE",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4100,
+      "name": "Commentaires",
+      "code": "DE_COMMENT",
+      "family": "ARCHITECTURE",
+      "group": "Dessin",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3714,
+      "name": "Eléments surf. - Général",
+      "code": "SF_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3715,
+      "name": "Hachurage",
+      "code": "SF_HACH",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3716,
+      "name": "Motif",
+      "code": "SF_MOTI",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3717,
+      "name": "Remplissage",
+      "code": "SF_REMP",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3891,
+      "name": "Surf. image",
+      "code": "SF_IMA",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3893,
+      "name": "Style surf.",
+      "code": "SF_STYL",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3889,
+      "name": "Plancher réfléchi",
+      "code": "SF_PRREF",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3890,
+      "name": "Plafond réfléchi",
+      "code": "PLD_PDREF",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 11,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3895,
+      "name": "Légende, description",
+      "code": "SF_LEGENDE",
+      "family": "ARCHITECTURE",
+      "group": "Eléments surfaciques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3718,
+      "name": "Texte - Général",
+      "code": "TX_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3719,
+      "name": "Texte 1/10",
+      "code": "TX_10",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3720,
+      "name": "Texte 1/20",
+      "code": "TX_20",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3721,
+      "name": "Texte 1/50",
+      "code": "TX_50",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3722,
+      "name": "Texte 1/100",
+      "code": "TX_100",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3723,
+      "name": "Texte 1/200",
+      "code": "TX_200",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3724,
+      "name": "Texte 1/500",
+      "code": "TX_500",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3725,
+      "name": "Texte 1/1000",
+      "code": "TX_1000",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4101,
+      "name": "Commentaires - textes",
+      "code": "TX_COMMENT",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4110,
+      "name": "Texte - Ingénierie",
+      "code": "TX_INGBAU",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4112,
+      "name": "Texte - FM annotation",
+      "code": "TX_ALLFA",
+      "family": "ARCHITECTURE",
+      "group": "Texte",
+      "pen": 1,
+      "line": 1,
+      "color": 6
+    },
+    {
+      "id": 3726,
+      "name": "Cotation - Général",
+      "code": "CO_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3727,
+      "name": "Cotation 1/10",
+      "code": "CO_10",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3728,
+      "name": "Cotation 1/20",
+      "code": "CO_20",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3729,
+      "name": "Cotation 1/50",
+      "code": "CO_50",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3730,
+      "name": "Cotation 1/100",
+      "code": "CO_100",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3731,
+      "name": "Cotation 1/200",
+      "code": "CO_200",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3732,
+      "name": "Cotation 1/500",
+      "code": "CO_500",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3733,
+      "name": "Cotation 1/1000",
+      "code": "CO_1000",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4111,
+      "name": "Cotation - Ingénierie",
+      "code": "ML_INGBAU",
+      "family": "ARCHITECTURE",
+      "group": "Cotation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3809,
+      "name": "Urbanisme - Général",
+      "code": "PU_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3810,
+      "name": "Peuplement forestier",
+      "code": "PU_FORE",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3811,
+      "name": "Répartir des plantes",
+      "code": "PU_REPA",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3812,
+      "name": "Chemins",
+      "code": "PU_CHE",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3813,
+      "name": "Habillage de plans",
+      "code": "PU_HABP",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3814,
+      "name": "Parcelle",
+      "code": "PU_PARCE",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 1,
+      "line": 1,
+      "color": 66
+    },
+    {
+      "id": 3815,
+      "name": "Bâtiment",
+      "code": "PU_BAT",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 2,
+      "line": 1,
+      "color": 18
+    },
+    {
+      "id": 3816,
+      "name": "Niveau étage",
+      "code": "PU_ETAGE",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 7,
+      "line": 2,
+      "color": 146
+    },
+    {
+      "id": 3817,
+      "name": "Surfaces de séparation",
+      "code": "PU_SSEP",
+      "family": "ARCHITECTURE",
+      "group": "Amén. paysage, Urbanisme",
+      "pen": 7,
+      "line": 5,
+      "color": 1
+    },
+    {
+      "id": 3734,
+      "name": "Architecture - Général",
+      "code": "AR_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3735,
+      "name": "Mur",
+      "code": "AR_MU",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3800,
+      "name": "Mur maçonnerie porteur",
+      "code": "AR_MA_PO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3801,
+      "name": "Mur maçonnerie non porteur",
+      "code": "AR_MA_NP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 2,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3802,
+      "name": "Mur béton porteur",
+      "code": "AR_B_PO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3805,
+      "name": "Mur béton non porteur",
+      "code": "AR_B_NP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 2,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3501,
+      "name": "Mur béton préfabriquée",
+      "code": "AR_B_FT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3502,
+      "name": "Mur, pare. béton",
+      "code": "AR_B_PARE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3507,
+      "name": "Mur isolation général",
+      "code": "AR_DAEMMU",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3896,
+      "name": "Mur bois porteur",
+      "code": "MU_BO_PO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 4,
+      "line": 1,
+      "color": 12
+    },
+    {
+      "id": 3897,
+      "name": "Mur bois non porteur",
+      "code": "MU_BO_NP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 2,
+      "line": 1,
+      "color": 12
+    },
+    {
+      "id": 3806,
+      "name": "Mur à sec",
+      "code": "AR_ASEC",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3885,
+      "name": "Mur à hauteur d'allège",
+      "code": "AR_MUAL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4106,
+      "name": "Mur isolation",
+      "code": "AR_MISOL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3755,
+      "name": "Talon",
+      "code": "AR_TALO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3736,
+      "name": "Poteau",
+      "code": "AR_PT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3803,
+      "name": "Poteau béton",
+      "code": "AR_PT_B",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 146
+    },
+    {
+      "id": 3804,
+      "name": "Poteau bois",
+      "code": "AR_PT_O",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 2,
+      "line": 1,
+      "color": 12
+    },
+    {
+      "id": 3737,
+      "name": "Dalle",
+      "code": "AR_DA",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3898,
+      "name": "Dalle béton armé",
+      "code": "AR_DA_BA",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3503,
+      "name": "Dalle, béton préfab.",
+      "code": "AR_DE_BPRE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3504,
+      "name": "Dalle, struc. préfa.",
+      "code": "AR_DE_STR",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3899,
+      "name": "Dalle bois",
+      "code": "AR_DA_B",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3699,
+      "name": "Dalle en console",
+      "code": "AR_DA_CO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3887,
+      "name": "Trémie, évidement dans dalle",
+      "code": "AR_DA_TE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3888,
+      "name": "Percement, évidement mur",
+      "code": "AR_MU_PE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3738,
+      "name": "Poutre",
+      "code": "AR_PO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3807,
+      "name": "Fenêtres",
+      "code": "AR_FENET",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3808,
+      "name": "Portes",
+      "code": "AR_PORT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3508,
+      "name": "Portails",
+      "code": "AR_PORTS",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3818,
+      "name": "Macro de fenêtre, porte",
+      "code": "AR_MAC",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3505,
+      "name": "Fenêtre, ouv. porte",
+      "code": "AR_OUVP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 2067,
+      "name": "Allège de fenêtre",
+      "code": "AR_ALFEN",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3892,
+      "name": "Croisillons de fenêtre",
+      "code": "AR_CRFEN",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3739,
+      "name": "Linteau/Store",
+      "code": "AR_EC",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 4051,
+      "name": "Tableau",
+      "code": "AR_TABL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3881,
+      "name": "Protection solaire",
+      "code": "AR_PSOL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3506,
+      "name": "Volets roulants intégrés",
+      "code": "AR_VOLE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3882,
+      "name": "Appui de fenêtre",
+      "code": "AR_APFEN",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 7
+    },
+    {
+      "id": 3740,
+      "name": "Volume 3D",
+      "code": "AR_3D",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 7
+    },
+    {
+      "id": 3741,
+      "name": "Plans de référence",
+      "code": "AR_PL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 11,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 4050,
+      "name": "Tracé, volume de coupe",
+      "code": "AR_COUP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 5,
+      "color": 1
+    },
+    {
+      "id": 3742,
+      "name": "Toit",
+      "code": "AR_TOIT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 11,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 3756,
+      "name": "Couverture",
+      "code": "AR_COUV",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 6
+    },
+    {
+      "id": 3883,
+      "name": "Sous-toiture",
+      "code": "AR_SSTOI",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 6
+    },
+    {
+      "id": 3884,
+      "name": "Fenêtre de toit, vitrage",
+      "code": "AR_FTT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 6
+    },
+    {
+      "id": 3509,
+      "name": "Coupole d'éclairage",
+      "code": "AR_COUPECL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4107,
+      "name": "Isolation",
+      "code": "AR_ISOL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3757,
+      "name": "Cheminée",
+      "code": "AR_CHEMI",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 3,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3894,
+      "name": "Elément d'installation",
+      "code": "AR_ECINST",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3743,
+      "name": "Escalier",
+      "code": "AR_ESCA",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3858,
+      "name": "Eléments d'escalier 1",
+      "code": "AR_EESC1",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3859,
+      "name": "Eléments d'escalier 2",
+      "code": "AR_EESC2",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4108,
+      "name": "Garde-corps, main courante",
+      "code": "AR_GDCMCO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3744,
+      "name": "Chevrons",
+      "code": "AR_CHEV",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3860,
+      "name": "Dalle de plancher",
+      "code": "AR_DAPLA",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3886,
+      "name": "Fondations générales",
+      "code": "AR_FONGE",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3861,
+      "name": "Fondation superficielle",
+      "code": "AR_FOSUP",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3862,
+      "name": "Fondation profonde",
+      "code": "AR_FOPRO",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3745,
+      "name": "Numéro d'élément",
+      "code": "AR_NOELT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3746,
+      "name": "Annoter",
+      "code": "AR_ANNOT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3747,
+      "name": "Cotes de niveau",
+      "code": "AR_CONIV",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3748,
+      "name": "Hauteurs d'allège",
+      "code": "AR_HALL",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3758,
+      "name": "Filtrage de l'affichage",
+      "code": "AR_FILAF",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 7,
+      "line": 9,
+      "color": 5
+    },
+    {
+      "id": 3759,
+      "name": "Mobilier 3D",
+      "code": "AR_MOBI",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4102,
+      "name": "Façade",
+      "code": "AR_FAC",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4103,
+      "name": "Façade rideau",
+      "code": "AR_FAC_R",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4104,
+      "name": "Façade panneaux",
+      "code": "AR_FAC_P",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4105,
+      "name": "Façade montants-traverses",
+      "code": "AR_FAC_MT",
+      "family": "ARCHITECTURE",
+      "group": "Architecture",
+      "pen": 1,
+      "line": 9,
+      "color": 1
+    },
+    {
+      "id": 3868,
+      "name": "Charpente - Général",
+      "code": "CH_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3869,
+      "name": "Chevrons, pannes",
+      "code": "CH_CHEV",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3870,
+      "name": "Pannes, fermes",
+      "code": "CH_PANN",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3871,
+      "name": "Poinçons, poteaux",
+      "code": "CH_POIN",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3872,
+      "name": "Solives, poutres, traverses",
+      "code": "CH_POUT",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3873,
+      "name": "El. quelconques (bielles,..)",
+      "code": "CH_ELQCQ",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 8
+    },
+    {
+      "id": 3874,
+      "name": "Liaison, él. montage",
+      "code": "CH_LIAIS",
+      "family": "ARCHITECTURE",
+      "group": "Charpente",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3749,
+      "name": "Pièce - Général",
+      "code": "PI_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3750,
+      "name": "Pièce",
+      "code": "PI_PI",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3751,
+      "name": "Surface de plancher",
+      "code": "PI_PLAN",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3752,
+      "name": "Surface de plafond",
+      "code": "PI_PLAF",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3753,
+      "name": "Surface latérale",
+      "code": "PI_LAT",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3754,
+      "name": "Plinthe",
+      "code": "PI_PLINT",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3819,
+      "name": "Etage",
+      "code": "PI_ETAGE",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4590,
+      "name": "Pièce - Autres",
+      "code": "PI_PI2",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4591,
+      "name": "Etage - Autres",
+      "code": "PI_ETAGE2",
+      "family": "ARCHITECTURE",
+      "group": "Pièce",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3511,
+      "name": "Objets d'extérieur, général",
+      "code": "VIS_GEN",
+      "family": "ARCHITECTURE",
+      "group": "Visualisation",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3512,
+      "name": "Véhicules",
+      "code": "VIS_VEHIC",
+      "family": "ARCHITECTURE",
+      "group": "Visualisation",
+      "pen": 1,
+      "line": 1,
+      "color": 18
+    },
+    {
+      "id": 3513,
+      "name": "Personnes",
+      "code": "VIS_PERSO",
+      "family": "ARCHITECTURE",
+      "group": "Visualisation",
+      "pen": 1,
+      "line": 1,
+      "color": 111
+    },
+    {
+      "id": 3514,
+      "name": "Arbres",
+      "code": "VIS_ARBR",
+      "family": "ARCHITECTURE",
+      "group": "Visualisation",
+      "pen": 1,
+      "line": 1,
+      "color": 66
+    },
+    {
+      "id": 3820,
+      "name": "Vues et coupes - Général",
+      "code": "VC_GEN",
+      "family": "INGENIERIE",
+      "group": "Vues et coupes",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3821,
+      "name": "Vues et coupes",
+      "code": "VU_COU",
+      "family": "INGENIERIE",
+      "group": "Vues et coupes",
+      "pen": 2,
+      "line": 1,
+      "color": 5
+    },
+    {
+      "id": 3822,
+      "name": "Vues et coupes conversion 3",
+      "code": "VU_COU3D",
+      "family": "INGENIERIE",
+      "group": "Vues et coupes",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3823,
+      "name": "Vues et coupes développemen",
+      "code": "VU_COUDE",
+      "family": "INGENIERIE",
+      "group": "Vues et coupes",
+      "pen": 1,
+      "line": 7,
+      "color": 1
+    },
+    {
+      "id": 3863,
+      "name": "Armatures - Général",
+      "code": "PF_GEN",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3824,
+      "name": "Armatures",
+      "code": "PF_ARM",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3825,
+      "name": "Armatures inférieures",
+      "code": "PF_ARM_I",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3826,
+      "name": "Armatures supérieures",
+      "code": "PF_ARM_S",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3827,
+      "name": "Lignes iso-valeurs armatures",
+      "code": "PF_LARM",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3828,
+      "name": "Arm. conversion éléments 2D",
+      "code": "PF_ARM2D",
+      "family": "INGENIERIE",
+      "group": "Plan de ferraillage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3864,
+      "name": "Armat. par barres - Général",
+      "code": "AB_GEN",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3829,
+      "name": "Barres d'armature",
+      "code": "AB_B",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3830,
+      "name": "Barres inférieures",
+      "code": "AB_B_I",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3831,
+      "name": "Barres inférieures 1er lit",
+      "code": "AB_B_I_1",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3832,
+      "name": "Barres inférieures 2ème lit",
+      "code": "AB_B_I_2",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3833,
+      "name": "Barres inférieures 3ème lit",
+      "code": "AB_B_I_3",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3834,
+      "name": "Barres inférieures 4ème lit",
+      "code": "AB_B_I_4",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 4030,
+      "name": "Barres inférieures, renforts",
+      "code": "AB_B_I_REN",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3835,
+      "name": "Barres supérieures",
+      "code": "AB_B_S",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3836,
+      "name": "Barres supérieures 1er lit",
+      "code": "AB_B_S_1",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3837,
+      "name": "Barres supérieures 2ème lit",
+      "code": "AB_B_S_2",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3838,
+      "name": "Barres supérieures 3ème lit",
+      "code": "AB_B_S_3",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3839,
+      "name": "Barres supérieures 4ème lit",
+      "code": "AB_B_S_4",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4031,
+      "name": "Barres supérieures, renforts",
+      "code": "AB_B_S_REN",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3497,
+      "name": "Barres d'arm. rac.",
+      "code": "BR_ARMR",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 2,
+      "line": 1,
+      "color": 13
+    },
+    {
+      "id": 3498,
+      "name": "Barres d'arm. cisail.",
+      "code": "BR_CISA",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 2,
+      "line": 1,
+      "color": 13
+    },
+    {
+      "id": 4032,
+      "name": "Raccord d'escalier rigide 2",
+      "code": "AB_ES_RA_2",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4033,
+      "name": "Raccord d'escalier rigide 3",
+      "code": "AB_ES_RA_3",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4034,
+      "name": "Barres d'arm. coin",
+      "code": "BR_R_COI",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4035,
+      "name": "Barres d'arm. fonda.",
+      "code": "BR_R_FON",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4036,
+      "name": "Barres d'arm. spé.",
+      "code": "RU_R_SPE",
+      "family": "INGENIERIE",
+      "group": "Armature par barres",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3865,
+      "name": "Armature par TS - Général",
+      "code": "TS_GEN",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3840,
+      "name": "Treillis soudés",
+      "code": "TS_P",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3841,
+      "name": "Panneaux TS inférieurs",
+      "code": "TS_P_I",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3842,
+      "name": "Panneaux TS inf. 1ère nappe",
+      "code": "TS_P_I_1",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3843,
+      "name": "Panneaux TS inf. 2ème nappe",
+      "code": "TS_P_I_2",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3844,
+      "name": "Panneaux TS supérieurs",
+      "code": "TS_P_S",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3845,
+      "name": "Panneaux TS sup. 1er lit",
+      "code": "TS_P_S_1",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3846,
+      "name": "Panneaux TS sup. 2ème lit",
+      "code": "TS_P_S_2",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3499,
+      "name": "Arm treillis mur av.",
+      "code": "TR_M_M_AV",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3500,
+      "name": "Arm treillis mur ar.",
+      "code": "TR_M_M_AR",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3496,
+      "name": "Armature par TS - aciers de",
+      "code": "MA_ANSCHL",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3495,
+      "name": "Armature par TS - Ferraillag",
+      "code": "MA_SCHUB",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4037,
+      "name": "Arm treillis fond.",
+      "code": "TR_M_FO",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4038,
+      "name": "Arm treillis spé.",
+      "code": "TR_M_SPE",
+      "family": "INGENIERIE",
+      "group": "Armature par treillis soudés",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4039,
+      "name": "Constr. bande joint.",
+      "code": "CON_BJOIN",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4040,
+      "name": "Constr. Arm. renf.",
+      "code": "CON_ARM",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4041,
+      "name": "Constr. tronso",
+      "code": "CON_TRON",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4042,
+      "name": "Constr. poinçon.",
+      "code": "CON_POIN",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4043,
+      "name": "Constr. élé. montage",
+      "code": "CON_MOT",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4044,
+      "name": "Constr. compo. spé",
+      "code": "CON_SPE",
+      "family": "INGENIERIE",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3866,
+      "name": "BAMTEC - Général",
+      "code": "BA_GEN",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3847,
+      "name": "BAMTEC",
+      "code": "BA_B",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3848,
+      "name": "BAMTEC inf.",
+      "code": "BA_B_I",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3849,
+      "name": "BAMTEC inf. 1er lit",
+      "code": "BA_B_I_1",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3850,
+      "name": "BAMTEC inf. 2ème lit",
+      "code": "BA_B_I_2",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 2,
+      "color": 1
+    },
+    {
+      "id": 3851,
+      "name": "BAMTEC sup.",
+      "code": "BA_B_S",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3852,
+      "name": "BAMTEC sup. 1er lit",
+      "code": "BA_B_S_1",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3853,
+      "name": "BAMTEC sup. 2ème lit",
+      "code": "BA_B_S_2",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3854,
+      "name": "BAMTEC liens portants",
+      "code": "BA_B_LIP",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 4,
+      "color": 5
+    },
+    {
+      "id": 3920,
+      "name": "BAMTEC préparation du plan",
+      "code": "BA_B_PLA",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3921,
+      "name": "BAMTEC rouleaux",
+      "code": "BA_B_ROU",
+      "family": "INGENIERIE",
+      "group": "BAMTEC",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3867,
+      "name": "Plan de repérage - Général",
+      "code": "PR_GEN",
+      "family": "INGENIERIE",
+      "group": "Plan de repérage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3855,
+      "name": "Plan de repérage",
+      "code": "PR_PREP",
+      "family": "INGENIERIE",
+      "group": "Plan de repérage",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4052,
+      "name": "Existant - Général",
+      "code": "COE_EXI_GE",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4053,
+      "name": "Existant porteur",
+      "code": "COE_EXI_PO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4054,
+      "name": "Existant non porteur",
+      "code": "COE_EXI_NP",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4095,
+      "name": "Mur léger, exis.",
+      "code": "PIB_EXI_LG",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4055,
+      "name": "Existant maçonnerie",
+      "code": "COE_EXI_MA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4056,
+      "name": "Existant ouvertures él.",
+      "code": "COE_EXI_OU",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4057,
+      "name": "Existant poutre",
+      "code": "COE_EXI_P",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4058,
+      "name": "Existant dalle",
+      "code": "COE_EXI_DA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4088,
+      "name": "Existant couverture",
+      "code": "COE_EXI_CO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4085,
+      "name": "Existant fondation",
+      "code": "COE_EXI_FO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4059,
+      "name": "Existant pièce",
+      "code": "COE_EXI_PI",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4080,
+      "name": "Existant numéro de pièce",
+      "code": "COE_EXI_N",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4081,
+      "name": "Existant désignation pièce",
+      "code": "COE_EXI_D",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4060,
+      "name": "Existant texte pièce",
+      "code": "COE_EXI_TX",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4079,
+      "name": "Existant métré",
+      "code": "COE_EXI_ME",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4070,
+      "name": "Escaliers Existant",
+      "code": "PIB_BST_TR",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4072,
+      "name": "Existant fluides chauffage",
+      "code": "COE_EXI_CH",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4074,
+      "name": "Existant fluides sanitaire",
+      "code": "COE_EXI_SA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4076,
+      "name": "Existant fluides électricité",
+      "code": "COE_EXI_EL",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Existant",
+      "pen": 1,
+      "line": 1,
+      "color": 16
+    },
+    {
+      "id": 4061,
+      "name": "Démoli - Général",
+      "code": "COE_DEM_GE",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4062,
+      "name": "Démoli porteur",
+      "code": "COE_DEM_PO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4063,
+      "name": "Démoli non porteur",
+      "code": "COE_DEM_NP",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4096,
+      "name": "Mur léger, démo.",
+      "code": "PIB_DEM_LG",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4064,
+      "name": "Démoli maçonnerie",
+      "code": "COE_DEM_MA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4065,
+      "name": "Démoli ouvertures él.",
+      "code": "COE_DEM_OU",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4066,
+      "name": "Démoli poutre",
+      "code": "COE_DEM_P",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4067,
+      "name": "Démoli dalle",
+      "code": "COE_DEM_DA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4090,
+      "name": "Démoli couverture",
+      "code": "COE_DEM_CO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4089,
+      "name": "Démoli fondation",
+      "code": "COE_DEM_FO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4068,
+      "name": "Démoli pièce",
+      "code": "COE_DEM_PI",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4082,
+      "name": "Démoli numéro de pièce",
+      "code": "COE_DEM_N",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4083,
+      "name": "Démoli désignation pièce",
+      "code": "COE_DEM_D",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4069,
+      "name": "Démoli texte pièce",
+      "code": "COE_DEM_TX",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4078,
+      "name": "Démoli métré",
+      "code": "COE-DEM_ME",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4071,
+      "name": "Escaliers Démolition",
+      "code": "PIB_ABB_TR",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4073,
+      "name": "Démoli fluides chauffage",
+      "code": "COE_DEM_CH",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4075,
+      "name": "Démoli fluides sanitaire",
+      "code": "COE_DEM_SA",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4077,
+      "name": "Démoli fluides électricité",
+      "code": "COE_DEM_EL",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4084,
+      "name": "Démoli élément à démolir",
+      "code": "COE_DEM_ED",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Démoli",
+      "pen": 1,
+      "line": 99,
+      "color": 35
+    },
+    {
+      "id": 4091,
+      "name": "Nouvelle constr. - Général",
+      "code": "COE_NOU_GE",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Nouvelle construction",
+      "pen": 2,
+      "line": 1,
+      "color": 100
+    },
+    {
+      "id": 4092,
+      "name": "Nouvelle constr. porteur",
+      "code": "COE_NOU_PO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Nouvelle construction",
+      "pen": 2,
+      "line": 1,
+      "color": 100
+    },
+    {
+      "id": 4093,
+      "name": "Nouvelle constr. non porteur",
+      "code": "COE_NOU_NP",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Nouvelle construction",
+      "pen": 2,
+      "line": 1,
+      "color": 100
+    },
+    {
+      "id": 4097,
+      "name": "Mur léger, nou. bât.",
+      "code": "PIB_NOU_LG",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Nouvelle construction",
+      "pen": 2,
+      "line": 1,
+      "color": 100
+    },
+    {
+      "id": 4094,
+      "name": "Nouvelle constr. nouvel élém",
+      "code": "COE_NOU_NO",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Nouvelle construction",
+      "pen": 2,
+      "line": 1,
+      "color": 100
+    },
+    {
+      "id": 4086,
+      "name": "Transformation métré",
+      "code": "COE_TRA_ME",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Transformation",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 4087,
+      "name": "Transformation texte",
+      "code": "COE_TRA_TX",
+      "family": "CONCEPTION DANS L'EXISTANT",
+      "group": "Transformation",
+      "pen": 1,
+      "line": 1,
+      "color": 11
+    },
+    {
+      "id": 3930,
+      "name": "Calepinage de dalles",
+      "code": "DA_CALEPIN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3931,
+      "name": "Numéros de positions",
+      "code": "DA_POS",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3932,
+      "name": "Textes de plan de pose",
+      "code": "DA_TEXT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3933,
+      "name": "Symboles",
+      "code": "DA_SYM",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3934,
+      "name": "Corps creux",
+      "code": "DA_CC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3993,
+      "name": "Ombrage",
+      "code": "DA_OMBRAG",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3935,
+      "name": "Aciers longitudinaux inférie",
+      "code": "DA_LON_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3936,
+      "name": "Aciers longitudinaux supérie",
+      "code": "DA_LON_S",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3937,
+      "name": "Aciers transversaux inférieu",
+      "code": "DA_TRA_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3938,
+      "name": "Aciers transversaux supérieu",
+      "code": "DA_TRA_S",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3939,
+      "name": "Treillis de base inférieur d",
+      "code": "DE_TSB_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3940,
+      "name": "Treillis de base supérieurs",
+      "code": "DE_TSB_S",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3941,
+      "name": "Renforts inférieurs dalle",
+      "code": "DA_REN_INF",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3942,
+      "name": "Renforts supérieurs dalle",
+      "code": "DA_REN_SUP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3943,
+      "name": "Treills de renfort inférieur",
+      "code": "DA_TSR_INF",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3944,
+      "name": "Treills de renfort supérieur",
+      "code": "DA_TSR_SUP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3945,
+      "name": "Poutrelles dalle",
+      "code": "DA_POU",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3946,
+      "name": "Poutrelles de renfort dalle",
+      "code": "DA_POR",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3947,
+      "name": "Poutrelles d'effort tranchan",
+      "code": "DA_POT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3948,
+      "name": "Aciers Optima dalle",
+      "code": "DA_OPT_AC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3949,
+      "name": "Aciers de montage Optima dal",
+      "code": "DA_OPT_MON",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3991,
+      "name": "Cages d'armature dalle",
+      "code": "DA_RE_CA",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3992,
+      "name": "Panneau plié dalle",
+      "code": "DA_RE_PP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3950,
+      "name": "Inserts général",
+      "code": "DA_IN_GEN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3951,
+      "name": "Eléments de montage",
+      "code": "DA_IN_MONT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3952,
+      "name": "Raccords d'armatures dalle",
+      "code": "DA_IN_RAC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3953,
+      "name": "Matériau isolant",
+      "code": "DA_IN_ISOL",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3954,
+      "name": "Electricité",
+      "code": "DA_IN_ELEC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3955,
+      "name": "Charges spéciales",
+      "code": "DA_CA_CHSP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_calcul",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3956,
+      "name": "Appuis statiques",
+      "code": "DA_CA_APPU",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_calcul",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3957,
+      "name": "Poutres continues",
+      "code": "DA_CA_POCO",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Dalle_calcul",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3958,
+      "name": "Calepinage de murs",
+      "code": "MU_CALEPIN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3959,
+      "name": "Numéros de positions murs",
+      "code": "MU_POS",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3960,
+      "name": "Textes de plan de pose",
+      "code": "MU_TEXT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3961,
+      "name": "Symbole face visible",
+      "code": "MU_SYM",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3962,
+      "name": "Surfaces mur",
+      "code": "MU_SURF",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3963,
+      "name": "Remplissages raccord/tracé p",
+      "code": "MU_RAC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_objets",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3964,
+      "name": "Aciers longit. invisibles mu",
+      "code": "MU_ACL_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3965,
+      "name": "Aciers longit. visibles mur",
+      "code": "MU_ACL_V",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3966,
+      "name": "Aciers transv. invisib. mur",
+      "code": "MU_ACT_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3967,
+      "name": "Aciers transversaux visibles",
+      "code": "MU_ACT_V",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3968,
+      "name": "Treillis de base invisibles",
+      "code": "MU_TSB_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3969,
+      "name": "Treillis de base visibles",
+      "code": "MU_TSB_V",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3970,
+      "name": "Renforts invisibles mur",
+      "code": "MU_REN_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3971,
+      "name": "Renforts visibles mur",
+      "code": "MU_REN_V",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3972,
+      "name": "TS renfort invisibles mur",
+      "code": "MU_TSR_I",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3973,
+      "name": "TS renfort visibles mur",
+      "code": "MU_TSR_V",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3974,
+      "name": "Poutrelles mur",
+      "code": "MU_POU",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3975,
+      "name": "Poutrelles de renfort mur",
+      "code": "MU_POR",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3976,
+      "name": "Poutrelles d'effort tranchan",
+      "code": "MU_POT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3977,
+      "name": "Aciers Optima mur",
+      "code": "MU_OPT_AC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3978,
+      "name": "Aciers de montage Optima mur",
+      "code": "MU_OPT_MON",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3994,
+      "name": "Cages d'armature mur",
+      "code": "MU_RE_CA",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3995,
+      "name": "Panneaux pliés mur",
+      "code": "MU_RE_PP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3979,
+      "name": "Inserts général",
+      "code": "MU_IN_GEN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3980,
+      "name": "Eléments de montage",
+      "code": "MU_IN_MONT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3981,
+      "name": "Raccords d'armatures",
+      "code": "MU_IN_RAC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3982,
+      "name": "Matériau isolant",
+      "code": "MU_IN_ISOL",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3983,
+      "name": "Electricité",
+      "code": "MU_IN_ELEC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4020,
+      "name": "Elé. connexion",
+      "code": "WA_EL_CONN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Mur_inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3984,
+      "name": "Eléments préfabriqués",
+      "code": "EP_ELEMENT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3985,
+      "name": "Générateur de coffrages",
+      "code": "EP_COFFR",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3986,
+      "name": "Numéros de positions",
+      "code": "EP_POS",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3987,
+      "name": "Annotation des positions",
+      "code": "EP_TEXT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3988,
+      "name": "Symboles préfabrication",
+      "code": "EP_SYM",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3989,
+      "name": "Aciers constructifs",
+      "code": "EP_ACCONST",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3990,
+      "name": "Armatures de renfort",
+      "code": "EP_RENFOR",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3996,
+      "name": "Emplacement de grue",
+      "code": "EP_GRUE",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3997,
+      "name": "Béton coulé en place suppl.",
+      "code": "EP_BETCOP",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3998,
+      "name": "Zones de définition",
+      "code": "EP_ZONE",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Eléments préfabriqués généra",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3900,
+      "name": "Type de ferraillage 1",
+      "code": "CA_TF_1",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3901,
+      "name": "Type de ferraillage 2",
+      "code": "CA_TF_2",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3902,
+      "name": "Type de ferraillage 3",
+      "code": "CA_TF_3",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3903,
+      "name": "Type de ferraillage 4",
+      "code": "CA_TF_4",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3904,
+      "name": "Type de ferraillage 5",
+      "code": "CA_TF_5",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3999,
+      "name": "Aciers en attente chantier",
+      "code": "CA_TF_ATTC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Cages d'armatures",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3922,
+      "name": "Inserts - Général",
+      "code": "IN_GEN",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3923,
+      "name": "Montage",
+      "code": "IN_MONT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3924,
+      "name": "Isolation",
+      "code": "IN_ISOLA",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3925,
+      "name": "Raccords de mur",
+      "code": "IN_RAC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3926,
+      "name": "Installation électrique",
+      "code": "IN_ELEC",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3927,
+      "name": "Installations sanitaires",
+      "code": "IN_SANIT",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3928,
+      "name": "Eléments de fenêtre, porte",
+      "code": "IN_AUSYM",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3929,
+      "name": "Autres",
+      "code": "IN_AUTRE",
+      "family": "ELEMENTS PREFABRIQUES",
+      "group": "Inserts",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3910,
+      "name": "Ossature, portique principal",
+      "code": "HA_PORTP",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4012,
+      "name": "Ferme",
+      "code": "HA_TRUSS",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3911,
+      "name": "Contreventement",
+      "code": "HA_CONTR",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3912,
+      "name": "Ossature, portique second.",
+      "code": "HA_PORTS",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3913,
+      "name": "Panneaux de lambris mur",
+      "code": "HA_LAMBM",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3914,
+      "name": "Panneaux de lambris toit",
+      "code": "HA_LAMBT",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3915,
+      "name": "Gouttières",
+      "code": "HA_GOUTT",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3916,
+      "name": "Accessoires mur",
+      "code": "HA_ACCM",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3917,
+      "name": "Accessoires toit",
+      "code": "HA_ACCT",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3918,
+      "name": "Sol",
+      "code": "HA_SOL",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 3919,
+      "name": "Autres",
+      "code": "HA_AUTRE",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Portiques",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4000,
+      "name": "Ossature, portique principal",
+      "code": "HA_PORTP_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4013,
+      "name": "Ferme, texture",
+      "code": "HA_TRUSS_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4001,
+      "name": "Contreventement Tx",
+      "code": "HA_CONTR_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4002,
+      "name": "Ossature, portique second. T",
+      "code": "HA_PORTS_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4003,
+      "name": "Panneaux de lambris mur Tx",
+      "code": "HA_LAMBM_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4004,
+      "name": "Panneaux de lambris toit Tx",
+      "code": "HA_LAMBT_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4010,
+      "name": "Panneaux lambris mur int. Tx",
+      "code": "HA_LAMMI_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4011,
+      "name": "Panneaux lambris toit int. T",
+      "code": "HA_LAMTI_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4005,
+      "name": "Gouttières Tx",
+      "code": "HA_GOUTT_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4006,
+      "name": "Accessoires mur Tx",
+      "code": "HA_ACCM_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4007,
+      "name": "Accessoires toit Tx",
+      "code": "HA_ACCT_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4008,
+      "name": "Sol, surface de base Tx",
+      "code": "HA_SOL_T",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4009,
+      "name": "Autres Tx",
+      "code": "HA_AUTRES_",
+      "family": "CONSTRUCTION DE HANGARS",
+      "group": "Texture portique",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4550,
+      "name": "Constr. métall. - Général",
+      "code": "CME_GEN",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique - Général",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4551,
+      "name": "Détail",
+      "code": "CME_DETAIL",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique - Général",
+      "pen": 7,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4552,
+      "name": "Façade",
+      "code": "CME_FACADE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique - Général",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4553,
+      "name": "Toit",
+      "code": "CME_TOIT",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique - Général",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4554,
+      "name": "Parement",
+      "code": "CMA_PAREM",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique - Général",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4555,
+      "name": "Structure - Général",
+      "code": "CMS_GEN",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4556,
+      "name": "Détail",
+      "code": "CMS_DETAIL",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 7,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4557,
+      "name": "Axe",
+      "code": "CMS_AXE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 5,
+      "color": 1
+    },
+    {
+      "id": 4558,
+      "name": "Barre",
+      "code": "CMS_BARRE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4559,
+      "name": "Poteau",
+      "code": "CMS_PO",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 115
+    },
+    {
+      "id": 4560,
+      "name": "Poteau de pignon",
+      "code": "CMS_POP",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 120
+    },
+    {
+      "id": 4561,
+      "name": "Poteau auxiliaire",
+      "code": "CMS_POA",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 125
+    },
+    {
+      "id": 4562,
+      "name": "Chevron",
+      "code": "CMS_CHEV",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 51
+    },
+    {
+      "id": 4563,
+      "name": "Panne",
+      "code": "CMS_PANNE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 180
+    },
+    {
+      "id": 4564,
+      "name": "Entretoisement de toit",
+      "code": "CMS_ENTRTO",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 66
+    },
+    {
+      "id": 4565,
+      "name": "Entretoisement de mur",
+      "code": "CMS_ENTRMU",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 72
+    },
+    {
+      "id": 4566,
+      "name": "Tirant",
+      "code": "CMS_TIRA",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 23
+    },
+    {
+      "id": 4567,
+      "name": "Poutre maîtresse",
+      "code": "CMS_POUMA",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4568,
+      "name": "Barre de treillis",
+      "code": "CMS_BATREI",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 246
+    },
+    {
+      "id": 4569,
+      "name": "Diagonale de treillis",
+      "code": "CMS_DIATRE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 86
+    },
+    {
+      "id": 4570,
+      "name": "Poutre",
+      "code": "CMS_POUT",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 102
+    },
+    {
+      "id": 4571,
+      "name": "Mur",
+      "code": "CMS_MUR",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 51
+    },
+    {
+      "id": 4572,
+      "name": "Plaque",
+      "code": "CMS_PLAQUE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 120
+    },
+    {
+      "id": 4573,
+      "name": "Poutre-plaque",
+      "code": "CMS_POUPLA",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 212
+    },
+    {
+      "id": 4574,
+      "name": "Nervure",
+      "code": "CMS_NEPL",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 27
+    },
+    {
+      "id": 4575,
+      "name": "Coque",
+      "code": "CMS_COQU",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, structur",
+      "pen": 1,
+      "line": 1,
+      "color": 102
+    },
+    {
+      "id": 4576,
+      "name": "Connexions - Général",
+      "code": "CMC_GEN",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4577,
+      "name": "Détail",
+      "code": "CMC_DETAIL",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 7,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4578,
+      "name": "Connexion rigide",
+      "code": "CMC_RIGID",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4579,
+      "name": "Connexion articulée",
+      "code": "CMC_ARTICU",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4580,
+      "name": "Entretoise",
+      "code": "CMC_RAIDIS",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4581,
+      "name": "Platine",
+      "code": "CMC_PLATIN",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4582,
+      "name": "Raidisseur",
+      "code": "CMC_RAIDIS                                                     0",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4583,
+      "name": "Vis/Boulons",
+      "code": "CMC_VISBOU",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4585,
+      "name": "Gousset",
+      "code": "CMC_GOUSS",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4586,
+      "name": "Renfort",
+      "code": "CMS_RENFOR",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4587,
+      "name": "Soudure",
+      "code": "CMC_SOUDU",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4588,
+      "name": "Platine de conn. articulée",
+      "code": "CMC_PLCOAR",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4589,
+      "name": "Baguette",
+      "code": "CMC_BAGUE",
+      "family": "CONSTRUCTION METALLIQUE",
+      "group": "Constr. métallique, connexio",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4500,
+      "name": "Couche 1",
+      "code": "CB_COU_1",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4501,
+      "name": "Couche 2",
+      "code": "CB_COU_2",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4502,
+      "name": "Couche 3",
+      "code": "CB_COU_3",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4503,
+      "name": "Couche 4",
+      "code": "CB_COU_4",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4504,
+      "name": "Couche 5",
+      "code": "CB_COU_5",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4505,
+      "name": "Couche 6",
+      "code": "CB_COU_6",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4506,
+      "name": "Couche 7",
+      "code": "CB_COU_7",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4507,
+      "name": "Couche 8",
+      "code": "CB_COU_8",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4508,
+      "name": "Couche 9",
+      "code": "CB_COU_9",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4509,
+      "name": "Couche 10",
+      "code": "CB_COU_10",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Couches murales",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4510,
+      "name": "Montant de renfort",
+      "code": "CB_MONTREN",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4511,
+      "name": "Lisses basses, lisses hautes",
+      "code": "CB_LIBAHA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4512,
+      "name": "Panneau",
+      "code": "CB_PANNEA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4513,
+      "name": "Madrier",
+      "code": "CB_MADR",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4514,
+      "name": "Lattis mural",
+      "code": "CB_LATMU",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4515,
+      "name": "Coffrage mural",
+      "code": "CB_COFMU",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4516,
+      "name": "Panneau massif",
+      "code": "CB_PAMA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de mur",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4517,
+      "name": "Chevron",
+      "code": "CB_CHEVRON",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4518,
+      "name": "Chevrons d'arêtier, de rive",
+      "code": "CB_AR_RI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4519,
+      "name": "Madrier de rive",
+      "code": "CB_MRI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4520,
+      "name": "Entrait",
+      "code": "CB_EN",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4521,
+      "name": "Panne",
+      "code": "CB_PA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4522,
+      "name": "Taquet",
+      "code": "CB_TAQ",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4523,
+      "name": "Lattis",
+      "code": "CB_LAT",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4524,
+      "name": "Madrier de chéneau",
+      "code": "CB_MCH",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4525,
+      "name": "Planche de fermeture",
+      "code": "CB_PLF",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4526,
+      "name": "Position des poutres",
+      "code": "CB_SOLI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4527,
+      "name": "Autres bois",
+      "code": "CB_AU_BOI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4528,
+      "name": "Marquage",
+      "code": "CB_REP",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de toiture, plafond",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4529,
+      "name": "Supports en acier",
+      "code": "CB_SUA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de constr. métalliq",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4530,
+      "name": "Liaisons de poutres",
+      "code": "CB_LP",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de constr. métalliq",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4531,
+      "name": "Glissières",
+      "code": "CB_GL",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de constr. métalliq",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4532,
+      "name": "Liaisons acier",
+      "code": "CB_LA",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Eléments de constr. métalliq",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4533,
+      "name": "Surface de tuiles",
+      "code": "CB_STUI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Surfaces de toiture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4534,
+      "name": "Surface visible",
+      "code": "CB_SV",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Surfaces de toiture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4535,
+      "name": "Surface brute",
+      "code": "CB_SB",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Surfaces de toiture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4536,
+      "name": "Surface d'isolation",
+      "code": "CB_SI",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Surfaces de toiture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 4537,
+      "name": "Surface de toiture générale",
+      "code": "CB_ST",
+      "family": "CONSTRUCTION BOIS",
+      "group": "Surfaces de toiture",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 32700,
+      "name": "Paysage de toiture",
+      "code": "MPL_PAYTOI",
+      "family": "ALLPLAN INTERNE",
+      "group": "Modèle de plans de référence",
+      "pen": 8,
+      "line": 9,
+      "color": 70
+    },
+    {
+      "id": 32701,
+      "name": "Traçage d'élément de constru",
+      "code": "CB_TRACA",
+      "family": "ALLPLAN INTERNE",
+      "group": "Construction bois",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    },
+    {
+      "id": 32702,
+      "name": "Données de référence",
+      "code": "BIMPL_REF",
+      "family": "ALLPLAN INTERNE",
+      "group": "Bimplus",
+      "pen": 1,
+      "line": 1,
+      "color": 1
+    }
+  ],
+  "pens": [
+    {
+      "id": 1,
+      "mm": 0.25
+    },
+    {
+      "id": 2,
+      "mm": 0.35
+    },
+    {
+      "id": 3,
+      "mm": 0.5
+    },
+    {
+      "id": 4,
+      "mm": 0.7
+    },
+    {
+      "id": 5,
+      "mm": 1.0
+    },
+    {
+      "id": 6,
+      "mm": 1.4
+    },
+    {
+      "id": 7,
+      "mm": 0.13
+    },
+    {
+      "id": 8,
+      "mm": 0.18
+    },
+    {
+      "id": 9,
+      "mm": 2.0
+    },
+    {
+      "id": 10,
+      "mm": 2.8
+    },
+    {
+      "id": 11,
+      "mm": 0.13
+    },
+    {
+      "id": 12,
+      "mm": 0.18
+    },
+    {
+      "id": 13,
+      "mm": 0.25
+    },
+    {
+      "id": 14,
+      "mm": 0.35
+    },
+    {
+      "id": 15,
+      "mm": 0.5
+    }
+  ],
+  "lines": [
+    {
+      "id": 1,
+      "name": "01",
+      "segments": [],
+      "special": ""
+    },
+    {
+      "id": 2,
+      "name": "02",
+      "segments": [
+        20,
+        7
+      ],
+      "special": ""
+    },
+    {
+      "id": 3,
+      "name": "03",
+      "segments": [
+        40,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 4,
+      "name": "04",
+      "segments": [
+        70,
+        20
+      ],
+      "special": ""
+    },
+    {
+      "id": 5,
+      "name": "05",
+      "segments": [
+        80,
+        10,
+        10,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 6,
+      "name": "06",
+      "segments": [
+        70,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 7,
+      "name": "07",
+      "segments": [
+        150,
+        20,
+        20,
+        20
+      ],
+      "special": ""
+    },
+    {
+      "id": 8,
+      "name": "08",
+      "segments": [
+        150,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "special": ""
+    },
+    {
+      "id": 9,
+      "name": "09",
+      "segments": [
+        2,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 10,
+      "name": "10",
+      "segments": [
+        20,
+        10,
+        5,
+        5,
+        5,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 11,
+      "name": "11",
+      "segments": [
+        40,
+        5,
+        5,
+        5
+      ],
+      "special": ""
+    },
+    {
+      "id": 12,
+      "name": "12",
+      "segments": [
+        70,
+        10,
+        5,
+        5,
+        5,
+        5,
+        5,
+        10
+      ],
+      "special": ""
+    },
+    {
+      "id": 13,
+      "name": "13",
+      "segments": [
+        100,
+        100,
+        20,
+        50,
+        20,
+        100
+      ],
+      "special": ""
+    },
+    {
+      "id": 14,
+      "name": "14",
+      "segments": [
+        100,
+        100,
+        20,
+        50,
+        20,
+        50,
+        20,
+        50,
+        20,
+        100
+      ],
+      "special": ""
+    },
+    {
+      "id": 15,
+      "name": "15",
+      "segments": [
+        10,
+        25
+      ],
+      "special": ""
+    },
+    {
+      "id": 90,
+      "name": "Conduite de ventilation",
+      "segments": [],
+      "special": "1,55,-55(180),-10(90),35,-20"
+    },
+    {
+      "id": 91,
+      "name": "Présence d'eaux usées",
+      "segments": [],
+      "special": "1,100,-18(45),[AllplDLSYM0999_L.xml;R=59;H=60;B=59],-18(-135),12,-18(45),[AllplDLSYM0999_L.xml;R=59;H=60;B=59],-18(-135),60"
+    },
+    {
+      "id": 92,
+      "name": "Présence d'eaux combinées",
+      "segments": [],
+      "special": "1,20,-18(45),[AllplDLSYM0999_L.xml;R=59;H=60;B=59],-18(-135),12,-18(45),[AllplDLSYM0999_L.xml;R=59;H=60;B=59],-18(-135),20,-10,0,-10,40,-10,0,-10"
+    },
+    {
+      "id": 97,
+      "name": "Ligne de démolition, tiretée",
+      "segments": [],
+      "special": "1,26,-10,[293;H=15;B=15],-10"
+    },
+    {
+      "id": 98,
+      "name": "Ligne de démolition, épaisse",
+      "segments": [],
+      "special": "1,60,[293;H=25;B=25],25"
+    },
+    {
+      "id": 99,
+      "name": "Ligne de démolition",
+      "segments": [],
+      "special": "1,35,[293;H=15;B=15],15"
+    }
+  ],
+  "colors": [
+    "#ffffff",
+    "#000000",
+    "#ffff00",
+    "#00ffff",
+    "#00ff00",
+    "#ff00ff",
+    "#ff0000",
+    "#0000ff",
+    "#ff8000",
+    "#f0f0b4",
+    "#dcff64",
+    "#c8c832",
+    "#c89632",
+    "#c86432",
+    "#966432",
+    "#821eb4",
+    "#2d2d2d",
+    "#3b3b3b",
+    "#494949",
+    "#575757",
+    "#656565",
+    "#737373",
+    "#808080",
+    "#8f8f8f",
+    "#a0a0a0",
+    "#ababab",
+    "#c0c0c0",
+    "#c7c7c7",
+    "#d5d5d5",
+    "#e3e3e3",
+    "#f1f1f1",
+    "#fafafa",
+    "#505000",
+    "#6e6e00",
+    "#808000",
+    "#b3b300",
+    "#c6c600",
+    "#d9d900",
+    "#ecec00",
+    "#f5f500",
+    "#ffff1c",
+    "#ffff38",
+    "#ffff54",
+    "#ffff70",
+    "#ffff8c",
+    "#ffffa8",
+    "#ffffc4",
+    "#ffffe0",
+    "#005050",
+    "#006e6e",
+    "#008080",
+    "#00b3b3",
+    "#00c6c6",
+    "#00d9d9",
+    "#00ecec",
+    "#00f5f5",
+    "#1cffff",
+    "#38ffff",
+    "#36ffff",
+    "#70ffff",
+    "#8cffff",
+    "#a8ffff",
+    "#c4ffff",
+    "#e0ffff",
+    "#005000",
+    "#006e00",
+    "#008000",
+    "#00b300",
+    "#00c600",
+    "#00d900",
+    "#00ec00",
+    "#00f500",
+    "#1cff1c",
+    "#38ff38",
+    "#54ff54",
+    "#70ff70",
+    "#8cff8c",
+    "#a8ffa8",
+    "#c4ffc4",
+    "#e0ffe0",
+    "#500050",
+    "#6e006e",
+    "#800080",
+    "#b300b3",
+    "#c600c6",
+    "#d900d9",
+    "#ec00ec",
+    "#f500f5",
+    "#ff1cff",
+    "#ff38ff",
+    "#ff54ff",
+    "#ff70ff",
+    "#ff8cff",
+    "#ffa8ff",
+    "#ffc4ff",
+    "#ffe0ff",
+    "#500000",
+    "#6e0000",
+    "#800000",
+    "#9f0000",
+    "#b20000",
+    "#c50000",
+    "#d80000",
+    "#f50000",
+    "#ff1c1c",
+    "#ff3838",
+    "#ff5454",
+    "#ff7070",
+    "#ff8c8c",
+    "#ffa8a8",
+    "#ffc4c4",
+    "#ffe0e0",
+    "#000050",
+    "#00006e",
+    "#000080",
+    "#0000b3",
+    "#0000c6",
+    "#0000d9",
+    "#0000ec",
+    "#0000f5",
+    "#1c1cff",
+    "#3838ff",
+    "#5454ff",
+    "#7070ff",
+    "#8c8cff",
+    "#a8a8ff",
+    "#c4c4ff",
+    "#e0e0ff",
+    "#783c14",
+    "#874614",
+    "#965014",
+    "#a55a14",
+    "#b46414",
+    "#c36e14",
+    "#d27814",
+    "#e18214",
+    "#f0911e",
+    "#f09628",
+    "#f09b32",
+    "#f0a03c",
+    "#f0a546",
+    "#f0aa50",
+    "#f0af5a",
+    "#f0b464",
+    "#a0a08c",
+    "#aaaa91",
+    "#b4b496",
+    "#bebe9b",
+    "#c8c8a0",
+    "#d2d2a5",
+    "#dcdcaa",
+    "#e6e6af",
+    "#f0f0bd",
+    "#f0f0c6",
+    "#f0f0cf",
+    "#f0f0d8",
+    "#f0f0e1",
+    "#f0f0ea",
+    "#f0f0f3",
+    "#f0f0fc",
+    "#64873c",
+    "#739641",
+    "#82a546",
+    "#91b44b",
+    "#a4c350",
+    "#afd255",
+    "#bee15a",
+    "#cdf05f",
+    "#e0ff6e",
+    "#e4ff78",
+    "#e8ff82",
+    "#ecff8c",
+    "#f0ff96",
+    "#f4ffa0",
+    "#f8ffaa",
+    "#fcffb4",
+    "#787832",
+    "#828232",
+    "#8c8c32",
+    "#969632",
+    "#a0a032",
+    "#aaaa32",
+    "#b4b432",
+    "#bebe32",
+    "#cdce41",
+    "#d2d450",
+    "#d7da5f",
+    "#dce06e",
+    "#e1e67d",
+    "#e6ec8c",
+    "#ebf29b",
+    "#f0f8aa",
+    "#504632",
+    "#5f5032",
+    "#6e5a32",
+    "#7d6432",
+    "#8c6e32",
+    "#9b7832",
+    "#aa8232",
+    "#b98c32",
+    "#cd9b32",
+    "#d2a046",
+    "#d7a550",
+    "#dcaa5a",
+    "#e1af64",
+    "#e6b46e",
+    "#ebb978",
+    "#f0be82",
+    "#50140a",
+    "#5f1e0f",
+    "#6e2814",
+    "#7d3219",
+    "#8c3c1e",
+    "#9b4623",
+    "#aa5028",
+    "#b95a2d",
+    "#ce6e3c",
+    "#d47846",
+    "#da8250",
+    "#e08c5a",
+    "#e69664",
+    "#eca06e",
+    "#f2aa78",
+    "#f8b482",
+    "#46140a",
+    "#501e0f",
+    "#5a2814",
+    "#643219",
+    "#6e3c1e",
+    "#784623",
+    "#825028",
+    "#8c5a2d",
+    "#9b7143",
+    "#a07e54",
+    "#a58b65",
+    "#aa9876",
+    "#afa587",
+    "#b4b298",
+    "#b9bfa9",
+    "#beccba",
+    "#0f1e3c",
+    "#1e1e4b",
+    "#2d1e5a",
+    "#3c1e69",
+    "#4b1e78",
+    "#5a1e87",
+    "#691e96",
+    "#781ea5",
+    "#8c32bd",
+    "#9646c6",
+    "#a05acf",
+    "#aa6ed8",
+    "#b482e1",
+    "#be96ea",
+    "#c8aaf3",
+    "#d2befc"
+  ]
+}
