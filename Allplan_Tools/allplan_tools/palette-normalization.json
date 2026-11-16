@@ -1,0 +1,282 @@
+{
+  "AllplanToolsHome": {
+    "24": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        22,
+        22,
+        105,
+        105
+      ],
+      "outputDimensions": [
+        24,
+        24
+      ],
+      "targetBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputAlphaBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputVisibleBox": [
+        1,
+        1,
+        22,
+        22
+      ]
+    },
+    "128": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        22,
+        22,
+        105,
+        105
+      ],
+      "outputDimensions": [
+        128,
+        128
+      ],
+      "targetBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputAlphaBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputVisibleBox": [
+        8,
+        8,
+        119,
+        119
+      ]
+    }
+  },
+  "InformationManager": {
+    "24": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        24,
+        24
+      ],
+      "targetBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputAlphaBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputVisibleBox": [
+        1,
+        1,
+        22,
+        22
+      ]
+    },
+    "128": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        128,
+        128
+      ],
+      "targetBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputAlphaBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputVisibleBox": [
+        8,
+        8,
+        120,
+        120
+      ]
+    }
+  },
+  "SmartCatalogEditor": {
+    "24": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        24,
+        24
+      ],
+      "targetBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputAlphaBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputVisibleBox": [
+        1,
+        1,
+        22,
+        22
+      ]
+    },
+    "128": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        128,
+        128
+      ],
+      "targetBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputAlphaBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputVisibleBox": [
+        8,
+        8,
+        120,
+        120
+      ]
+    }
+  },
+  "VOBEditor": {
+    "24": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        24,
+        24
+      ],
+      "targetBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputAlphaBox": [
+        1,
+        1,
+        22,
+        22
+      ],
+      "outputVisibleBox": [
+        1,
+        1,
+        22,
+        22
+      ]
+    },
+    "128": {
+      "sourceDimensions": [
+        128,
+        128
+      ],
+      "sourceAlphaBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "outputDimensions": [
+        128,
+        128
+      ],
+      "targetBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputAlphaBox": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "outputVisibleBox": [
+        8,
+        8,
+        120,
+        120
+      ]
+    }
+  }
+}

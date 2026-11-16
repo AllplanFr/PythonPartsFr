@@ -1,0 +1,194 @@
+{
+  "ok": true,
+  "status": "updated",
+  "presentation": {
+    "configuration": {
+      "schema": "aim-presentation-configuration",
+      "version": 1,
+      "configurationId": "synthetic-configuration",
+      "resetPolicy": {
+        "applyOn": "explicit_reset_only",
+        "checkboxWithoutDefault": "unchecked"
+      },
+      "categories": [
+        {
+          "id": "category-a",
+          "position": 1,
+          "name": "Synthetic category",
+          "icon": "",
+          "groups": [
+            {
+              "id": "group-a",
+              "position": 1,
+              "title": "Synthetic group",
+              "backgroundColor": "#FFFFFF",
+              "expanded": true,
+              "rows": [
+                {
+                  "id": "row-a",
+                  "position": 1,
+                  "num": 7,
+                  "title": "First occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  }
+                },
+                {
+                  "id": "row-b",
+                  "position": 2,
+                  "num": 7,
+                  "title": "Second occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "report": null,
+    "model": {
+      "schema": "aim-organized-presentation",
+      "version": 1,
+      "configurationId": "synthetic-configuration",
+      "readOnly": true,
+      "project": {
+        "name": "Synthetic.prj",
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+      },
+      "installation": {
+        "version": "2026",
+        "verificationVersion": false,
+        "allplanLanguage": "eng",
+        "paths": {
+          "PRJ": "C:\\AIM-Synthetic\\Prj",
+          "STD": "C:\\AIM-Synthetic\\Std",
+          "ETC": "C:\\AIM-Synthetic\\Etc"
+        }
+      },
+      "prjatt": {
+        "status": "read",
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+        "encodingHint": "cp1252",
+        "header": "Version 3"
+      },
+      "definitions": {
+        "status": "available",
+        "attr": "PRJ",
+        "language": "en",
+        "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+        "systemFiles": [
+          "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+        ],
+        "customFiles": [],
+        "priority": "first_valid_etc_then_custom_plain_preferred",
+        "groupMask": 65536
+      },
+      "categories": [
+        {
+          "id": "category-a",
+          "position": 1,
+          "name": "Synthetic category",
+          "icon": "",
+          "groups": [
+            {
+              "id": "group-a",
+              "position": 1,
+              "title": "Synthetic group",
+              "backgroundColor": "#FFFFFF",
+              "expanded": true,
+              "rows": [
+                {
+                  "id": "row-a",
+                  "position": 1,
+                  "title": "First occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "number": "7",
+                  "definition": {
+                    "number": "7",
+                    "uid": "synthetic-7",
+                    "label": "Synthetic attribute",
+                    "datatype": "C",
+                    "group_mask": 65536,
+                    "unit": null,
+                    "minimum": null,
+                    "maximum": null,
+                    "modify": null,
+                    "visible": null,
+                    "control": null,
+                    "propositions": [],
+                    "formulas": [],
+                    "properties": [],
+                    "provenance": {
+                      "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                      "source": "xml",
+                      "position": 1
+                    }
+                  },
+                  "valueState": "set",
+                  "value": "0",
+                  "diagnostics": []
+                },
+                {
+                  "id": "row-b",
+                  "position": 2,
+                  "title": "Second occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "number": "7",
+                  "definition": {
+                    "number": "7",
+                    "uid": "synthetic-7",
+                    "label": "Synthetic attribute",
+                    "datatype": "C",
+                    "group_mask": 65536,
+                    "unit": null,
+                    "minimum": null,
+                    "maximum": null,
+                    "modify": null,
+                    "visible": null,
+                    "control": null,
+                    "propositions": [],
+                    "formulas": [],
+                    "properties": [],
+                    "provenance": {
+                      "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                      "source": "xml",
+                      "position": 1
+                    }
+                  },
+                  "valueState": "set",
+                  "value": "0",
+                  "diagnostics": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "configurationLines": 2,
+        "matchedDefinitions": 2,
+        "missingDefinitions": 0,
+        "set": 2,
+        "unset": 0,
+        "unavailable": 0
+      },
+      "diagnostics": [],
+      "conversionDiagnostics": []
+    }
+  }
+}

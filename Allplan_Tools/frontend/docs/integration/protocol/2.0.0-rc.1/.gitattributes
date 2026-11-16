@@ -1,0 +1,2 @@
+# Official RC1 artifacts: bytes must stay identical to the release, never normalized.
+*.json -text -eol -filter -ident -working-tree-encoding

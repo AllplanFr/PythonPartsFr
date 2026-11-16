@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allplan-web-launcher"
+version = "0.1.0"
+description = "Windows launcher for modular Allplan WebView applications"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+classifiers = ["Operating System :: Microsoft :: Windows"]
+
+[project.optional-dependencies]
+contract-tests = ["jsonschema>=4.23,<5"]
+protocol-control-test = ["jsonschema>=4.23,<5"]
+
+[project.gui-scripts]
+allplan-launcher = "application.launcher.main:entrypoint"
+
+[project.scripts]
+allplan-inspect = "application.core.allplan.inspection:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["application*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["plugin.json", "resources\\*", "resources\\**\\*", "*.pyp"]

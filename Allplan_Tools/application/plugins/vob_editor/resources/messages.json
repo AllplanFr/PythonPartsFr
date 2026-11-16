@@ -1,0 +1,87 @@
+{
+  "etc-write-confirmation": {
+    "fr": "Cette destination ETC contient les donnees standard Allplan. Confirmez explicitement cette ecriture ; les backups et l'ecriture atomique restent obligatoires.",
+    "en": "This ETC destination contains Allplan standard data. Explicitly confirm this write; backups and atomic replacement remain mandatory."
+  },
+  "write-permission-denied": {
+    "fr": "Acces au systeme de fichiers refuse pendant la sauvegarde : {detail}. Aucune elevation ni ecriture directe de repli n'a ete tentee.",
+    "en": "File-system access denied during save: {detail}. No elevation or direct-write fallback was attempted."
+  },
+  "etc-write-protected": {
+    "fr": "L'écriture dans ETC est interdite. Utilisez Enregistrer sous dans un autre dossier autorisé. Le fichier source n'a pas été modifié.",
+    "en": "Writing to ETC is prohibited. Use Save As in another authorized folder. The source file has not been changed.",
+    "de": "Schreiben in ETC ist nicht erlaubt. Verwenden Sie Speichern unter in einem anderen zulässigen Ordner. Die Quelldatei wurde nicht geändert.",
+    "it": "La scrittura in ETC è vietata. Usare Salva con nome in un'altra cartella autorizzata. Il file originale non è stato modificato.",
+    "es": "No se permite escribir en ETC. Use Guardar como en otra carpeta autorizada. El archivo original no se ha modificado."
+  },
+  "invalid-vob": {
+    "fr": "Ce fichier ne contient pas de règles VOB texte reconnues.",
+    "en": "This file does not contain recognized VOB text rules.",
+    "de": "Diese Datei enthält keine erkannten VOB-Textregeln.",
+    "it": "Questo file non contiene regole VOB testuali riconosciute.",
+    "es": "Este archivo no contiene reglas VOB de texto reconocidas."
+  },
+  "invalid-header": {
+    "fr": "L'en-tête doit être une liste de lignes de texte sans retour à la ligne.",
+    "en": "The header must be a list of text lines without embedded line breaks.",
+    "de": "Der Kopf muss eine Liste von Textzeilen ohne eingebettete Zeilenumbrüche sein.",
+    "it": "L'intestazione deve essere un elenco di righe di testo senza interruzioni interne.",
+    "es": "La cabecera debe ser una lista de líneas de texto sin saltos de línea internos."
+  },
+  "invalid-rule": {
+    "fr": "La règle {index} est invalide : six champs texte et un booléen enabled sont attendus.",
+    "en": "Rule {index} is invalid: six text fields and a boolean enabled value are expected.",
+    "de": "Regel {index} ist ungültig: sechs Textfelder und ein boolescher enabled-Wert werden erwartet.",
+    "it": "La regola {index} non è valida: sono previsti sei campi di testo e un valore booleano enabled.",
+    "es": "La regla {index} no es válida: se esperan seis campos de texto y un booleano enabled."
+  },
+  "rule-format": {
+    "fr": "La règle ne peut pas être enregistrée sans perte. Vérifiez les séparateurs et les espaces : {rule}.",
+    "en": "The rule cannot be saved without data loss. Check separators and whitespace: {rule}.",
+    "de": "Die Regel kann nicht verlustfrei gespeichert werden. Prüfen Sie Trennzeichen und Leerzeichen: {rule}.",
+    "it": "La regola non può essere salvata senza perdita di dati. Verificare separatori e spazi: {rule}.",
+    "es": "La regla no puede guardarse sin pérdida de datos. Compruebe separadores y espacios: {rule}."
+  },
+  "encoding-error": {
+    "fr": "Le caractère {character} ne peut pas être enregistré avec l'encodage {encoding}.",
+    "en": "Character {character} cannot be saved using encoding {encoding}.",
+    "de": "Zeichen {character} kann mit der Kodierung {encoding} nicht gespeichert werden.",
+    "it": "Il carattere {character} non può essere salvato con la codifica {encoding}.",
+    "es": "El carácter {character} no puede guardarse con la codificación {encoding}."
+  },
+  "backup-error": {
+    "fr": "Impossible de créer ou de restaurer la sauvegarde du fichier.",
+    "en": "Unable to create or restore the file backup.",
+    "de": "Die Dateisicherung kann nicht erstellt oder wiederhergestellt werden.",
+    "it": "Impossibile creare o ripristinare il backup del file.",
+    "es": "No se puede crear o restaurar la copia de seguridad del archivo."
+  },
+  "files-skipped": {
+    "fr": "Certains fichiers VOB ont été ignorés : {files}.",
+    "en": "Some VOB files were skipped: {files}.",
+    "de": "Einige VOB-Dateien wurden übersprungen: {files}.",
+    "it": "Alcuni file VOB sono stati ignorati: {files}.",
+    "es": "Se omitieron algunos archivos VOB: {files}."
+  },
+  "projects-skipped": {
+    "fr": "Certains projets ont été ignorés : {files}.",
+    "en": "Some projects were skipped: {files}.",
+    "de": "Einige Projekte wurden übersprungen: {files}.",
+    "it": "Alcuni progetti sono stati ignorati: {files}.",
+    "es": "Se omitieron algunos proyectos: {files}."
+  },
+  "reopen-error": {
+    "fr": "Impossible de rouvrir le dernier fichier VOB : {path}.",
+    "en": "Unable to reopen the last VOB file: {path}.",
+    "de": "Die letzte VOB-Datei kann nicht erneut geöffnet werden: {path}.",
+    "it": "Impossibile riaprire l'ultimo file VOB: {path}.",
+    "es": "No se puede volver a abrir el último archivo VOB: {path}."
+  },
+  "vob-files": {
+    "fr": "Fichiers VOB",
+    "en": "VOB files",
+    "de": "VOB-Dateien",
+    "it": "File VOB",
+    "es": "Archivos VOB"
+  }
+}

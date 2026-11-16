@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>Plugins Allplan</title>
+<style>
+body{font:16px Segoe UI;margin:32px;background:#f5f6f8}
+label,select,button{display:block;margin:14px 0}
+input,select,button{font:inherit;padding:8px}button{width:100%;cursor:pointer}
+article{background:white;border-radius:8px;padding:16px;margin:16px 0}
+button:disabled{cursor:default}#status,.unavailable{white-space:pre-wrap;color:#a02620}
+</style>
+<h1>Plugins Allplan</h1>
+<p>Choisissez une application. Allplan ne doit pas necessairement etre ouvert.</p>
+<details><summary>Contexte Allplan (facultatif)</summary>
+<p>Selectionnez une installation pour utiliser ses fichiers.
+Sans selection, les applications restent accessibles en mode autonome.</p>
+<select id="install">OPTIONS</select>
+<label>Annee Allplan (facultative) <input id="year" value="YEAR"></label>
+<label><input id="verification" type="checkbox" CHECKED> Version de verification</label>
+<label>Pays (facultatif, sinon Settings / Country) <input id="country" value="COUNTRY"></label>
+</details>
+BUTTONS
+<p id="status" role="status">DIAGNOSTICS</p>
+<script>
+const $ = id => document.getElementById(id);
+const buttons = () => document.querySelectorAll('button[data-plugin]');
+$('install').onchange = () => {
+  const parts = $('install').value.split(':');
+  $('year').value = parts[0]; $('verification').checked = parts[1] === '1';
+  $('country').value = '';
+};
+buttons().forEach(button => button.onclick = async () => {
+  buttons().forEach(b => b.disabled = true);
+  $('status').textContent = 'Resolution du contexte et lancement...';
+  try {
+    const result = await window.pywebview.api.launch(button.dataset.plugin,
+      $('year').value, $('verification').checked, $('country').value);
+    $('status').textContent = result.ok ? 'Application lancee.' : result.error;
+  } catch (error) {
+    $('status').textContent = 'Le lancement a echoue. Reessayez depuis le launcher.';
+  } finally {
+    buttons().forEach(b => b.disabled = b.dataset.unavailable === 'true');
+  }
+});
+</script>
+</html>

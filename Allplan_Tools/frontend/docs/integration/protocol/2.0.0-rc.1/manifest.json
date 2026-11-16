@@ -1,0 +1,10 @@
+{
+  "release": "2.0.0-rc.1",
+  "protocol_version": "2.0",
+  "status": "candidate_not_activated",
+  "schema_id": "urn:allplan:host-protocol:2.0.0-rc.1",
+  "sha256": {
+    "schema.json": "809f2d84fb60f04e4b9bcd684b3be3ab46c1cd077d389a60ec2b48ca41d4edab",
+    "fixtures.json": "61a8e2c3ad2e90e4a5127d481805888eea53e4db8ee148d4d80894db6d8f2ed5"
+  }
+}

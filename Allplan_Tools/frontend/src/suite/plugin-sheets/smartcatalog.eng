@@ -1,0 +1,42 @@
+{
+  "_comment": "Editorial sheet only. Versions, installation, capabilities and update state come from Python.",
+  "labels": {
+    "overview": "Overview",
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "credits": "Credits",
+    "sources": "Sources",
+    "role": "Design and development",
+    "git": "GitHub repository",
+    "lovable": "Lovable project"
+  },
+  "summary": "SmartCatalog catalog editor for Allplan.",
+  "overview": "SmartCatalog Editor organises Allplan item catalogs in a tree of folders and items, and lets you fill in their components and attributes in a single environment.",
+  "features": [
+    {
+      "title": "Tree",
+      "text": "Folders and items with unique codes, drag-and-drop moves and undo."
+    },
+    {
+      "title": "Attributes",
+      "text": "Typed input, favourite attribute orders and formulas."
+    },
+    {
+      "title": "Templates",
+      "text": "Personal attribute templates reusable in the catalog."
+    },
+    {
+      "title": "External libraries",
+      "text": "Read-only browsing and import into the catalog."
+    }
+  ],
+  "credits": [
+    {
+      "role": "Design and development",
+      "name": "MAUGER Jean-François"
+    }
+  ],
+  "gitUrl": "https://github.com/AllplanFr/PythonPartsFr",
+  "lovableUrl": "https://lovable.dev/projects/297630a7-1565-46a1-be88-827e783d171d",
+  "screenshots": []
+}

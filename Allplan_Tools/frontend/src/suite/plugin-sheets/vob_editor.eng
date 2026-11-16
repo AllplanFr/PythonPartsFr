@@ -1,0 +1,42 @@
+{
+  "_comment": "Editorial sheet only. Versions, installation, capabilities and update state come from Python.",
+  "labels": {
+    "overview": "Overview",
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "credits": "Credits",
+    "sources": "Sources",
+    "role": "Design and development",
+    "git": "GitHub repository",
+    "lovable": "Lovable project"
+  },
+  "summary": "VOB calculation rules editor.",
+  "overview": "VOB Editor gathers VOB calculation rules by trade, object, unit and method, and lets you filter, group and edit them with their formula and comment.",
+  "features": [
+    {
+      "title": "Calculation rules",
+      "text": "Trades, objects, units, methods and formulas."
+    },
+    {
+      "title": "Grouping and filters",
+      "text": "Coloured groups, value filters and search."
+    },
+    {
+      "title": "Resource files",
+      "text": "Standard and personal files, with tracked changes."
+    },
+    {
+      "title": "Backups",
+      "text": "Backup list and confirmed restore."
+    }
+  ],
+  "credits": [
+    {
+      "role": "Design and development",
+      "name": "MAUGER Jean-François"
+    }
+  ],
+  "gitUrl": "https://github.com/AllplanFr/PythonPartsFr",
+  "lovableUrl": "https://lovable.dev/projects/297630a7-1565-46a1-be88-827e783d171d",
+  "screenshots": []
+}

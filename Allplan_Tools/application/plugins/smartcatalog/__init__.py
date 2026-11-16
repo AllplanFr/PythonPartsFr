@@ -1,0 +1,1 @@
+"""SmartCatalog integration."""

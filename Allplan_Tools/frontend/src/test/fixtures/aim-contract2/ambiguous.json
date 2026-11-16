@@ -1,0 +1,59 @@
+{
+ "app": "information_manager",
+ "project_contract": 2,
+ "capabilities": [
+  "project.select"
+ ],
+ "read_only": true,
+ "selection": "installation_required",
+ "project": {
+  "path": "C:\\AIM-Fixture\\Prj\\Test.prj",
+  "name": "Test.prj"
+ },
+ "installation": null,
+ "installationCandidates": [
+  {
+   "version": "2024",
+   "verificationVersion": false,
+   "allplanLanguage": null,
+   "paths": {
+    "PRJ": "C:\\AIM-Fixture\\Prj",
+    "STD": "C:\\AIM-Fixture\\Std",
+    "ETC": "C:\\AIM-Fixture\\Etc"
+   }
+  },
+  {
+   "version": "2025",
+   "verificationVersion": false,
+   "allplanLanguage": null,
+   "paths": {
+    "PRJ": "C:\\AIM-Fixture\\Prj",
+    "STD": "C:\\AIM-Fixture\\Std",
+    "ETC": "C:\\AIM-Fixture\\Etc"
+   }
+  }
+ ],
+ "prjatt": {
+  "status": "not_loaded",
+  "path": null,
+  "encodingHint": null,
+  "header": null
+ },
+ "definitions": {
+  "status": "not_loaded"
+ },
+ "data": {
+  "attributes": []
+ },
+ "diagnostics": [
+  {
+   "code": "installation_ambiguous",
+   "severity": "error",
+   "message": "Choisir explicitement une installation dans le lanceur ; aucune lecture projet.",
+   "path": null,
+   "line": null,
+   "attributeNumber": null,
+   "relatedPath": null
+  }
+ ]
+}

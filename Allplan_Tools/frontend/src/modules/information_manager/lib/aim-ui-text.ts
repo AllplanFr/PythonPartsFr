@@ -1,0 +1,15 @@
+import { additionalLanguages } from "./aim-extra-languages";
+import type { Lang } from "./i18n";
+
+const en = { resetSearch: "Reset", project: "Project", invalidLayout: "Invalid menu layout file.", dismiss: "Dismiss", pageNotFound: "Page not found", pageMissing: "The page does not exist or has been moved.", goHome: "Go home", pageFailed: "This page did not load", pageFailureHint: "Try refreshing or return to the application.", retry: "Try again", lightTheme: "Light", darkTheme: "Dark", themeTitle: "Theme", copyright: "Copyright (c) ALLPLAN GmbH - All rights reserved" };
+type UiText = typeof en;
+const texts: Record<Lang, UiText> = {
+  en,
+  fr: { resetSearch: "Réinitialiser", project: "Projet", invalidLayout: "Fichier de menu layout invalide.", dismiss: "Fermer", pageNotFound: "Page introuvable", pageMissing: "Cette page n’existe pas ou a été déplacée.", goHome: "Retour à l’application", pageFailed: "Cette page n’a pas pu s’ouvrir", pageFailureHint: "Réessayez ou revenez à l’application.", retry: "Réessayer", lightTheme: "Clair", darkTheme: "Sombre", themeTitle: "Thème", copyright: "Copyright (c) ALLPLAN GmbH - Tous droits réservés" },
+  it: { resetSearch: "Reimposta", project: "Progetto", invalidLayout: "File del layout menu non valido.", dismiss: "Chiudi", pageNotFound: "Pagina non trovata", pageMissing: "La pagina non esiste o è stata spostata.", goHome: "Torna all’applicazione", pageFailed: "Impossibile aprire questa pagina", pageFailureHint: "Riprova o torna all’applicazione.", retry: "Riprova", lightTheme: "Chiaro", darkTheme: "Scuro", themeTitle: "Tema", copyright: "Copyright (c) ALLPLAN GmbH - Tutti i diritti riservati" },
+  de: { resetSearch: "Zurücksetzen", project: "Projekt", invalidLayout: "Ungültige Menülayout-Datei.", dismiss: "Schließen", pageNotFound: "Seite nicht gefunden", pageMissing: "Diese Seite existiert nicht oder wurde verschoben.", goHome: "Zur Anwendung", pageFailed: "Diese Seite konnte nicht geladen werden", pageFailureHint: "Versuchen Sie es erneut oder kehren Sie zur Anwendung zurück.", retry: "Erneut versuchen", lightTheme: "Hell", darkTheme: "Dunkel", themeTitle: "Design", copyright: "Copyright (c) ALLPLAN GmbH - Alle Rechte vorbehalten" },
+  es: { resetSearch: "Restablecer", project: "Proyecto", invalidLayout: "Archivo de disposición del menú no válido.", dismiss: "Cerrar", pageNotFound: "Página no encontrada", pageMissing: "Esta página no existe o se ha movido.", goHome: "Volver a la aplicación", pageFailed: "No se pudo abrir esta página", pageFailureHint: "Inténtelo de nuevo o vuelva a la aplicación.", retry: "Reintentar", lightTheme: "Claro", darkTheme: "Oscuro", themeTitle: "Tema", copyright: "Copyright (c) ALLPLAN GmbH - Todos los derechos reservados" },
+  hr: additionalLanguages.hr.extra, ro: additionalLanguages.ro.extra, ru: additionalLanguages.ru.extra,
+  cs: additionalLanguages.cs.extra, sl: additionalLanguages.sl.extra, sk: additionalLanguages.sk.extra,
+};
+export function aimUiText(lang: Lang) { return texts[lang]; }

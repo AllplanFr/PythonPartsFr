@@ -1,0 +1,2795 @@
+{
+  "syntheticOnly": true,
+  "identityCompatibleFutureFrontend": {
+    "id": "information_manager",
+    "title": "Allplan Information Manager \u2014 Gestion des informations",
+    "protocol_version": 1,
+    "capabilities": [
+      "project.select"
+    ],
+    "read_only": true,
+    "project_contract": 2,
+    "project_history_contract": 1,
+    "presentation_contract": 1,
+    "presentation_capabilities": [
+      "presentation.import.prepare",
+      "presentation.import.apply",
+      "presentation.import.cancel",
+      "presentation.get",
+      "presentation.export",
+      "presentation.update"
+    ],
+    "project_manager_contract": 1,
+    "presentation_tree_contract": 1
+  },
+  "legacyIdentity": {
+    "id": "information_manager",
+    "title": "Allplan Information Manager \u2014 Gestion des informations",
+    "protocol_version": 1,
+    "capabilities": [
+      "project.select"
+    ],
+    "read_only": true,
+    "project_contract": 2,
+    "project_history_contract": 1,
+    "presentation_contract": 1,
+    "presentation_capabilities": [
+      "presentation.import.prepare",
+      "presentation.import.apply",
+      "presentation.import.cancel",
+      "presentation.get",
+      "presentation.export"
+    ],
+    "project_manager_contract": 1,
+    "presentation_tree_contract": 0
+  },
+  "snapshot": {
+    "app": "information_manager",
+    "project_contract": 2,
+    "capabilities": [
+      "project.select"
+    ],
+    "read_only": true,
+    "selection": "accepted",
+    "project": {
+      "name": "Synthetic.prj",
+      "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+    },
+    "installation": {
+      "version": "2026",
+      "verificationVersion": false,
+      "allplanLanguage": "eng",
+      "paths": {
+        "PRJ": "C:\\AIM-Synthetic\\Prj",
+        "STD": "C:\\AIM-Synthetic\\Std",
+        "ETC": "C:\\AIM-Synthetic\\Etc"
+      }
+    },
+    "installationCandidates": [],
+    "prjatt": {
+      "status": "read",
+      "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+      "encodingHint": "cp1252",
+      "header": "Version 3"
+    },
+    "definitions": {
+      "status": "available",
+      "attr": "PRJ",
+      "language": "en",
+      "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+      "systemFiles": [
+        "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+      ],
+      "customFiles": [],
+      "priority": "first_valid_etc_then_custom_plain_preferred",
+      "groupMask": 65536
+    },
+    "data": {
+      "attributes": [
+        {
+          "number": "7",
+          "label": "Synthetic attribute",
+          "definition": {
+            "number": "7",
+            "uid": "synthetic-7",
+            "label": "Synthetic attribute",
+            "datatype": "C",
+            "group_mask": 65536,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "modify": null,
+            "visible": null,
+            "control": null,
+            "propositions": [],
+            "formulas": [],
+            "properties": [],
+            "provenance": {
+              "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+              "source": "xml",
+              "position": 1
+            }
+          },
+          "valueState": "set",
+          "value": "0"
+        },
+        {
+          "number": "8",
+          "label": "Synthetic boolean",
+          "definition": {
+            "number": "8",
+            "uid": "synthetic-8",
+            "label": "Synthetic boolean",
+            "datatype": "C",
+            "group_mask": 65536,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "modify": null,
+            "visible": null,
+            "control": null,
+            "propositions": [],
+            "formulas": [],
+            "properties": [],
+            "provenance": {
+              "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+              "source": "xml",
+              "position": 1
+            }
+          },
+          "valueState": "set",
+          "value": "false"
+        },
+        {
+          "number": "9",
+          "label": "Synthetic empty",
+          "definition": {
+            "number": "9",
+            "uid": "synthetic-9",
+            "label": "Synthetic empty",
+            "datatype": "C",
+            "group_mask": 65536,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "modify": null,
+            "visible": null,
+            "control": null,
+            "propositions": [],
+            "formulas": [],
+            "properties": [],
+            "provenance": {
+              "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+              "source": "xml",
+              "position": 1
+            }
+          },
+          "valueState": "set",
+          "value": ""
+        }
+      ]
+    },
+    "diagnostics": []
+  },
+  "configurationV1": {
+    "schema": "aim-presentation-configuration",
+    "version": 1,
+    "configurationId": "synthetic-configuration",
+    "resetPolicy": {
+      "applyOn": "explicit_reset_only",
+      "checkboxWithoutDefault": "unchecked"
+    },
+    "categories": [
+      {
+        "id": "category-a",
+        "position": 1,
+        "name": "Synthetic category",
+        "icon": "",
+        "groups": [
+          {
+            "id": "group-a",
+            "position": 1,
+            "title": "Synthetic group",
+            "backgroundColor": "#FFFFFF",
+            "expanded": true,
+            "rows": [
+              {
+                "id": "row-a",
+                "position": 1,
+                "num": 7,
+                "title": "First occurrence",
+                "widget": "entry",
+                "type": "STR",
+                "resetDefault": {
+                  "state": "absent"
+                }
+              },
+              {
+                "id": "row-b",
+                "position": 2,
+                "num": 7,
+                "title": "Second occurrence",
+                "widget": "entry",
+                "type": "STR",
+                "resetDefault": {
+                  "state": "absent"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "configurationV2": {
+    "schema": "aim-presentation-configuration",
+    "version": 2,
+    "configurationId": "synthetic-configuration",
+    "resetPolicy": {
+      "applyOn": "explicit_reset_only",
+      "checkboxWithoutDefault": "unchecked"
+    },
+    "categories": [
+      {
+        "id": "category-a",
+        "position": 1,
+        "name": "Synthetic category",
+        "icon": "",
+        "children": [
+          {
+            "id": "row-a",
+            "position": 1,
+            "num": 7,
+            "title": "First occurrence",
+            "widget": "entry",
+            "type": "STR",
+            "resetDefault": {
+              "state": "absent"
+            },
+            "kind": "row"
+          },
+          {
+            "id": "group-a",
+            "position": 2,
+            "title": "Synthetic group",
+            "backgroundColor": "#FFFFFF",
+            "expanded": true,
+            "rows": [
+              {
+                "id": "row-b",
+                "position": 1,
+                "num": 7,
+                "title": "Second occurrence",
+                "widget": "entry",
+                "type": "STR",
+                "resetDefault": {
+                  "state": "absent"
+                },
+                "kind": "row"
+              },
+              {
+                "id": "row-c",
+                "position": 2,
+                "num": 8,
+                "title": "False checkbox",
+                "widget": "checkbox",
+                "resetDefault": {
+                  "state": "absent"
+                },
+                "kind": "row"
+              }
+            ],
+            "kind": "group"
+          },
+          {
+            "id": "row-d",
+            "position": 3,
+            "num": 9,
+            "title": "Empty direct occurrence",
+            "widget": "entry",
+            "type": "STR",
+            "resetDefault": {
+              "state": "absent"
+            },
+            "kind": "row"
+          },
+          {
+            "id": "group-b",
+            "position": 4,
+            "title": "Second group",
+            "backgroundColor": "#FFFFFF",
+            "expanded": true,
+            "rows": [
+              {
+                "id": "row-e",
+                "position": 1,
+                "num": 8,
+                "title": "False as text",
+                "widget": "entry",
+                "type": "STR",
+                "resetDefault": {
+                  "state": "absent"
+                },
+                "kind": "row"
+              }
+            ],
+            "kind": "group"
+          }
+        ]
+      },
+      {
+        "id": "category-b",
+        "position": 2,
+        "name": "Empty category",
+        "icon": "",
+        "children": []
+      }
+    ]
+  },
+  "calls": [
+    {
+      "command": "project.source",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "source": {
+          "status": "resolved",
+          "version": "2026",
+          "verificationVersion": false,
+          "reason": null
+        }
+      }
+    },
+    {
+      "command": "project.manager.list",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "projects": [
+          {
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+            "name": "Synthetic.prj",
+            "source": {
+              "status": "resolved",
+              "version": "2026",
+              "verificationVersion": false,
+              "reason": null
+            },
+            "sourceFreshness": "last_read"
+          },
+          {
+            "path": "C:\\AIM-Synthetic\\Prj\\Other.prj",
+            "name": "Other.prj",
+            "source": {
+              "status": "resolved",
+              "version": "2026",
+              "verificationVersion": false,
+              "reason": null
+            },
+            "sourceFreshness": "last_read"
+          }
+        ]
+      }
+    },
+    {
+      "command": "project.manager.add",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "added",
+        "project": {
+          "name": "Synthetic.prj",
+          "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+          "source": {
+            "status": "resolved",
+            "version": "2026",
+            "verificationVersion": false,
+            "reason": null
+          },
+          "sourceFreshness": "last_read"
+        }
+      }
+    },
+    {
+      "command": "project.manager.add",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "cancelled"
+      }
+    },
+    {
+      "command": "project.manager.preview",
+      "payload": {
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+      },
+      "response": {
+        "ok": true,
+        "status": "preview",
+        "preview": {
+          "project": {
+            "name": "Synthetic.prj",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+          },
+          "source": {
+            "status": "resolved",
+            "version": "2026",
+            "verificationVersion": false,
+            "reason": null
+          },
+          "readOnly": true,
+          "valuesStatus": "read",
+          "mode": "current_presentation",
+          "items": [
+            {
+              "kind": "row",
+              "id": "row-a",
+              "number": "7",
+              "title": "First occurrence",
+              "value": "0"
+            },
+            {
+              "kind": "group",
+              "id": "group-a",
+              "title": "Synthetic group",
+              "rows": [
+                {
+                  "kind": "row",
+                  "id": "row-b",
+                  "number": "7",
+                  "title": "Second occurrence",
+                  "value": "0"
+                },
+                {
+                  "kind": "row",
+                  "id": "row-c",
+                  "number": "8",
+                  "title": "False checkbox",
+                  "value": "false"
+                }
+              ]
+            },
+            {
+              "kind": "group",
+              "id": "group-b",
+              "title": "Second group",
+              "rows": [
+                {
+                  "kind": "row",
+                  "id": "row-e",
+                  "number": "8",
+                  "title": "False as text",
+                  "value": "false"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "project.manager.open",
+      "payload": {
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+        "discardPresentation": false
+      },
+      "response": {
+        "ok": true,
+        "data": {
+          "app": "information_manager",
+          "project_contract": 2,
+          "capabilities": [
+            "project.select"
+          ],
+          "read_only": true,
+          "selection": "accepted",
+          "project": {
+            "name": "Synthetic.prj",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+          },
+          "installation": {
+            "version": "2026",
+            "verificationVersion": false,
+            "allplanLanguage": "eng",
+            "paths": {
+              "PRJ": "C:\\AIM-Synthetic\\Prj",
+              "STD": "C:\\AIM-Synthetic\\Std",
+              "ETC": "C:\\AIM-Synthetic\\Etc"
+            }
+          },
+          "installationCandidates": [],
+          "prjatt": {
+            "status": "read",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+            "encodingHint": "cp1252",
+            "header": "Version 3"
+          },
+          "definitions": {
+            "status": "available",
+            "attr": "PRJ",
+            "language": "en",
+            "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+            "systemFiles": [
+              "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+            ],
+            "customFiles": [],
+            "priority": "first_valid_etc_then_custom_plain_preferred",
+            "groupMask": 65536
+          },
+          "data": {
+            "attributes": [
+              {
+                "number": "7",
+                "label": "Synthetic attribute",
+                "definition": {
+                  "number": "7",
+                  "uid": "synthetic-7",
+                  "label": "Synthetic attribute",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "0"
+              },
+              {
+                "number": "8",
+                "label": "Synthetic boolean",
+                "definition": {
+                  "number": "8",
+                  "uid": "synthetic-8",
+                  "label": "Synthetic boolean",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "false"
+              },
+              {
+                "number": "9",
+                "label": "Synthetic empty",
+                "definition": {
+                  "number": "9",
+                  "uid": "synthetic-9",
+                  "label": "Synthetic empty",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": ""
+              }
+            ]
+          },
+          "diagnostics": []
+        }
+      }
+    },
+    {
+      "command": "project.manager.open",
+      "payload": {
+        "path": "C:\\AIM-Synthetic\\Prj\\Other.prj",
+        "discardPresentation": false
+      },
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "presentation_confirmation_required",
+          "message": "Une presentation est ouverte ; exportez-la ou confirmez son abandon avant de changer de projet."
+        }
+      }
+    },
+    {
+      "command": "project.recent",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "projects": [
+          {
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+            "name": "Synthetic.prj"
+          }
+        ]
+      }
+    },
+    {
+      "command": "project.select",
+      "payload": {
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+      },
+      "response": {
+        "ok": true,
+        "data": {
+          "app": "information_manager",
+          "project_contract": 2,
+          "capabilities": [
+            "project.select"
+          ],
+          "read_only": true,
+          "selection": "accepted",
+          "project": {
+            "name": "Synthetic.prj",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+          },
+          "installation": {
+            "version": "2026",
+            "verificationVersion": false,
+            "allplanLanguage": "eng",
+            "paths": {
+              "PRJ": "C:\\AIM-Synthetic\\Prj",
+              "STD": "C:\\AIM-Synthetic\\Std",
+              "ETC": "C:\\AIM-Synthetic\\Etc"
+            }
+          },
+          "installationCandidates": [],
+          "prjatt": {
+            "status": "read",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+            "encodingHint": "cp1252",
+            "header": "Version 3"
+          },
+          "definitions": {
+            "status": "available",
+            "attr": "PRJ",
+            "language": "en",
+            "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+            "systemFiles": [
+              "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+            ],
+            "customFiles": [],
+            "priority": "first_valid_etc_then_custom_plain_preferred",
+            "groupMask": 65536
+          },
+          "data": {
+            "attributes": [
+              {
+                "number": "7",
+                "label": "Synthetic attribute",
+                "definition": {
+                  "number": "7",
+                  "uid": "synthetic-7",
+                  "label": "Synthetic attribute",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "0"
+              },
+              {
+                "number": "8",
+                "label": "Synthetic boolean",
+                "definition": {
+                  "number": "8",
+                  "uid": "synthetic-8",
+                  "label": "Synthetic boolean",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "false"
+              },
+              {
+                "number": "9",
+                "label": "Synthetic empty",
+                "definition": {
+                  "number": "9",
+                  "uid": "synthetic-9",
+                  "label": "Synthetic empty",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": ""
+              }
+            ]
+          },
+          "diagnostics": []
+        }
+      }
+    },
+    {
+      "command": "project.select",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "cancelled",
+        "data": {
+          "app": "information_manager",
+          "project_contract": 2,
+          "capabilities": [
+            "project.select"
+          ],
+          "read_only": true,
+          "selection": "accepted",
+          "project": {
+            "name": "Synthetic.prj",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+          },
+          "installation": {
+            "version": "2026",
+            "verificationVersion": false,
+            "allplanLanguage": "eng",
+            "paths": {
+              "PRJ": "C:\\AIM-Synthetic\\Prj",
+              "STD": "C:\\AIM-Synthetic\\Std",
+              "ETC": "C:\\AIM-Synthetic\\Etc"
+            }
+          },
+          "installationCandidates": [],
+          "prjatt": {
+            "status": "read",
+            "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+            "encodingHint": "cp1252",
+            "header": "Version 3"
+          },
+          "definitions": {
+            "status": "available",
+            "attr": "PRJ",
+            "language": "en",
+            "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+            "systemFiles": [
+              "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+            ],
+            "customFiles": [],
+            "priority": "first_valid_etc_then_custom_plain_preferred",
+            "groupMask": 65536
+          },
+          "data": {
+            "attributes": [
+              {
+                "number": "7",
+                "label": "Synthetic attribute",
+                "definition": {
+                  "number": "7",
+                  "uid": "synthetic-7",
+                  "label": "Synthetic attribute",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "0"
+              },
+              {
+                "number": "8",
+                "label": "Synthetic boolean",
+                "definition": {
+                  "number": "8",
+                  "uid": "synthetic-8",
+                  "label": "Synthetic boolean",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": "false"
+              },
+              {
+                "number": "9",
+                "label": "Synthetic empty",
+                "definition": {
+                  "number": "9",
+                  "uid": "synthetic-9",
+                  "label": "Synthetic empty",
+                  "datatype": "C",
+                  "group_mask": 65536,
+                  "unit": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "modify": null,
+                  "visible": null,
+                  "control": null,
+                  "propositions": [],
+                  "formulas": [],
+                  "properties": [],
+                  "provenance": {
+                    "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                    "source": "xml",
+                    "position": 1
+                  }
+                },
+                "valueState": "set",
+                "value": ""
+              }
+            ]
+          },
+          "diagnostics": []
+        }
+      }
+    },
+    {
+      "command": "presentation.import.prepare",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "prepared",
+        "token": "synthetic-import-token",
+        "candidate": {
+          "configuration": {
+            "schema": "aim-presentation-configuration",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "resetPolicy": {
+              "applyOn": "explicit_reset_only",
+              "checkboxWithoutDefault": "unchecked"
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "num": 7,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "num": 7,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "num": 8,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "num": 9,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "num": 8,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ]
+          },
+          "report": null,
+          "model": {
+            "schema": "aim-organized-presentation",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "readOnly": true,
+            "project": {
+              "name": "Synthetic.prj",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+            },
+            "installation": {
+              "version": "2026",
+              "verificationVersion": false,
+              "allplanLanguage": "eng",
+              "paths": {
+                "PRJ": "C:\\AIM-Synthetic\\Prj",
+                "STD": "C:\\AIM-Synthetic\\Std",
+                "ETC": "C:\\AIM-Synthetic\\Etc"
+              }
+            },
+            "prjatt": {
+              "status": "read",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+              "encodingHint": "cp1252",
+              "header": "Version 3"
+            },
+            "definitions": {
+              "status": "available",
+              "attr": "PRJ",
+              "language": "en",
+              "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+              "systemFiles": [
+                "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+              ],
+              "customFiles": [],
+              "priority": "first_valid_etc_then_custom_plain_preferred",
+              "groupMask": 65536
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "7",
+                    "definition": {
+                      "number": "7",
+                      "uid": "synthetic-7",
+                      "label": "Synthetic attribute",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "0",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "7",
+                        "definition": {
+                          "number": "7",
+                          "uid": "synthetic-7",
+                          "label": "Synthetic attribute",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "0",
+                        "diagnostics": []
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "9",
+                    "definition": {
+                      "number": "9",
+                      "uid": "synthetic-9",
+                      "label": "Synthetic empty",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ],
+            "counts": {
+              "configurationLines": 5,
+              "matchedDefinitions": 5,
+              "missingDefinitions": 0,
+              "set": 5,
+              "unset": 0,
+              "unavailable": 0
+            },
+            "diagnostics": [],
+            "conversionDiagnostics": []
+          }
+        }
+      }
+    },
+    {
+      "command": "presentation.import.apply",
+      "payload": {
+        "token": "synthetic-import-token"
+      },
+      "response": {
+        "ok": true,
+        "status": "applied",
+        "presentation": {
+          "configuration": {
+            "schema": "aim-presentation-configuration",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "resetPolicy": {
+              "applyOn": "explicit_reset_only",
+              "checkboxWithoutDefault": "unchecked"
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "num": 7,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "num": 7,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "num": 8,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "num": 9,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "num": 8,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ]
+          },
+          "report": null,
+          "model": {
+            "schema": "aim-organized-presentation",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "readOnly": true,
+            "project": {
+              "name": "Synthetic.prj",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+            },
+            "installation": {
+              "version": "2026",
+              "verificationVersion": false,
+              "allplanLanguage": "eng",
+              "paths": {
+                "PRJ": "C:\\AIM-Synthetic\\Prj",
+                "STD": "C:\\AIM-Synthetic\\Std",
+                "ETC": "C:\\AIM-Synthetic\\Etc"
+              }
+            },
+            "prjatt": {
+              "status": "read",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+              "encodingHint": "cp1252",
+              "header": "Version 3"
+            },
+            "definitions": {
+              "status": "available",
+              "attr": "PRJ",
+              "language": "en",
+              "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+              "systemFiles": [
+                "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+              ],
+              "customFiles": [],
+              "priority": "first_valid_etc_then_custom_plain_preferred",
+              "groupMask": 65536
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "7",
+                    "definition": {
+                      "number": "7",
+                      "uid": "synthetic-7",
+                      "label": "Synthetic attribute",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "0",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "7",
+                        "definition": {
+                          "number": "7",
+                          "uid": "synthetic-7",
+                          "label": "Synthetic attribute",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "0",
+                        "diagnostics": []
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "9",
+                    "definition": {
+                      "number": "9",
+                      "uid": "synthetic-9",
+                      "label": "Synthetic empty",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ],
+            "counts": {
+              "configurationLines": 5,
+              "matchedDefinitions": 5,
+              "missingDefinitions": 0,
+              "set": 5,
+              "unset": 0,
+              "unavailable": 0
+            },
+            "diagnostics": [],
+            "conversionDiagnostics": []
+          }
+        }
+      }
+    },
+    {
+      "command": "presentation.update",
+      "payload": {
+        "configuration": {
+          "schema": "aim-presentation-configuration",
+          "version": 2,
+          "configurationId": "synthetic-configuration",
+          "resetPolicy": {
+            "applyOn": "explicit_reset_only",
+            "checkboxWithoutDefault": "unchecked"
+          },
+          "categories": [
+            {
+              "id": "category-a",
+              "position": 1,
+              "name": "Synthetic category",
+              "icon": "",
+              "children": [
+                {
+                  "id": "row-a",
+                  "position": 1,
+                  "num": 7,
+                  "title": "First occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "kind": "row"
+                },
+                {
+                  "id": "group-a",
+                  "position": 2,
+                  "title": "Synthetic group",
+                  "backgroundColor": "#FFFFFF",
+                  "expanded": true,
+                  "rows": [
+                    {
+                      "id": "row-b",
+                      "position": 1,
+                      "num": 7,
+                      "title": "Second occurrence",
+                      "widget": "entry",
+                      "type": "STR",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    },
+                    {
+                      "id": "row-c",
+                      "position": 2,
+                      "num": 8,
+                      "title": "False checkbox",
+                      "widget": "checkbox",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    }
+                  ],
+                  "kind": "group"
+                },
+                {
+                  "id": "row-d",
+                  "position": 3,
+                  "num": 9,
+                  "title": "Empty direct occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "kind": "row"
+                },
+                {
+                  "id": "group-b",
+                  "position": 4,
+                  "title": "Second group",
+                  "backgroundColor": "#FFFFFF",
+                  "expanded": true,
+                  "rows": [
+                    {
+                      "id": "row-e",
+                      "position": 1,
+                      "num": 8,
+                      "title": "False as text",
+                      "widget": "entry",
+                      "type": "STR",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    }
+                  ],
+                  "kind": "group"
+                }
+              ]
+            },
+            {
+              "id": "category-b",
+              "position": 2,
+              "name": "Empty category",
+              "icon": "",
+              "children": []
+            }
+          ]
+        }
+      },
+      "response": {
+        "ok": true,
+        "status": "updated",
+        "presentation": {
+          "configuration": {
+            "schema": "aim-presentation-configuration",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "resetPolicy": {
+              "applyOn": "explicit_reset_only",
+              "checkboxWithoutDefault": "unchecked"
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "num": 7,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "num": 7,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "num": 8,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "num": 9,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "num": 8,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ]
+          },
+          "report": null,
+          "model": {
+            "schema": "aim-organized-presentation",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "readOnly": true,
+            "project": {
+              "name": "Synthetic.prj",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+            },
+            "installation": {
+              "version": "2026",
+              "verificationVersion": false,
+              "allplanLanguage": "eng",
+              "paths": {
+                "PRJ": "C:\\AIM-Synthetic\\Prj",
+                "STD": "C:\\AIM-Synthetic\\Std",
+                "ETC": "C:\\AIM-Synthetic\\Etc"
+              }
+            },
+            "prjatt": {
+              "status": "read",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+              "encodingHint": "cp1252",
+              "header": "Version 3"
+            },
+            "definitions": {
+              "status": "available",
+              "attr": "PRJ",
+              "language": "en",
+              "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+              "systemFiles": [
+                "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+              ],
+              "customFiles": [],
+              "priority": "first_valid_etc_then_custom_plain_preferred",
+              "groupMask": 65536
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "7",
+                    "definition": {
+                      "number": "7",
+                      "uid": "synthetic-7",
+                      "label": "Synthetic attribute",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "0",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "7",
+                        "definition": {
+                          "number": "7",
+                          "uid": "synthetic-7",
+                          "label": "Synthetic attribute",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "0",
+                        "diagnostics": []
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "9",
+                    "definition": {
+                      "number": "9",
+                      "uid": "synthetic-9",
+                      "label": "Synthetic empty",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ],
+            "counts": {
+              "configurationLines": 5,
+              "matchedDefinitions": 5,
+              "missingDefinitions": 0,
+              "set": 5,
+              "unset": 0,
+              "unavailable": 0
+            },
+            "diagnostics": [],
+            "conversionDiagnostics": []
+          }
+        }
+      }
+    },
+    {
+      "command": "presentation.get",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "current",
+        "presentation": {
+          "configuration": {
+            "schema": "aim-presentation-configuration",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "resetPolicy": {
+              "applyOn": "explicit_reset_only",
+              "checkboxWithoutDefault": "unchecked"
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "num": 7,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "num": 7,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "num": 8,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "num": 9,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row"
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "num": 8,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row"
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ]
+          },
+          "report": null,
+          "model": {
+            "schema": "aim-organized-presentation",
+            "version": 2,
+            "configurationId": "synthetic-configuration",
+            "readOnly": true,
+            "project": {
+              "name": "Synthetic.prj",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+            },
+            "installation": {
+              "version": "2026",
+              "verificationVersion": false,
+              "allplanLanguage": "eng",
+              "paths": {
+                "PRJ": "C:\\AIM-Synthetic\\Prj",
+                "STD": "C:\\AIM-Synthetic\\Std",
+                "ETC": "C:\\AIM-Synthetic\\Etc"
+              }
+            },
+            "prjatt": {
+              "status": "read",
+              "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj\\prjatt.dat",
+              "encodingHint": "cp1252",
+              "header": "Version 3"
+            },
+            "definitions": {
+              "status": "available",
+              "attr": "PRJ",
+              "language": "en",
+              "source": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj",
+              "systemFiles": [
+                "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml"
+              ],
+              "customFiles": [],
+              "priority": "first_valid_etc_then_custom_plain_preferred",
+              "groupMask": 65536
+            },
+            "categories": [
+              {
+                "id": "category-a",
+                "position": 1,
+                "name": "Synthetic category",
+                "icon": "",
+                "children": [
+                  {
+                    "id": "row-a",
+                    "position": 1,
+                    "title": "First occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "7",
+                    "definition": {
+                      "number": "7",
+                      "uid": "synthetic-7",
+                      "label": "Synthetic attribute",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "0",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-a",
+                    "position": 2,
+                    "title": "Synthetic group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-b",
+                        "position": 1,
+                        "title": "Second occurrence",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "7",
+                        "definition": {
+                          "number": "7",
+                          "uid": "synthetic-7",
+                          "label": "Synthetic attribute",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "0",
+                        "diagnostics": []
+                      },
+                      {
+                        "id": "row-c",
+                        "position": 2,
+                        "title": "False checkbox",
+                        "widget": "checkbox",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  },
+                  {
+                    "id": "row-d",
+                    "position": 3,
+                    "title": "Empty direct occurrence",
+                    "widget": "entry",
+                    "type": "STR",
+                    "resetDefault": {
+                      "state": "absent"
+                    },
+                    "kind": "row",
+                    "number": "9",
+                    "definition": {
+                      "number": "9",
+                      "uid": "synthetic-9",
+                      "label": "Synthetic empty",
+                      "datatype": "C",
+                      "group_mask": 65536,
+                      "unit": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "modify": null,
+                      "visible": null,
+                      "control": null,
+                      "propositions": [],
+                      "formulas": [],
+                      "properties": [],
+                      "provenance": {
+                        "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                        "source": "xml",
+                        "position": 1
+                      }
+                    },
+                    "valueState": "set",
+                    "value": "",
+                    "diagnostics": []
+                  },
+                  {
+                    "id": "group-b",
+                    "position": 4,
+                    "title": "Second group",
+                    "backgroundColor": "#FFFFFF",
+                    "expanded": true,
+                    "rows": [
+                      {
+                        "id": "row-e",
+                        "position": 1,
+                        "title": "False as text",
+                        "widget": "entry",
+                        "type": "STR",
+                        "resetDefault": {
+                          "state": "absent"
+                        },
+                        "kind": "row",
+                        "number": "8",
+                        "definition": {
+                          "number": "8",
+                          "uid": "synthetic-8",
+                          "label": "Synthetic boolean",
+                          "datatype": "C",
+                          "group_mask": 65536,
+                          "unit": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "modify": null,
+                          "visible": null,
+                          "control": null,
+                          "propositions": [],
+                          "formulas": [],
+                          "properties": [],
+                          "provenance": {
+                            "path": "C:\\AIM-Synthetic\\Etc\\Xml\\AttributeDefinitionCollectionAllplan_en.xml",
+                            "source": "xml",
+                            "position": 1
+                          }
+                        },
+                        "valueState": "set",
+                        "value": "false",
+                        "diagnostics": []
+                      }
+                    ],
+                    "kind": "group"
+                  }
+                ]
+              },
+              {
+                "id": "category-b",
+                "position": 2,
+                "name": "Empty category",
+                "icon": "",
+                "children": []
+              }
+            ],
+            "counts": {
+              "configurationLines": 5,
+              "matchedDefinitions": 5,
+              "missingDefinitions": 0,
+              "set": 5,
+              "unset": 0,
+              "unavailable": 0
+            },
+            "diagnostics": [],
+            "conversionDiagnostics": []
+          }
+        }
+      }
+    },
+    {
+      "command": "presentation.export",
+      "payload": {
+        "configuration": {
+          "schema": "aim-presentation-configuration",
+          "version": 2,
+          "configurationId": "synthetic-configuration",
+          "resetPolicy": {
+            "applyOn": "explicit_reset_only",
+            "checkboxWithoutDefault": "unchecked"
+          },
+          "categories": [
+            {
+              "id": "category-a",
+              "position": 1,
+              "name": "Synthetic category",
+              "icon": "",
+              "children": [
+                {
+                  "id": "row-a",
+                  "position": 1,
+                  "num": 7,
+                  "title": "First occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "kind": "row"
+                },
+                {
+                  "id": "group-a",
+                  "position": 2,
+                  "title": "Synthetic group",
+                  "backgroundColor": "#FFFFFF",
+                  "expanded": true,
+                  "rows": [
+                    {
+                      "id": "row-b",
+                      "position": 1,
+                      "num": 7,
+                      "title": "Second occurrence",
+                      "widget": "entry",
+                      "type": "STR",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    },
+                    {
+                      "id": "row-c",
+                      "position": 2,
+                      "num": 8,
+                      "title": "False checkbox",
+                      "widget": "checkbox",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    }
+                  ],
+                  "kind": "group"
+                },
+                {
+                  "id": "row-d",
+                  "position": 3,
+                  "num": 9,
+                  "title": "Empty direct occurrence",
+                  "widget": "entry",
+                  "type": "STR",
+                  "resetDefault": {
+                    "state": "absent"
+                  },
+                  "kind": "row"
+                },
+                {
+                  "id": "group-b",
+                  "position": 4,
+                  "title": "Second group",
+                  "backgroundColor": "#FFFFFF",
+                  "expanded": true,
+                  "rows": [
+                    {
+                      "id": "row-e",
+                      "position": 1,
+                      "num": 8,
+                      "title": "False as text",
+                      "widget": "entry",
+                      "type": "STR",
+                      "resetDefault": {
+                        "state": "absent"
+                      },
+                      "kind": "row"
+                    }
+                  ],
+                  "kind": "group"
+                }
+              ]
+            },
+            {
+              "id": "category-b",
+              "position": 2,
+              "name": "Empty category",
+              "icon": "",
+              "children": []
+            }
+          ]
+        }
+      },
+      "response": {
+        "ok": true,
+        "status": "exported",
+        "fileName": "synthetic-export.json",
+        "configurationId": "synthetic-configuration"
+      }
+    },
+    {
+      "command": "presentation.import.cancel",
+      "payload": {
+        "token": "synthetic-cancel-token"
+      },
+      "response": {
+        "ok": true,
+        "status": "cancelled"
+      }
+    },
+    {
+      "command": "presentation.import.prepare",
+      "payload": {},
+      "response": {
+        "ok": true,
+        "status": "cancelled"
+      }
+    },
+    {
+      "command": "presentation.update",
+      "payload": {
+        "configuration": {
+          "values": []
+        }
+      },
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "invalid_presentation",
+          "message": "Structure de presentation invalide."
+        }
+      }
+    },
+    {
+      "command": "presentation.import.apply",
+      "payload": {
+        "token": "synthetic-import-token"
+      },
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "stale_candidate",
+          "message": "Import absent, expire ou deja consomme."
+        }
+      }
+    }
+  ],
+  "unresolvedSource": {
+    "ok": true,
+    "source": {
+      "status": "unresolved",
+      "version": null,
+      "verificationVersion": null,
+      "reason": "definitions_not_loaded"
+    }
+  },
+  "flatFallbackPreview": {
+    "ok": true,
+    "status": "preview",
+    "preview": {
+      "project": {
+        "name": "Synthetic.prj",
+        "path": "C:\\AIM-Synthetic\\Prj\\Synthetic.prj"
+      },
+      "source": {
+        "status": "resolved",
+        "version": "2026",
+        "verificationVersion": false,
+        "reason": null
+      },
+      "readOnly": true,
+      "valuesStatus": "read",
+      "mode": "attributes_without_presentation",
+      "items": [
+        {
+          "kind": "row",
+          "id": "7",
+          "number": "7",
+          "title": "Synthetic attribute",
+          "value": "0"
+        },
+        {
+          "kind": "row",
+          "id": "8",
+          "number": "8",
+          "title": "Synthetic boolean",
+          "value": "false"
+        }
+      ]
+    }
+  },
+  "failureEnvelopes": [
+    {
+      "ok": false,
+      "error": {
+        "code": "invalid_payload",
+        "message": "Requete de gestionnaire invalide."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "project_not_added",
+        "message": "Ajoutez ce projet au gestionnaire avant de l'utiliser."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "manager_unavailable",
+        "message": "Inventaire ou source inaccessible ; reessayez ou consultez le journal."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "project_read_error",
+        "message": "Configuration project.cfg illisible ou incompatible ; aucune valeur chargee."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "preview_unavailable",
+        "message": "Apercu indisponible ; le projet actif est conserve."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "model_unavailable",
+        "message": "Modele indisponible ; presentation precedente conservee."
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "code": "unsupported_presentation_version",
+        "message": "Cette interface ne prend pas en charge les enfants ordonnes."
+      }
+    }
+  ]
+}

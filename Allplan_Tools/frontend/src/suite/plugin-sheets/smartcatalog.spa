@@ -1,0 +1,42 @@
+{
+  "_comment": "Editorial sheet only. Versions, installation, capabilities and update state come from Python.",
+  "labels": {
+    "overview": "Presentación",
+    "features": "Funciones",
+    "screenshots": "Capturas de pantalla",
+    "credits": "Créditos",
+    "sources": "Fuentes",
+    "role": "Diseño y desarrollo",
+    "git": "Repositorio GitHub",
+    "lovable": "Proyecto Lovable"
+  },
+  "summary": "Editor de catálogos SmartCatalog para Allplan.",
+  "overview": "SmartCatalog Editor organiza los catálogos de partidas de Allplan en un árbol de carpetas y partidas, y permite completar sus componentes y atributos en un único entorno.",
+  "features": [
+    {
+      "title": "Árbol",
+      "text": "Carpetas y partidas con códigos únicos, movimientos por arrastrar y soltar y deshacer."
+    },
+    {
+      "title": "Atributos",
+      "text": "Entrada tipada, órdenes de atributos favoritos y fórmulas."
+    },
+    {
+      "title": "Plantillas",
+      "text": "Plantillas de atributos personales reutilizables en el catálogo."
+    },
+    {
+      "title": "Bibliotecas externas",
+      "text": "Consulta de solo lectura e importación al catálogo."
+    }
+  ],
+  "credits": [
+    {
+      "role": "Diseño y desarrollo",
+      "name": "MAUGER Jean-François"
+    }
+  ],
+  "gitUrl": "https://github.com/AllplanFr/PythonPartsFr",
+  "lovableUrl": "https://lovable.dev/projects/297630a7-1565-46a1-be88-827e783d171d",
+  "screenshots": []
+}
