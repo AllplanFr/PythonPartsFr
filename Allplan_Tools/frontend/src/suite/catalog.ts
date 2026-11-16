@@ -32,4 +32,4 @@ export const suiteModule = (appId: SuiteAppId) => {
   return module;
 };
 
-export const UPCOMING_MODULES = ["Trade Editor", "Layer Editor", "Attribute Editor"] as const;
+export const UPCOMING_MODULES = ["Trade Editor", "Layer Editor", "Attribute Editor", "Attribute Set Editor"] as const;

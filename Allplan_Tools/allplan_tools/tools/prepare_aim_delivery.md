@@ -1,5 +1,44 @@
 # Preparation AIM isolee
 
+## Assemblage combine avec Home, VOB et SmartCatalog locaux
+
+L'assembleur accepte `--aim-application <lot-python-epingle>` et delegue alors
+a ce preparateur, avec les options existantes `--home-local-package`,
+`--vob-local-package` et `--smartcatalog-local-package`. Candidate et profil
+doivent etre absents. Aucune candidate fonctionnelle n'est mise a jour.
+
+La comparaison des 11 fichiers avec les sources actuelles a etabli :
+4 fichiers identiques hors fins de ligne (`attributes.py`, `windows_ui.py`,
+`legacy_presentation.py`, `presentation_structure.py`) ; 6 modules AIM propres
+a l'ancien contrat coordonne sont remplaces ensemble ; `logging_setup.py`
+presente un conflit partage : sa version epinglee ne fournit pas
+`session_log_path()`, requis par VOB et le lanceur recent.
+
+Le parcours combine conserve donc la journalisation actuelle a son empreinte
+exacte et applique les 10 autres fichiers du lot valide. Il declare l'etat
+compose `aim-working-state-0b05206-shared-logging-1`, distinct de l'etat
+historique. Le validateur AIM controle les 11 empreintes de cet etat : aucune
+exception permissive ni modification de l'archive ou de ses pins frontend.
+Les anciens descripteurs/etats restent reconnus sans changement. L'option
+`--preserve-shared-logging` active aussi cet etat dans le preparateur direct ;
+elle est automatique quand un paquet VOB ou SmartCatalog est fourni.
+
+Les dispatchs centraux/surcharges, services VOB/SmartCatalog locaux,
+`BaseApp`/`BridgeApp`, version de suite et metadonnees des plugins ne font pas
+partie du lot applique et sont conserves. Les reductions de fonctionnalites
+AIM correspondent au lot deja valide pour son frontend historique, pas a une
+mise a jour du frontend AIM.
+
+Ordre : validation archive et lot source intacts, assemblage avec les ZIP
+explicitement choisis, application du lot compatible, inventaire recalcule,
+validation complete, generation exclusive du descripteur dans le profil neuf,
+validation installee puis precontrole. `aimPythonState` dans `runtime.json`
+selectionne explicitement l'etat attendu par ce precontrole.
+Un simple descripteur ajoute a une candidate generique ne remplace jamais
+ces etapes. AIM reste « interface modifiee, livraison locale non actualisee ».
+Les tests de ce raccordement n'utilisent que des destinations temporaires ;
+aucun nouvel assemblage utilisateur n'a ete prepare.
+
 `prepare_aim_delivery.py` utilise les sources centralisees et l'assembleur
 existant : sources, overlays, puis les seuls 11 fichiers AIM epingles du lot
 fourni. Il ne remplace aucune source commune et ne lance aucune application.
@@ -62,8 +101,8 @@ protection de production n'est modifiee.
 
 L'utilisateur confirme le parcours visuel depuis l'entree
 `AllplanToolsAimRecipe` : ouverture de l'accueil, lancement AIM, puis fermeture.
-Candidate : `C:\Users\jmauger\Documents\AllplanLocal\AllplanTools\home-aim-0b05206-candidate`.
-Profil : `C:\Users\jmauger\Documents\AllplanLocal\AllplanTools\home-aim-0b05206-profile`.
+Candidate : `<racine-recettes>\home-aim-0b05206-candidate`.
+Profil : `<racine-recettes>\home-aim-0b05206-profile`.
 Provenance composite : socle centralise
 `d3a41573981b03c4be0a193fac095f034258a3b2`, bundle frontend
 `5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee`, lot AIM epingle

@@ -21,7 +21,12 @@ class BaseApp:
         return launch_plugin(plugin_id, self._launch_context, plugin_options)
 
     def get_app_info(self):
-        return {"id": self.app_id, "title": self.title, "protocol_version": 1}
+        from application.core.catalog import PLUGINS
+
+        return {
+            "id": self.app_id, "title": self.title, "protocol_version": 1,
+            "version": PLUGINS[self.app_id].version,
+        }
 
     def get_initial_data(self):
         # Fichier local fixe : le site ne choisit jamais un chemin arbitraire.

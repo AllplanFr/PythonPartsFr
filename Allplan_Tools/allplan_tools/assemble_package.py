@@ -14,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 HOME_REVISION = "5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee"
 AIM_REVISION = "0b05206ba6c1ce6d7ef9fcc9e6df7879601bfc65"
-PYTHON_ITEMS = ("application", "inspect_allplan.py", "launcher.py", "requirements.txt",
+PYTHON_ITEMS = ("application", "inspect_allplan.py", "launcher.py", "vob_launcher.py", "requirements.txt",
                 "pyproject.toml", "setup.py", "MANIFEST.in")
 IGNORED = shutil.ignore_patterns("__pycache__", "*.pyc")
 
@@ -35,7 +35,20 @@ def git_head():
         return "unknown"
 
 
-def assemble(out, python_exe, profile, candidate):
+def assemble(out, python_exe, profile, candidate, *, vob_local_package=None,
+             smartcatalog_local_package=None, home_local_package=None):
+    home_revision = HOME_REVISION
+    home_files = None
+    if home_local_package is not None:
+        from allplan_tools.home_delivery import verified_home_package
+        home_manifest, home_files = verified_home_package(home_local_package)
+        home_revision = home_manifest["revision"]
+    if vob_local_package is not None:
+        from application.launcher.vob_local_delivery import local_resources
+        local_resources(vob_local_package)
+    if smartcatalog_local_package is not None:
+        from application.launcher.smartcatalog_local_delivery import local_resources as smart_resources
+        smart_resources(smartcatalog_local_package)
     if out.exists() and any(out.iterdir()):
         raise SystemExit("Destination non vide : " + str(out))
     out.mkdir(parents=True, exist_ok=True)
@@ -53,12 +66,34 @@ def assemble(out, python_exe, profile, candidate):
         target = python / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(overlay / relative, target)
+    if vob_local_package is not None:
+        local_archive = python / "vob-local-package.zip"
+        shutil.copy2(vob_local_package, local_archive)
+        local_resources(local_archive)
+        write_json(python / "vob-local-delivery.json", {
+            "schema": "vob-local-installation/1", "archive": local_archive.name,
+        })
+    if smartcatalog_local_package is not None:
+        local_archive = python / "smartcatalog-local-package.zip"
+        shutil.copy2(smartcatalog_local_package, local_archive)
+        smart_resources(local_archive)
+        write_json(python / "smartcatalog-local-delivery.json", {
+            "schema": "smartcatalog-local-installation/1", "archive": local_archive.name,
+        })
     for name in ("runtime", "library", "template", "tools", "tests", "pythonparts"):
         shutil.copytree(HERE / name, out / name, ignore=IGNORED)
     for name in ("palette-normalization.json", "validated-icons-reference.json"):
         shutil.copy2(HERE / name, out / name)
-    shutil.copytree(REPO / "artifacts" / "home-5dd43513",
-                    out / ("home-" + HOME_REVISION[:7]))
+    home_directory = out / ("home-" + home_revision[:7])
+    if home_files is None:
+        shutil.copytree(REPO / "artifacts" / "home-5dd43513", home_directory)
+    else:
+        for name, body in home_files.items():
+            path = home_directory / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(body)
+        shutil.copy2(home_local_package, out / "home-local-package.zip")
+        verified_home_package(out / "home-local-package.zip")
     wrappers = out / "pythonparts" / "AllplanToolsTest"
     (wrappers / "entry-config.example.json").unlink()
     write_json(wrappers / "entry-config.json", {"testRoot": str(out)})
@@ -67,19 +102,24 @@ def assemble(out, python_exe, profile, candidate):
         "pythonRoot": str(python),
         "profile": str(profile),
         "pinnedCandidate": str(candidate),
-        "homeDirectory": str(out / ("home-" + HOME_REVISION[:7])),
-        "homeRevision": HOME_REVISION,
+        "homeDirectory": str(home_directory),
+        "homeRevision": home_revision,
         "pythonExecutable": str(python_exe),
+        "vobEntrypoint": str(python / "vob_launcher.py"),
     })
     files = {}
     roots = [out / name for name in ("python", "runtime", "pythonparts", "library", "template")]
-    for path in [p for root in roots for p in root.rglob("*") if p.is_file()] + [out / "runtime.json"]:
+    extra = [out / "runtime.json"]
+    if home_files is not None:
+        roots.append(home_directory)
+        extra.append(out / "home-local-package.zip")
+    for path in [p for root in roots for p in root.rglob("*") if p.is_file()] + extra:
         files[path.relative_to(out).as_posix()] = sha256(path)
     write_json(out / "work-manifest.json", {
         "schema": "allplan-tools-launcher-work/1",
         "basePythonCommit": git_head(),
         "aimRevision": AIM_REVISION,
-        "homeRevision": HOME_REVISION,
+        "homeRevision": home_revision,
         "modifiedPythonFiles": overlaid,
         "files": dict(sorted(files.items())),
     })
@@ -94,12 +134,36 @@ def main(argv=None):
                         help="dossier de la candidate AIM epinglee")
     parser.add_argument("--python", type=Path, default=Path(sys.executable),
                         help="python.exe utilise pour les enfants")
+    parser.add_argument("--vob-local-package", type=Path,
+                        help="ZIP VOB verifie et copie dans le package, sans dependance externe")
+    parser.add_argument("--smartcatalog-local-package", type=Path,
+                        help="ZIP SmartCatalog verifie et copie dans le package")
+    parser.add_argument("--home-local-package", type=Path,
+                        help="ZIP Home explicitement epingle, verifie avant extraction")
+    parser.add_argument("--aim-application", type=Path,
+                        help="Lot Python AIM epingle : preparation dediee avec profil neuf")
     args = parser.parse_args(argv)
+    if args.aim_application is not None:
+        from allplan_tools.tools.prepare_aim_delivery import prepare
+        result = prepare(
+            args.out.resolve(), args.profile.resolve(), args.pinned_candidate.resolve(),
+            args.aim_application.resolve(), args.python.resolve(),
+            home_local_package=args.home_local_package,
+            vob_local_package=args.vob_local_package,
+            smartcatalog_local_package=args.smartcatalog_local_package,
+            preserve_shared_logging=True,
+        )
+        print(json.dumps(result, ensure_ascii=True, indent=2))
+        return 0
     count = assemble(args.out.resolve(), args.python.resolve(), args.profile.resolve(),
-                     args.pinned_candidate.resolve())
+                     args.pinned_candidate.resolve(),
+                     vob_local_package=args.vob_local_package,
+                     smartcatalog_local_package=args.smartcatalog_local_package,
+                     home_local_package=args.home_local_package)
     print("Package assemble :", args.out.resolve(), "(" + str(count) + " fichiers inventories)")
     return 0
 
 
 if __name__ == "__main__":
+    sys.path.insert(0, str(REPO))
     raise SystemExit(main())

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { useAppDialog } from "@/lib/app-dialog";
 import { useT } from "@/lib/i18n";
 import { useCatalog } from "@/lib/catalog-store";
+import { verifiedAppVersion } from "@/shared/product-version";
 
 export function AppMessageDialog({ compact = false, title = "SmartCatalog", iconSrc = ascIcon.url }: { compact?: boolean; title?: string; iconSrc?: string }) {
   const t = useT(); const current = useAppDialog((s) => s.queue[0]); const close = useAppDialog((s) => s.close);
@@ -21,6 +22,7 @@ export function AppMessageDialog({ compact = false, title = "SmartCatalog", icon
       <div className="about-hero flex flex-col items-center gap-2 bg-primary px-6 py-7 text-primary-foreground">
         <img src={iconSrc} alt="" className="about-logo h-16 w-16 object-contain" />
         <span className="about-title text-base font-semibold tracking-wide">Allplan SmartCatalog Editor</span>
+        {verifiedAppVersion() && <span className="about-version text-xs opacity-80">Version {verifiedAppVersion()}</span>}
       </div>
       <DialogDescription className="about-text whitespace-pre-line px-6 py-5 text-center text-xs leading-6 text-foreground">{"Application créée par MAUGER Jean-François\nCopyright (c) ALLPLAN GmbH - All rights reserved"}</DialogDescription>
       <div className="secondary-dialog-footer flex justify-center px-4 py-2"><Button autoFocus onClick={ok}>OK</Button></div>

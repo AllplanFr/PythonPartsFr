@@ -6,6 +6,7 @@ type CloseEvent = { requestId: string; reason: "native_window_close" | "frontend
 type CloseDependencies = {
   call: (command: string, payload: object) => Promise<unknown>;
   ask: () => Promise<boolean>;
+  needsConfirmation?: () => boolean;
   blockLeave: (isCurrent: () => boolean) => Promise<boolean>;
   report: (error: unknown) => void;
   /** Called once after Python confirmed the cancellation ("Return to editing"). */
@@ -13,6 +14,10 @@ type CloseDependencies = {
 };
 const object = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
 const nonempty = (v: unknown): v is string => typeof v === "string" && v.trim().length > 0;
+
+export function vobCloseNeedsConfirmation(dirty: boolean, resourcesManager: boolean): boolean {
+  return dirty || resourcesManager;
+}
 
 export function vobCloseAvailable(info: unknown): boolean {
   if (normalizeAppIdentity(info) !== "vob_editor" || !object(info)) return false;
@@ -98,7 +103,7 @@ export class VobCloseCoordinator {
     const isCurrent = () => this.current(event) && generation === this.generation && !this.interrupted;
     try {
       if (this.interrupted) { await this.finish(event, false); if (this.active === null) await this.dependencies.stayed?.(true); return; }
-      const quit = await this.dependencies.ask();
+      const quit = this.dependencies.needsConfirmation?.() === false ? true : await this.dependencies.ask();
       if (!this.current(event)) return;
       if (!isCurrent()) { await this.finish(event, false); if (this.active === null) await this.dependencies.stayed?.(true); return; }
       if (!quit) { await this.finish(event, false); if (this.active === null) await this.dependencies.stayed?.(); return; }

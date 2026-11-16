@@ -1,0 +1,38 @@
+{
+  "_comment": "Editorial sheet only. Versions, installation, capabilities and update state come from Python.",
+  "labels": {
+    "overview": "Presentación",
+    "features": "Funciones",
+    "screenshots": "Capturas de pantalla",
+    "credits": "Créditos",
+    "sources": "Fuentes",
+    "role": "Diseño y desarrollo",
+    "git": "Repositorio GitHub",
+    "lovable": "Proyecto Lovable"
+  },
+  "summary": "Presentación y valores de los atributos del proyecto.",
+  "overview": "Information Manager organiza la presentación de los atributos del proyecto Allplan en categorías y grupos, y permite consultar y modificar sus valores.",
+  "features": [
+    {
+      "title": "Presentación",
+      "text": "Categorías y grupos reorganizables por arrastrar y soltar."
+    },
+    {
+      "title": "Valores del proyecto",
+      "text": "Entrada de los valores de atributos del proyecto abierto."
+    },
+    {
+      "title": "Importación y exportación",
+      "text": "Importación y exportación de presentaciones en formato JSON."
+    }
+  ],
+  "credits": [
+    {
+      "role": "Diseño y desarrollo",
+      "name": "MAUGER Jean-François"
+    }
+  ],
+  "gitUrl": "https://github.com/AllplanFr/PythonPartsFr",
+  "lovableUrl": "https://lovable.dev/projects/297630a7-1565-46a1-be88-827e783d171d",
+  "screenshots": []
+}

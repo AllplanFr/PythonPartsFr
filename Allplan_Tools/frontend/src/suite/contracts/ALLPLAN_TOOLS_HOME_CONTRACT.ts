@@ -46,6 +46,8 @@ export type UpdateReply = { ok: false; error: {
 
 export interface HomeInfo {
   home_launch_contract: 1;
+  /** Optional Allplan Tools version; old hosts omit it. */
+  version?: string;
   context: HomeContext;
   plugins: HomePlugin[];
 }
@@ -53,16 +55,8 @@ export interface HomeInfo {
 /** ok means the existing host launch service returned after process creation. */
 export type LaunchReply = { ok: true } | { ok: false; error: string };
 
-/** Acceptance of the request does not confirm window or runner termination. */
+/** A positive reply acknowledges a request, not effective window closure. */
 export type CloseHomeReply = { ok: true; status: "requested" } | { ok: false; error: string };
-
-export function isCloseHomeReply(value: unknown): value is CloseHomeReply {
-  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
-  const reply = value as Record<string, unknown>;
-  return reply["ok"] === true
-    ? reply["status"] === "requested"
-    : reply["ok"] === false && typeof reply["error"] === "string" && reply["error"].trim().length > 0;
-}
 
 export interface AllplanToolsHomeApi {
   close_home?(): Promise<CloseHomeReply>;
@@ -145,4 +139,11 @@ export function isLaunchReply(value: unknown): value is LaunchReply {
   const obj = value as Record<string, unknown>;
   return obj["ok"] === true ||
     (obj["ok"] === false && typeof obj["error"] === "string" && obj["error"].length > 0);
+}
+
+export function isCloseHomeReply(value: unknown): value is CloseHomeReply {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const obj = value as Record<string, unknown>;
+  return (obj["ok"] === true && obj["status"] === "requested") ||
+    (obj["ok"] === false && typeof obj["error"] === "string" && obj["error"].trim().length > 0);
 }

@@ -1,17 +1,56 @@
 # Allplan Tools integration provenance
 
+## Historical integration base
+
 Integration base: `e54751a0ae86230367ea937818d93428a96f1080` (upstream/main).
-Python source repository: `C:\Users\jmauger\Documents\GitHub\smartcatalog-editor-web`.
+Python source repository: `smartcatalog-editor-web` (historical repository name).
 Unchanged tracked Python/assembly/test source commit: `2b7e543b6f769ba6f1d3a3d447fee355fae3c7b1`.
 Overlays are imported as distinct sources, not applied.
 README.md, native_delivery_icons_probe.py and test_finishing.py use the source commit versions.
 Old compiled home, local divergent frontend, environments, profiles, caches and session evidence are excluded.
 
-## Local validation environment
+## Retained integrated sources
+
+The retained recipe uses offline local deliveries by default: the installed
+pinned AIM delivery and the explicit per-assembly VOB/SmartCatalog package
+selection. No user settings or profiles are changed. Existing online dispatch
+remains available outside that local selection; a rejected local delivery never
+silently falls back to HTTPS. There is no new global online/offline preference.
+
+The frontend sources now come from the checked export with declared base
+`5c8e62401caecf5d154cd7779cb17c69c2202e8d`, plus the local Home-close fix.
+The export archive SHA-256 is
+`66182fba7eaa6203ed22360ee156b94704ea3b1dfc4bc1713d5de4e6d2da59b9`.
+Its 558 source-file checksums were checked; the unavailable Git object was not
+authenticated locally. These corrected sources are not the exact announced
+commit. The separate technical Home ZIP is pinned to SHA-256
+`95ee364c33cfa307f40f98d51bc90dd9ad2b4094c5d5782c9545d13bed32d5f7`;
+the manifest revision identifies the declared base, not the composite source.
+The frontend alphabetical sorting and other retained export changes are preserved.
+
+Home closure uses the optional Python `close_home()` contract: accepted means
+request sent, not effective closure; errors do not trigger browser fallback.
+The Python VOB first-launch fix leaves normal data/profile initialization to
+the child instead of requiring its data directory before process creation.
+The compatible AIM Python state preserves shared logging and local dispatches.
+
+Acquired validation: eight Home-close tests and TypeScript `tsc --noEmit` passed;
+three targeted VOB first-launch tests passed. Bun 1.4.4 and locked dependencies
+were used without changing package.json or bun.lock. No default-mode change
+was necessary in the retained recipe, so no further tests were replayed.
+
+User validation of Lovable modifications is mandatory before both creating
+and using any new corresponding ZIP. This source import authorizes neither
+new fabrication nor deployment. AIM's pinned frontend archive and the Python
+interpreter remain external dependencies of the recipe. ZIPs, profiles,
+environments, caches and session evidence are not part of this source commit.
+The older provenance and validation sections below are historical records.
+
+### Historical local validation environment
 
 Bun 1.4.4 is retained for this local environment, installed from the official
 oven-sh/bun release distribution at
-`C:\Users\jmauger\AppData\Local\AllplanToolsTooling\bun-1.4.4\bun.exe`.
+`<tooling-root>\bun-1.4.4\bun.exe`.
 Lovable attested Bun 1.4.4 for the dedicated b3dc338e home bundle fabrication,
 but did not attest that version for earlier dependency installation or validations.
 Local `bun install --frozen-lockfile` completed successfully without changing
@@ -21,8 +60,8 @@ The targeted tools-home-close.test.tsx run passed all 8 tests with local Vitest.
 The requested `tsgo -b --noEmit` was not executed: tsgo is not included in the
 locked dependencies or installed locally. No launcher downloaded it implicitly.
 Subsequently, the local TypeScript 5.9.3 compiler check succeeded with exit code 0:
-`C:\Users\jmauger\AppData\Local\AllplanToolsTooling\bun-1.4.4\bun.exe`
-`C:\Users\jmauger\Documents\GitHub\PythonPartsFr\Allplan_Tools\frontend\node_modules\typescript\bin\tsc`
+`<tooling-root>\bun-1.4.4\bun.exe`
+`<repository>\Allplan_Tools\frontend\node_modules\typescript\bin\tsc`
 `-b --noEmit`, run from Allplan_Tools/frontend.
 This is a local tsc validation, not a reproduction of the historical tsgo check.
 The generated tsconfig.tsbuildinfo was removed. No corrected home bundle has
@@ -319,7 +358,7 @@ tests/test_vob_v14.py 65efa8c39160184bc9b87174d94e8b420800395e 8f1dfefd0f06ee7a0
 
 ## Frontend export
 
-Archive origin: `C:\Users\jmauger\Downloads\allplan-tools-sources-b3dc338.zip`.
+Archive origin: user-supplied `allplan-tools-sources-b3dc338.zip`.
 Verified archive SHA-256: `3e9573d3dbb7a16a32c76576ea13997bc604708397d409c6aa6704e161a9e424`.
 The 532 source paths come exclusively from EXPORT_GIT_BLOBS.txt.
 The archive envelope and three export metadata files are not frontend sources.

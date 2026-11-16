@@ -6,6 +6,20 @@ export const HOME_LANGUAGES = [
   { code: "sl", label: "Slovenščina" }, { code: "sk", label: "Slovenčina" },
 ] as const;
 export type HomeLanguage = typeof HOME_LANGUAGES[number]["code"];
+type MasterText = Record<"installed" | "available" | "upcoming" | "updateAll" | "batchUnavailable" | "launch" | "details" | "previewVersion", string>;
+export const HOME_MASTER_TEXT: Record<HomeLanguage, MasterText> = {
+  fr: { previewVersion: "Aperçu navigateur — version fournie par Python", installed: "Plugins installés", available: "Plugins disponibles", upcoming: "Plugins à venir", updateAll: "Tout mettre à jour", batchUnavailable: "Mise à jour groupée indisponible : le contrat permet uniquement l’ouverture d’un lien par plugin.", launch: "Lancer", details: "Fiche du plugin" },
+  en: { previewVersion: "Browser preview — version supplied by Python", installed: "Installed plugins", available: "Available plugins", upcoming: "Upcoming plugins", updateAll: "Update all", batchUnavailable: "Batch update unavailable: the contract only supports requesting one plugin link at a time.", launch: "Launch", details: "Plugin details" },
+  it: { previewVersion: "Anteprima browser — versione fornita da Python", installed: "Plugin installati", available: "Plugin disponibili", upcoming: "Plugin futuri", updateAll: "Aggiorna tutto", batchUnavailable: "Aggiornamento collettivo non disponibile: il contratto consente solo un collegamento per plugin.", launch: "Avvia", details: "Dettagli del plugin" },
+  de: { previewVersion: "Browser-Vorschau — Version wird von Python geliefert", installed: "Installierte Plugins", available: "Verfügbare Plugins", upcoming: "Künftige Plugins", updateAll: "Alle aktualisieren", batchUnavailable: "Sammelaktualisierung nicht verfügbar: der Vertrag unterstützt nur einen Link pro Plugin.", launch: "Starten", details: "Plugin-Details" },
+  es: { previewVersion: "Vista previa del navegador — versión proporcionada por Python", installed: "Plugins instalados", available: "Plugins disponibles", upcoming: "Próximos plugins", updateAll: "Actualizar todo", batchUnavailable: "Actualización conjunta no disponible: el contrato solo permite un enlace por plugin.", launch: "Iniciar", details: "Detalles del plugin" },
+  hr: { previewVersion: "Browser preview — version supplied by Python", installed: "Instalirani dodaci", available: "Dostupni dodaci", upcoming: "Budući dodaci", updateAll: "Ažuriraj sve", batchUnavailable: "Skupno ažuriranje nije dostupno: ugovor podržava samo jednu poveznicu po dodatku.", launch: "Pokreni", details: "Detalji dodatka" },
+  ro: { previewVersion: "Browser preview — version supplied by Python", installed: "Pluginuri instalate", available: "Pluginuri disponibile", upcoming: "Pluginuri viitoare", updateAll: "Actualizează tot", batchUnavailable: "Actualizarea în grup nu este disponibilă: contractul permite doar un link per plugin.", launch: "Lansează", details: "Detalii plugin" },
+  ru: { previewVersion: "Browser preview — version supplied by Python", installed: "Установленные плагины", available: "Доступные плагины", upcoming: "Будущие плагины", updateAll: "Обновить всё", batchUnavailable: "Групповое обновление недоступно: контракт поддерживает только одну ссылку на плагин.", launch: "Запустить", details: "Сведения о плагине" },
+  cs: { previewVersion: "Browser preview — version supplied by Python", installed: "Nainstalované pluginy", available: "Dostupné pluginy", upcoming: "Připravované pluginy", updateAll: "Aktualizovat vše", batchUnavailable: "Hromadná aktualizace není dostupná: smlouva podporuje pouze jeden odkaz na plugin.", launch: "Spustit", details: "Podrobnosti pluginu" },
+  sl: { previewVersion: "Browser preview — version supplied by Python", installed: "Nameščeni vtičniki", available: "Razpoložljivi vtičniki", upcoming: "Prihodnji vtičniki", updateAll: "Posodobi vse", batchUnavailable: "Skupinska posodobitev ni na voljo: pogodba podpira samo eno povezavo na vtičnik.", launch: "Zaženi", details: "Podrobnosti vtičnika" },
+  sk: { previewVersion: "Browser preview — version supplied by Python", installed: "Nainštalované pluginy", available: "Dostupné pluginy", upcoming: "Pripravované pluginy", updateAll: "Aktualizovať všetko", batchUnavailable: "Hromadná aktualizácia nie je dostupná: zmluva podporuje iba jeden odkaz na plugin.", launch: "Spustiť", details: "Podrobnosti pluginu" },
+};
 export const HOME_SECTIONS: Record<HomeLanguage, readonly [string, string]> = {
   fr: ["Applications disponibles", "Bientôt disponibles"],
   en: ["Available applications", "Coming soon"],
@@ -20,6 +34,19 @@ export const HOME_SECTIONS: Record<HomeLanguage, readonly [string, string]> = {
   sk: ["Dostupné aplikácie", "Čoskoro dostupné"],
 };
 type HomeText = { applications: string; choose: string; language: string; theme: string; about: string; quit: string; construction: string; cancel: string; quitQuestion: string; closeHint: string; createdBy: string; descriptions: readonly [string, string, string] };
+export const HOME_CLOSE_TEXT: Record<HomeLanguage, { requested: string; failed: string }> = {
+  fr: { requested: "Demande de fermeture émise. La fermeture effective n’est pas confirmée.", failed: "La demande de fermeture a échoué." },
+  en: { requested: "Close request sent. Effective closure is not confirmed.", failed: "The close request failed." },
+  it: { requested: "Richiesta di chiusura inviata. La chiusura effettiva non è confermata.", failed: "La richiesta di chiusura non è riuscita." },
+  de: { requested: "Schließanforderung gesendet. Das tatsächliche Schließen ist nicht bestätigt.", failed: "Die Schließanforderung ist fehlgeschlagen." },
+  es: { requested: "Solicitud de cierre enviada. El cierre efectivo no está confirmado.", failed: "La solicitud de cierre ha fallado." },
+  hr: { requested: "Zahtjev za zatvaranje poslan. Stvarno zatvaranje nije potvrđeno.", failed: "Zahtjev za zatvaranje nije uspio." },
+  ro: { requested: "Cererea de închidere a fost trimisă. Închiderea efectivă nu este confirmată.", failed: "Cererea de închidere a eșuat." },
+  ru: { requested: "Запрос на закрытие отправлен. Фактическое закрытие не подтверждено.", failed: "Запрос на закрытие завершился ошибкой." },
+  cs: { requested: "Požadavek na zavření odeslán. Skutečné zavření není potvrzeno.", failed: "Požadavek na zavření selhal." },
+  sl: { requested: "Zahteva za zapiranje poslana. Dejansko zaprtje ni potrjeno.", failed: "Zahteva za zapiranje ni uspela." },
+  sk: { requested: "Požiadavka na zatvorenie odoslaná. Skutočné zatvorenie nie je potvrdené.", failed: "Požiadavka na zatvorenie zlyhala." },
+};
 export const HOME_TEXT: Record<HomeLanguage, HomeText> = {
   fr: { applications: "Applications", choose: "Choisissez une application.", language: "Langue", theme: "Changer de thème", about: "À propos", quit: "Quitter", construction: "En cours de construction", cancel: "Annuler", quitQuestion: "Quitter Allplan Tools ?", closeHint: "La fermeture automatique n’est pas disponible dans cette fenêtre. Vous pouvez fermer cet onglet ou cette fenêtre.", createdBy: "Application créée par", descriptions: ["Catalogues d’ouvrages, composants, liens et attributs.", "Règles de calcul : métiers, objets, unités, méthodes et formules.", "Présentation et valeurs des attributs du projet."] },
   en: { applications: "Applications", choose: "Choose an application.", language: "Language", theme: "Change theme", about: "About", quit: "Quit", construction: "Under construction", cancel: "Cancel", quitQuestion: "Quit Allplan Tools?", closeHint: "Automatic closing is not available in this window. You can close this tab or window.", createdBy: "Application created by", descriptions: ["Catalogs of items, components, links and attributes.", "Calculation rules: trades, objects, units, methods and formulas.", "Presentation and values of project attributes."] },

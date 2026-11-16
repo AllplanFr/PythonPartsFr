@@ -73,7 +73,7 @@ class BridgeApp(BaseApp):
         return {
             "app_id": self.app_id,
             "title": self.title,
-            "version": "unknown",
+            "version": super().get_app_info()["version"],
             "allplan_version": self._allplan_version,
             "bridge_version": 1,
             **self._capability_data(),

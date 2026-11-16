@@ -2,6 +2,7 @@ import { vobArtwork } from "@/lib/vob-artwork";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
+import { verifiedAppVersion } from "@/shared/product-version";
 
 export function VobAboutDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
   const t = useT();
@@ -16,6 +17,7 @@ export function VobAboutDialog({ open, onOpenChange }: { open: boolean; onOpenCh
         </div>
         <span aria-hidden="true" className="vob-about-formula mt-5 font-mono text-xs text-muted-foreground">ƒ(x) · Σ · m² · m³</span>
         <h2 className="vob-about-name mt-2 text-xl font-semibold text-foreground">Allplan VOB Editor</h2>
+        {verifiedAppVersion() && <span className="vob-about-version mt-1 text-xs text-muted-foreground">Version {verifiedAppVersion()}</span>}
       </div>
       <DialogDescription className="vob-about-credits whitespace-pre-line px-4 py-6 text-center text-xs leading-6 text-foreground">{"Application créée par MAUGER Jean-François\nCopyright (c) ALLPLAN GmbH - All rights reserved"}</DialogDescription>
       <div className="secondary-dialog-footer flex justify-center px-4 py-2"><Button autoFocus onClick={() => onOpenChange(false)}>OK</Button></div>

@@ -26,6 +26,8 @@ WORKING_REVISION = "0b05206ba6c1ce6d7ef9fcc9e6df7879601bfc65"
 WORKING_TREE = "a5f51ec092b2dabf2796ea67628d05d859ce5d08"
 WORKING_ARTIFACT_SHA256 = "6452e7d92e24f03d8c1ab738eaeeeb1380cca35c384a4293329348f0add97b52"
 WORKING_PYTHON_STATE = "aim-working-state-0b05206"
+SHARED_LOGGING_STATE = "aim-working-state-0b05206-shared-logging-1"
+SHARED_LOGGING_SHA256 = "9994300de9f344d44e532a1f7a75b17f2d7b054957c4d198411ad4b13d6b7cf6"
 WORKING_PYTHON_FILES = {
     r"core\allplan\readers\attributes.py":
         "dcdbb023bf0d02fe96ec8f2a99a06b1a42049c6924dc6f09d6c58bd9c3ad3bbd",
@@ -104,7 +106,19 @@ def installation_file():
             "information_manager" / "local-delivery.json")
 
 
-def delivery_pin(revision):
+def delivery_pin(revision, python_state=None):
+    if python_state == SHARED_LOGGING_STATE and revision == WORKING_REVISION:
+        return {
+            "tree": WORKING_TREE, "sha256": WORKING_ARTIFACT_SHA256,
+            "python_state": SHARED_LOGGING_STATE,
+            "python_files": {
+                **WORKING_PYTHON_FILES,
+                r"core\logging_setup.py": SHARED_LOGGING_SHA256,
+            },
+        }
+    if python_state is not None:
+        original = delivery_pin(revision)
+        return original if original and original["python_state"] == python_state else None
     if revision == REVISION:
         return {
             "tree": TREE, "sha256": ARTIFACT_SHA256, "python_state": PYTHON_STATE,
@@ -118,8 +132,8 @@ def delivery_pin(revision):
     return None
 
 
-def verify_python(revision=REVISION):
-    pin = delivery_pin(revision)
+def verify_python(revision=REVISION, python_state=None):
+    pin = delivery_pin(revision, python_state)
     if pin is None:
         raise ValueError("Revision Python AIM non autorisee.")
     for name, digest in pin["python_files"].items():
@@ -208,7 +222,7 @@ def installed_resources():
     if descriptor.stat().st_size > 8192:
         raise ValueError("Descripteur de livraison AIM invalide.")
     info = json.loads(descriptor.read_text(encoding="utf-8"))
-    pin = delivery_pin(info.get("revision"))
+    pin = delivery_pin(info.get("revision"), info.get("pythonState"))
     if (set(info) != {"schema", "revision", "tree", "sha256", "pythonState", "artifact"}
             or info["schema"] != "aim-local-installation/1"
             or pin is None or info["tree"] != pin["tree"]
@@ -217,7 +231,7 @@ def installed_resources():
         raise ValueError("Livraison locale AIM incompatible ; aucun repli distant.")
     from application.core.context import LaunchContext
     archive = LaunchContext._path(info["artifact"])
-    verify_python(info["revision"])
+    verify_python(info["revision"], info["pythonState"])
     try:
         return local_resources(
             archive, expected_sha256=info["sha256"], revision=info["revision"],

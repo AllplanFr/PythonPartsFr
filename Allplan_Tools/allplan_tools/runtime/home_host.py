@@ -16,7 +16,7 @@ CANDIDATE = Path(CONFIG["pythonRoot"]).parent
 PYTHON_ROOT = Path(CONFIG["pythonRoot"])
 PROFILE = Path(CONFIG["profile"])
 REVISION = "0b05206ba6c1ce6d7ef9fcc9e6df7879601bfc65"
-HOME_REVISION = "5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee"
+HOME_REVISION = CONFIG.get("homeRevision", "5dd43513ec8f170c8e8bc138f5fd2e0c82ae31ee")
 HOME_DIRECTORY = Path(CONFIG["homeDirectory"])
 PREFLIGHT = Path(__file__).with_name("preflight.py")
 LOGGER = logging.getLogger(__name__)
@@ -120,7 +120,10 @@ class HomeApi:
         }
 
     def get_home_info(self):
+        from application.core.product_version import ALLPLAN_TOOLS_VERSION
+
         return {
+            "version": ALLPLAN_TOOLS_VERSION,
             "home_launch_contract": 1,
             "plugin_inventory_contract": 1,
             "context": {
@@ -229,11 +232,6 @@ class HomeApi:
             raise RuntimeError("Profil VOB different du profil de lancement.")
         if self._context.allplan_version is None:
             raise ValueError("Le lancement VOB raccorde exige le contexte Allplan.")
-        kind = "verification" if self._verification else "standard"
-        storage = PROFILE / "AllplanWebLauncher" / "vob_editor" / self._year / kind
-        data_directory = storage / "data"
-        if not data_directory.is_dir():
-            raise FileNotFoundError("Dossier applicatif VOB data introuvable : " + str(data_directory))
         command = launcher_command(entrypoint, Path(CONFIG["pythonExecutable"]))
         command.insert(1, "-I")
         command.extend(context_to_arguments(self._context))

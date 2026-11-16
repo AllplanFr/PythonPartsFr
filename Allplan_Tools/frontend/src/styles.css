@@ -515,3 +515,10 @@ input[type="checkbox"]:focus-visible, .app-checkbox:focus-visible { outline: 1px
 :root:has(.vob-app) .toolbar-settings { padding: 12px; font-size: 13px; border-radius: 2px; }
 :root:has(.vob-app) .toolbar-settings > label { gap: 8px; min-height: 24px; cursor: pointer; }
 :root:has(.vob-app) .toolbar-settings .h-8, :root:has(.vob-app) .toolbar-settings button { font-size: 13px; }
+
+/* Home groups: VOB-style coloured vertical band on headings and rows. */
+.home-group { --home-group-accent: oklch(0.62 0.14 var(--home-group-hue)); }
+.dark .home-group { --home-group-accent: oklch(0.75 0.12 var(--home-group-hue)); }
+.home-group-heading { background: color-mix(in srgb, var(--home-group-accent) 18%, var(--panel)); box-shadow: inset 4px 0 0 var(--home-group-accent); }
+/* Home: VOB rule-row stripe — selection changes the row background only, never the stripe colour. */
+.home-app .home-group-row, .home-app .home-group-row.catalog-selected-row { box-shadow: inset 4px 0 0 var(--home-group-accent); }

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { VobCloseCoordinator, VOB_CLOSE_COMMANDS, vobCloseAvailable } from "@/lib/vob-close";
+import { VobCloseCoordinator, VOB_CLOSE_COMMANDS, vobCloseAvailable, vobCloseNeedsConfirmation } from "@/lib/vob-close";
 import { shouldBlockLeave } from "@/suite/leave-guard";
 const event = { requestId: "host-1", reason: "native_window_close" };
 function setup() {
@@ -9,6 +9,27 @@ function setup() {
   return { coordinator, call, ask, blockLeave, report };
 }
 describe("event-owned VOB close", () => {
+  it.each(["native_window_close", "frontend_exit_button"])("clean editor closes directly for %s with correlated authorization and leave guard", async (reason) => {
+    const s = setup();
+    const coordinator = new VobCloseCoordinator({ ...s, needsConfirmation: () => vobCloseNeedsConfirmation(false, false) });
+    coordinator.setEnabled(true); coordinator.receive({ ...event, reason });
+    await vi.waitFor(() => expect(s.call).toHaveBeenCalledExactlyOnceWith("vob.close.authorize", { requestId: "host-1" }));
+    expect(s.ask).not.toHaveBeenCalled(); expect(s.blockLeave).toHaveBeenCalledTimes(1);
+  });
+  it.each([[true, false], [false, true], [true, true]])("dirty=%s manager=%s retains confirmation/cancellation", async (dirty, manager) => {
+    const s = setup();
+    const coordinator = new VobCloseCoordinator({ ...s, needsConfirmation: () => vobCloseNeedsConfirmation(dirty, manager) });
+    coordinator.setEnabled(true); coordinator.receive(event);
+    await vi.waitFor(() => expect(s.call).toHaveBeenCalledExactlyOnceWith("vob.close.cancel", { requestId: "host-1" }));
+    expect(s.ask).toHaveBeenCalledTimes(1); expect(s.blockLeave).not.toHaveBeenCalled();
+  });
+  it("new dirty data encountered by the leave guard blocks a direct close", async () => {
+    const s = setup(); s.blockLeave.mockResolvedValue(true);
+    const coordinator = new VobCloseCoordinator({ ...s, needsConfirmation: () => false });
+    coordinator.setEnabled(true); coordinator.receive(event);
+    await vi.waitFor(() => expect(s.call).toHaveBeenCalledExactlyOnceWith("vob.close.cancel", { requestId: "host-1" }));
+    expect(s.ask).not.toHaveBeenCalled();
+  });
   it.each(VOB_CLOSE_COMMANDS)("missing %s prevents activation", (missing) => {
     expect(vobCloseAvailable({ app_id: "vob_editor", capabilities: VOB_CLOSE_COMMANDS.filter((c) => c !== missing) })).toBe(false);
   });

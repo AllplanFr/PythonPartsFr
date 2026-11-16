@@ -9,7 +9,7 @@ import { useVobEditor } from "@/lib/vob-editor";
 import { shouldBlockLeave, useLeaveGuard, type LeavePolicy } from "@/suite/leave-guard";
 import { detectNativeBinding } from "@/shared/transport/native-binding";
 import { onHostEvent, request, isCommandUnavailable, onUnavailableChange } from "@/lib/host-bridge";
-import { VobCloseCoordinator, VOB_CLOSE_COMMANDS, vobCloseAvailable } from "@/lib/vob-close";
+import { VobCloseCoordinator, VOB_CLOSE_COMMANDS, vobCloseAvailable, vobCloseNeedsConfirmation } from "@/lib/vob-close";
 
 /** VOB module entry: unchanged editor plus the suite leave guard covering every dirty VOB file of the session. */
 export function VobEditorModule({ native }: { native: boolean }) {
@@ -30,6 +30,7 @@ export function VobEditorModule({ native }: { native: boolean }) {
   const policyRef = useRef(policy); policyRef.current = policy;
   const [coordinator] = useState(() => new VobCloseCoordinator({
     call: (command, payload) => request(command, payload),
+    needsConfirmation: () => vobCloseNeedsConfirmation(vobDirtyPaths().length > 0, useVobResources.getState().manager),
     ask: async () => {
       const fr = useCatalog.getState().lang === "fr";
       return await askChoice(fr ? "Voulez-vous quitter l’application ou retourner en édition ?" : "Do you want to quit the application or return to editing?", [

@@ -1,0 +1,42 @@
+{
+  "_comment": "Editorial sheet only. Versions, installation, capabilities and update state come from Python.",
+  "labels": {
+    "overview": "Présentation",
+    "features": "Fonctionnalités",
+    "screenshots": "Captures d’écran",
+    "credits": "Crédits",
+    "sources": "Sources",
+    "role": "Conception et développement",
+    "git": "Dépôt GitHub",
+    "lovable": "Projet Lovable"
+  },
+  "summary": "Éditeur des règles de calcul VOB.",
+  "overview": "VOB Editor rassemble les règles de calcul VOB par métier, objet, unité et méthode, et permet de les filtrer, regrouper et modifier avec leur formule et leur commentaire.",
+  "features": [
+    {
+      "title": "Règles de calcul",
+      "text": "Métiers, objets, unités, méthodes et formules."
+    },
+    {
+      "title": "Regroupement et filtres",
+      "text": "Groupes colorés, filtres par valeur et recherche."
+    },
+    {
+      "title": "Fichiers de ressources",
+      "text": "Fichiers standard et personnels, avec modifications suivies."
+    },
+    {
+      "title": "Sauvegardes",
+      "text": "Liste et restauration confirmée des sauvegardes."
+    }
+  ],
+  "credits": [
+    {
+      "role": "Conception et développement",
+      "name": "MAUGER Jean-François"
+    }
+  ],
+  "gitUrl": "https://github.com/AllplanFr/PythonPartsFr",
+  "lovableUrl": "https://lovable.dev/projects/297630a7-1565-46a1-be88-827e783d171d",
+  "screenshots": []
+}

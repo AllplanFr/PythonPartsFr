@@ -228,6 +228,69 @@ class PinnedPreparationTests(unittest.TestCase):
             prepare.validate(self.python, self.out / "python", self.pin, profile=self.profile)
         self.assertIn("Configuration et racine verifiee incoherentes", refused.exception.stderr)
 
+    def test_combined_local_preparation_preserves_recent_integrations(self):
+        downloads = Path(os.environ["AIM_TEST_LOCAL_PACKAGES"])
+        result = prepare.prepare(
+            self.out, self.profile, self.pin, self.reference_lot, self.python,
+            home_local_package=downloads / "allplan-tools-home-local-ccdaa3a.zip",
+            vob_local_package=downloads / "vob-editor-local-ccdaa3a.zip",
+            smartcatalog_local_package=downloads / "smartcatalog-local-ccdaa3a.zip",
+        )
+        state = "aim-working-state-0b05206-shared-logging-1"
+        descriptor = json.loads(Path(result["descriptor"]).read_text())
+        self.assertEqual(descriptor["pythonState"], state)
+        runtime = json.loads((self.out / "runtime.json").read_text())
+        self.assertEqual(runtime["aimPythonState"], state)
+        self.assertEqual(runtime["homeRevision"], "ccdaa3a932ffe23629decc2fabfeed8ac6e39935")
+        manifest = json.loads((self.out / "work-manifest.json").read_text())
+        self.assertEqual(sum(r["layer"] == "aim" for r in result["replacements"]), 10)
+        self.assertEqual(sum(r["layer"] == "shared" for r in result["replacements"]), 1)
+        for name in (
+                "application/launcher/vob_online.py",
+                "application/launcher/vob_local_delivery.py",
+                "application/launcher/smartcatalog_local_delivery.py",
+                "application/launcher/local_delivery_config.py",
+                "application/core/product_version.py", "application/core/base.py",
+                "application/core/bridge.py", "application/core/logging_setup.py"):
+            self.assertEqual((self.out / "python" / name).read_bytes(),
+                             (prepare.SOURCES / name).read_bytes())
+        overlay = prepare.SUITE / "overlay/python"
+        for name in ("application/launcher/main.py",
+                     "application/plugins/information_manager/plugin.json",
+                     "application/plugins/vob_editor/plugin.json",
+                     "application/plugins/smartcatalog/plugin.json"):
+            self.assertEqual((self.out / "python" / name).read_bytes(),
+                             (overlay / name).read_bytes())
+        for name, digest in manifest["files"].items():
+            self.assertEqual(hashlib.sha256((self.out / name).read_bytes()).hexdigest(), digest)
+        # A re-inventoried but unpinned shared logging file must still fail AIM validation.
+        logging_file = self.out / "python/application/core/logging_setup.py"
+        logging_file.write_bytes(logging_file.read_bytes() + b"\n# altered\n")
+        relative = "python/application/core/logging_setup.py"
+        manifest["files"][relative] = hashlib.sha256(logging_file.read_bytes()).hexdigest()
+        (self.out / "work-manifest.json").write_text(json.dumps(manifest))
+        with self.assertRaises(subprocess.CalledProcessError) as refused:
+            prepare.validate(self.python, self.out / "python", self.pin, profile=self.profile,
+                             python_state=state)
+        self.assertIn("Etat Python AIM different", refused.exception.stderr)
+
+    def test_incoherent_shared_logging_refused_before_descriptor(self):
+        assembly = prepare.assembler()
+        original = assembly.assemble
+
+        def altered(*args, **kwargs):
+            original(*args, **kwargs)
+            logging_file = args[0] / "python/application/core/logging_setup.py"
+            logging_file.write_bytes(logging_file.read_bytes() + b"\n# incompatible\n")
+
+        with patch.object(prepare, "assembler", return_value=assembly), \
+                patch.object(assembly, "assemble", side_effect=altered):
+            with self.assertRaisesRegex(ValueError, "Journalisation partagee"):
+                prepare.prepare(self.out, self.profile, self.pin, self.reference_lot,
+                                self.python, preserve_shared_logging=True)
+        self.assertFalse(self.out.exists())
+        self.assertFalse(self.profile.exists())
+
     def test_real_archive_and_python_divergence_no_outputs(self):
         temporary_pin = self.root / "altered-pin"
         temporary_pin.mkdir()

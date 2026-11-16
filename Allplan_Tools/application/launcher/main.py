@@ -32,6 +32,10 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("app_id", nargs="?", help=", ".join(PLUGINS))
     add_context_arguments(parser)
     parser.add_argument("--paths", type=Path)
+    parser.add_argument("--vob-local-package", type=Path,
+                        help="Livraison ZIP VOB locale protegee, sans repli reseau.")
+    parser.add_argument("--smartcatalog-local-package", type=Path,
+                        help="Livraison ZIP SmartCatalog locale protegee, sans repli reseau.")
     added = set()
     for plugin in PLUGINS.values():
         for name, description in plugin.path_options.items():
@@ -76,7 +80,18 @@ def _run_app(plugin, context: LaunchContext, args) -> None:
     data_dir.mkdir(parents=True, exist_ok=True)
     profile_dir.mkdir(parents=True, exist_ok=True)
     app = create_app(plugin, data_dir, context, plugin_options(args), PluginServices(args.timeout))
+    if plugin.id == "smartcatalog":
+        from .local_delivery_config import selected_package
+        archive = selected_package("smartcatalog", getattr(args, "smartcatalog_local_package", None))
+        if archive is not None:
+            from .smartcatalog_local_delivery import run as run_local
+            run_local(app, app_root, profile_dir, archive=archive)
+            return
     if plugin.id == "vob_editor":
+        if getattr(args, "vob_local_package", None) is not None:
+            from .vob_local_delivery import run as run_local
+            run_local(app, app_root, profile_dir, archive=args.vob_local_package)
+            return
         from .vob_online import run
         run(
             app, app_root, profile_dir,
@@ -143,6 +158,14 @@ def main(argv=None):
     if "--installation-id" in arguments or any(v.startswith("--installation-id=") for v in arguments):
         parser.error("--installation-id supprime : utiliser --allplan-version et, si necessaire, --verification-version.")
     args = parser.parse_args(arguments)
+    if args.smartcatalog_local_package is not None and (
+            args.app_id != "smartcatalog" or args.protocol_control_test
+            or args.protocol_smartcatalog_test):
+        parser.error("--smartcatalog-local-package exige le parcours SmartCatalog metier uniquement.")
+    if args.vob_local_package is not None and (
+            args.app_id != "vob_editor" or args.protocol_control_test
+            or args.protocol_smartcatalog_test):
+        parser.error("--vob-local-package exige le parcours VOB metier uniquement.")
     if args.protocol_control_test and args.protocol_smartcatalog_test:
         parser.error("Les modes RC1 local et SmartCatalog distant sont exclusifs.")
     if sys.platform != "win32":

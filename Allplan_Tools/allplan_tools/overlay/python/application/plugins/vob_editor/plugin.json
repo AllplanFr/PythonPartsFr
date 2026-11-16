@@ -1,5 +1,6 @@
 {
   "id": "vob_editor",
+  "version": "0.1.0",
   "name": "VOB Editor",
   "description": "Ouvrir et modifier les regles VOB. Sans installation selectionnee, ajouter les fichiers manuellement.",
   "entrypoint": "plugin:create_app",

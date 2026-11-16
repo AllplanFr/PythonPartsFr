@@ -124,8 +124,9 @@ def published_resources(fetch=fetch_public, *, route=ROUTE):
 class VobPublishedBoundary(Boundary):
     """Only serve bytes whose URLs and fingerprints came from the verified manifest."""
 
-    def __init__(self, resources, *args):
-        super().__init__(ROUTE, set(), *args)
+    def __init__(self, resources, *args, route=ROUTE, document_urls=None):
+        super().__init__(route, set(), *args)
+        self.document_urls = {route} if document_urls is None else set(document_urls)
         self.resources = resources
         self.native = None
 
@@ -137,7 +138,7 @@ class VobPublishedBoundary(Boundary):
         resource = self.resources.get(uri)
         if (resource is None or str(args.Request.Method) != "GET"
                 or getattr(args, "ResourceContext", None) == self.context.Document
-                and uri != ROUTE):
+                and uri not in self.document_urls):
             return
         mime, data = resource
         stream = self.native.MemoryStream(self.native.Array[self.native.Byte](data))
@@ -152,8 +153,9 @@ class VobPublishedBoundary(Boundary):
 class VobProtectedApi:
     """Expose the existing VOB contract only after same-window identity verification."""
 
-    def __init__(self, app):
+    def __init__(self, app, *, app_id="vob_editor"):
         self._app = app
+        self.app_id = app_id
         self.active = False
         self.identified = False
 
@@ -162,7 +164,7 @@ class VobProtectedApi:
             raise RuntimeError("Protected VOB route not active.")
         info = self._app.get_app_info()
         if (type(info) is not dict
-                or info.get("app_id", info.get("id")) != "vob_editor"
+                or info.get("app_id", info.get("id")) != self.app_id
                 or type(info.get("app_id", info.get("id"))) is not str
                 or ("id" in info and "app_id" in info and info["id"] != info["app_id"])):
             raise RuntimeError("VOB host identity mismatch.")
@@ -185,17 +187,25 @@ class VobProtectedApi:
 
 
 def run_protected(app, workspace, profile, *, route=ROUTE, coordinated_revision=None):
-    import webview
-    from importlib import import_module
-
     _manifest, resources = published_resources(route=route)
     if coordinated_revision is not None:
         if (not isinstance(coordinated_revision, str)
                 or re.fullmatch(r"[0-9a-f]{40}", coordinated_revision) is None
                 or _manifest["revision"] != coordinated_revision):
             raise ValueError("Coordinated VOB publication revision not verified.")
+    return _run_verified(
+        app, workspace, profile, resources, route=route,
+        coordinated_revision=coordinated_revision,
+    )
+
+
+def _run_verified(app, workspace, profile, resources, *, route, coordinated_revision,
+                  document_urls=None, app_id="vob_editor"):
+    import webview
+    from importlib import import_module
+
     common = resource_path(PACKAGE_ROOT / "core", "resources\\bridge.js")
-    specific = resource_path(PACKAGE_ROOT / "plugins" / "vob_editor", app.script_name)
+    specific = resource_path(PACKAGE_ROOT / "plugins" / app_id, app.script_name)
     scripts = common.read_text(encoding="utf-8") + "\n" + specific.read_text(encoding="utf-8")
     workspace.mkdir(parents=True, exist_ok=True)
     profile.mkdir(parents=True, exist_ok=True)
@@ -212,7 +222,7 @@ def run_protected(app, workspace, profile, *, route=ROUTE, coordinated_revision=
     )
     app._initial_preferences()
     webview.settings["IGNORE_SSL_ERRORS"] = False
-    api = VobProtectedApi(app)
+    api = VobProtectedApi(app, app_id=app_id)
     native = load_native()
     action = import_module("System").Action
     bootstrap_ready = Event()
@@ -230,7 +240,7 @@ def run_protected(app, workspace, profile, *, route=ROUTE, coordinated_revision=
         window.events.closed += app._close
 
     coordinator = None
-    if coordinated_revision is not None:
+    if app_id == "vob_editor" and coordinated_revision is not None:
         from application.plugins.vob_editor.coordinated_host import prepare_coordinated_host
         coordinator = prepare_coordinated_host(
             app, window, identified=lambda: api.active and api.identified,
@@ -270,7 +280,8 @@ def run_protected(app, workspace, profile, *, route=ROUTE, coordinated_revision=
                 core.NewWindowRequested -= window.native.browser.on_new_window_request
                 boundary = VobPublishedBoundary(
                     resources, core.Environment, native.ResourceContext,
-                    native.RequestSourceKinds, [], stop,
+                    native.RequestSourceKinds, [], stop, route=route,
+                    document_urls=document_urls,
                 )
                 boundary.native = native
                 boundary.install(core)
@@ -307,7 +318,7 @@ def run_protected(app, workspace, profile, *, route=ROUTE, coordinated_revision=
                     args.State = (
                         native.PermissionState.Allow
                         if clipboard_request_allowed(
-                            str(args.Uri), ROUTE, str(args.PermissionKind),
+                            str(args.Uri), route, str(args.PermissionKind),
                         )
                         else native.PermissionState.Deny
                     )

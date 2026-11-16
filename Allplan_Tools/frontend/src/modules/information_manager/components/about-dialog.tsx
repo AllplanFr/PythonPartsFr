@@ -1,6 +1,7 @@
 import { AimBrandIcon } from "@/modules/information_manager/components/aim-brand-icon";
 import { useT, type Lang } from "@/modules/information_manager/lib/i18n";
 import { aimUiText } from "@/modules/information_manager/lib/aim-ui-text";
+import { verifiedAppVersion } from "@/shared/product-version";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 
@@ -18,6 +19,7 @@ export function AboutDialog({ onClose, lang }: { onClose: () => void; lang: Lang
           </div>
           <span className="suite-about-name mt-5 text-xl font-semibold text-foreground">AIM</span>
           <h2 className="suite-about-name mt-2 text-lg font-semibold text-foreground">Allplan Information Manager</h2>
+          {verifiedAppVersion() && <span className="suite-about-version mt-1 text-xs text-muted-foreground">Version {verifiedAppVersion()}</span>}
           <p className="suite-about-name mt-2 text-xs text-muted-foreground">{t.aboutTag}</p>
         </div>
         <DialogDescription className="suite-about-credits px-4 py-6 text-center text-xs leading-6 text-foreground">

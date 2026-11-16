@@ -28,19 +28,22 @@ def verify(token):
     verify_work_copy()
     from application.launcher.aim_local_delivery import delivery_pin, local_resources, verify_python
     descriptor = PROFILE / "AllplanWebLauncher" / "information_manager" / "local-delivery.json"
+    python_state = CONFIG.get("aimPythonState", PYTHON_STATE)
+    pin = delivery_pin(REVISION, python_state)
+    if pin is None:
+        raise ValueError("Etat Python AIM non autorise.")
     expected = {
         "schema": "aim-local-installation/1", "revision": REVISION, "tree": TREE,
-        "sha256": SHA256, "pythonState": PYTHON_STATE, "artifact": str(ARCHIVE),
+        "sha256": SHA256, "pythonState": python_state, "artifact": str(ARCHIVE),
     }
     if json.loads(descriptor.read_text(encoding="utf-8")) != expected:
         raise ValueError("Descripteur candidat incorrect.")
-    pin = delivery_pin(REVISION)
     if (pin is None or pin["tree"] != TREE or pin["sha256"] != SHA256
-            or pin["python_state"] != PYTHON_STATE):
+            or pin["python_state"] != python_state):
         raise ValueError("Epingles candidates incorrectes.")
     if hashlib.sha256(ARCHIVE.read_bytes()).hexdigest() != SHA256:
         raise ValueError("Empreinte archive incorrecte.")
-    verify_python(REVISION)
+    verify_python(REVISION, python_state)
     manifest, resources = local_resources(ARCHIVE, expected_sha256=SHA256, revision=REVISION)
     if manifest.get("revision") != REVISION or manifest.get("trackedChangesAtBuild") is not False:
         raise ValueError("Identite du build incorrecte.")
